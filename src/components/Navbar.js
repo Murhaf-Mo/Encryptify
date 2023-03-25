@@ -1,70 +1,65 @@
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { useState } from 'react';
+import {Link} from 'react-router-dom'
+import logo from '../assets/logo.png'
 const items = [
+
   {
-    label: 'Navigation One',
+label: (
+    <Link to="/ciphers" rel="noopener noreferrer">
+      Ciphers
+    </Link>
+  ),
     key: 'mail',
-    icon: <MailOutlined />,
-  },
-  {
-    label: 'Navigation Two',
-    key: 'app',
-    icon: <AppstoreOutlined />,
-    disabled: true,
-  },
-  {
-    label: 'Navigation Three - Submenu',
-    key: 'SubMenu',
-    icon: <SettingOutlined />,
-    children: [
-      {
-        type: 'group',
-        label: 'Item 1',
-        children: [
-          {
-            label: 'Option 1',
-            key: 'setting:1',
-          },
-          {
-            label: 'Option 2',
-            key: 'setting:2',
-          },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'Item 2',
-        children: [
-          {
-            label: 'Option 3',
-            key: 'setting:3',
-          },
-          {
-            label: 'Option 4',
-            key: 'setting:4',
-          },
-        ],
-      },
-    ],
   },
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        Navigation Four - Link
-      </a>
+        <Link to="/applications" rel="noopener noreferrer">
+          Applications
+        </Link>
+    ),
+    key: 'app',
+  },
+  {
+    label: (
+        <Link to="/challenges" rel="noopener noreferrer">
+          Challenges
+        </Link>
+    ),
+    key: 'SubMenu',
+
+      },
+  {
+    label: (
+        <Link to="/quantum" rel="noopener noreferrer">
+          Quantum
+        </Link>
     ),
     key: 'alipay',
   },
 ];
 
 const Navbar = () => {
-  const [current, setCurrent] = useState('mail');
+  const [current, setCurrent] = useState('');
   const onClick = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
   };
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+  return (
+      <nav className="nav">
+          <Link to="/" className="site-title">
+              <img className="logo" src= {logo} alt='logo' onClick={onClick}/>
+          </Link>
+          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal"  items={items} theme={"light"} style={{
+              background:'#27282C',
+              color: '#757578',
+              flex: 'space-between',
+                             
+          }} />
+      </nav>
+
+
+)
 };
 
 

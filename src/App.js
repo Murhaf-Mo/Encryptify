@@ -1,23 +1,42 @@
 import './App.css'
 import React from 'react';
 import Navbar from './components/Navbar';
-import {Button, ConfigProvider} from "antd";
+import {ConfigProvider} from "antd";
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Applications from "./pages/Applications";
+import Challenges from "./pages/Challenges";
+import Ciphers from "./pages/Ciphers";
+import Quantum from "./pages/Quantum";
 function App() {
 
   return (
+    <>
+
       <ConfigProvider
           theme={{
-              token: {
-                  colorPrimary: '#00b96b',
-              },
-          }}
+              "token": {
+                'colorPrimaryBg': '#ffe6fe',
+                "colorPrimary": "#ffffff",
+
+          }
+
+              }
+          }
       >
-          <>
-          <Navbar/>
-          <Button type="primary">Button</Button>
-          <h1> HI</h1>
-      </>
-      </ConfigProvider>
+              <Navbar />
+              </ConfigProvider>
+              <div className="container">
+                  <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/applications" element={<Applications />} />
+                      <Route path="/challenges" element={<Challenges />} />
+                      <Route path="/ciphers" element={<Ciphers />} />
+                      <Route path="/quantum" element={<Quantum />} />
+                  </Routes>
+              </div>
+        </>
+
 
   )
 }
