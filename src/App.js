@@ -2,7 +2,7 @@ import './App.css'
 import React from 'react';
 import Navbar from './components/Navbar';
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home";
+//import Home from "./pages/Home";
 import Applications from "./pages/Applications";
 import Challenges from "./pages/Challenges";
 import Ciphers from "./pages/Ciphers";
