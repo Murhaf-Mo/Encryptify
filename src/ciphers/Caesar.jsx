@@ -236,7 +236,7 @@ function Caesar() {
 
                                     }}
                                     onChange={onChange}
-                                    placeholder="Chipher text..."
+                                    placeholder="Cipher text..."
                                     value={caesarShift(text, key)}
                                 />
                                 </ConfigProvider>
