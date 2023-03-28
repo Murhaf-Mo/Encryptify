@@ -4,29 +4,33 @@ import {useForm, ValidationError} from '@formspree/react';
 
 
 function Footer() {
-    const [state, handleSubmit] = useForm("meqwlwrr");
+    const [state, handleSubmit] = useForm("mayzdglg");
 
     return (<div className={"footer"}>
-            <div className={"footer-container"}>
+            <div className={"footer-container2"}>
                 <form onSubmit={handleSubmit} className={"footer-v"}>
                     <p className={"b-light"}> Feedback</p>
                     <ConfigProvider theme={{token: {colorTextBase: "#ffffff", colorBgBase: "#19191c", colorFill: "#f9f9f9", borderRadius: 0, colorText: "#ffffff", colorPrimary: "#ffffff", colorBorder: "#B5B5B5", colorBorderSecondary: "#76767d",},}}>
+                        <div className={'footer-input'}>
+
                         <Input required name={"name"}
                                id="name"
                                placeholder={"Name"}
-                               style={{width: '30%',}}
+                               style={{width: '60%',}}
                         />
                         <ValidationError
                             prefix="Name"
                             field="name"
                             errors={state.errors}
                         />
-                        <div>
+                        </div>
+                        <div className={'footer-input'}>
                             <Input required name={"message"}
                                    id="message"
                                    placeholder="Message"
                                    style={{
                                        width: '80%',
+
                                    }}
                             />
                             <ValidationError
@@ -34,10 +38,10 @@ function Footer() {
                                 field="message"
                                 errors={state.errors}
                             />
+                        </div>
                             <p className={"b-light"} style={{fontSize: "13px", paddingTop: "2%", paddingBottom: "3%"}}>
                                 By submitting you will be helping me improve on the content of this project.
                             </p>
-                        </div>
                     </ConfigProvider>
                     <ConfigProvider theme={{token: {colorTextBase: "#ffffff", colorBgBase: "#19191c", colorFill: "#f9f9f9", colorText: "#ffffff", colorPrimary: "#19191c", colorBorder: "#ffffff", colorBorderSecondary: "#76767d",},}}>
                         <Button htmlType="submit" disabled={state.submitting} type={"primary"} shape="round"

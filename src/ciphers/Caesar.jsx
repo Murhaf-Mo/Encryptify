@@ -64,7 +64,7 @@ function Caesar() {
                 <div className="g"></div>
                 <img className="olive" src={olive} alt="olive"/>
                 <h1 className="title"> Caesar Cipher</h1>
-                <p className="suptitle">A classic example of ancient cryptography</p>
+                <p className="subtitle">A classic example of ancient cryptography</p>
                 <img className="caesar" src={caesar} alt="caesar"/>
 
             </div>

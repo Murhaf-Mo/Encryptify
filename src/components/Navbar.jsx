@@ -62,15 +62,13 @@ const Navbar = () => {
           }}
       >
       <nav className="nav">
-          <Link to="/" className="site-title">
-              <img className="logo" src= {logo} alt='logo' onClick={onClick}/>
-          </Link>
-          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal"  items={items} theme={"light"} style={{
-              background:'#27282C',
-              color: '#757578',
-              flex: 'space-between',
-                             
-          }} />
+          <div></div>
+          <Link to="/"><img className="logo" src= {logo} alt='logo' onClick={onClick}/></Link>
+          <div></div>
+          <div className={'menu'}>
+          <Menu  onClick={onClick} selectedKeys={[current]} mode="horizontal"  items={items} theme={"light"} style={{background:'#27282C', color: '#757578', paddingTop:"2px"}} />
+          </div>
+          <div></div>
 
       </nav>
       </ConfigProvider>

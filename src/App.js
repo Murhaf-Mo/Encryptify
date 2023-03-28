@@ -9,6 +9,7 @@ import Ciphers from "./pages/Ciphers";
 import Quantum from "./pages/Quantum";
 import Caesar from './ciphers/Caesar';
 import Footer from "./components/Footer";
+import Vigenere from "./ciphers/Vigenere";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
                 <Navbar/>
             <div>
                 <Routes>
-                    <Route path="/" element={<Caesar/>}/>
+                    <Route path="/" element={<Vigenere/>}/>
                     <Route path="/applications" element={<Applications/>}/>
                     <Route path="/challenges" element={<Challenges/>}/>
                     <Route path="/ciphers" element={<Ciphers/>}/>

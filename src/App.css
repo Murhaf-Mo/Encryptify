@@ -5,18 +5,21 @@
 }
 
 .nav {
-    background-color: #27282c;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+    background-color: #27282c;
 
+}
+.menu{
+    width: min(470px, 90vw);
+
+}
 .logo {
     height: auto;
     width: auto;
-    max-height: 45px;
-    max-width: 45px;
+    max-height: 48px;
+    max-width: 48px;
 }
 
 .nav a {
@@ -26,14 +29,130 @@
     align-items: center;
 }
 
+.cipher-container{
+    background-color: #19191C;
 
-.title-page {
-    color: white;
-    width: auto;
-    height: 574px;
+}
+.cipher-title-container {
+    overflow: hidden;
+    width: min(90vw, 100rem);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 6%;
+}
+
+
+.g-vigenere{
     position: relative;
     z-index: 1;
+    width: max(2000px,100%);
+    height: 100%;
+    right: 5vw;
+    background: rgb(255,84,71);
+    background: radial-gradient(circle, rgba(255,84,71,1) 5%, rgba(132,28,164,1) 33%, rgba(25,25,28,1) 66%);
+
 }
+
+.vigenere-logo{
+    width: 125px;
+    height: 129px;
+}
+
+
+.cipher-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.5rem;
+    padding-bottom: 2%;
+}
+
+
+.cipher-subtitle {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.5rem;
+    width: 25ch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: #9C3CF7;
+
+
+}
+.footer-container {
+    padding: 5%;
+    height: 62%;
+    width: 90%;
+    display: flex;
+
+
+
+}
+.footer-container2 {
+    padding: 5%;
+    height: 62%;
+    display: flex;
+    width: min(90vw, 100rem);
+    margin-inline: auto;
+
+
+}
+
+.footer-input{
+    padding: 1%;
+    width: 100%;
+}
+
+
+.footer-v{
+    width: 50%;
+    padding: 0 0 3% 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.b-light{
+    font-weight: 300;
+    font-size: 29px;
+    color: #FFFFFF;
+
+}
+.b-light2{
+    font-weight: 600;
+    font-size: 19px;
+    color: #FFFFFF;
+
+}
+
+
+
+
+
+
+
 
 .g {
     position: absolute;
@@ -51,6 +170,14 @@
 
 }
 
+.title-page {
+    color: white;
+    width: auto;
+    height: 574px;
+    position: relative;
+    z-index: 1;
+}
+
 .title {
     padding-left: 150px;
     width: 643px;
@@ -63,7 +190,7 @@
     line-height: 72px;
 }
 
-.suptitle {
+.subtitle {
     padding-left: 150px;
     width: 643px;
     height: 84px;
@@ -74,6 +201,8 @@
     font-size: 39px;
     line-height: 49px;
 }
+
+
 
 .olive {
     position: relative;
@@ -222,40 +351,27 @@
 
 
 
-.footer{
-    height: 400px;
-    background-color: #9C3CF7;
 
+
+
+
+
+
+
+
+
+
+@media all and (max-width:550px) {
+    .footer-container2{
+        flex-direction: column;
+    }
+    .footer-v{
+        width: 100%;
+        ;
+
+    }
+    .g-vigenere{
+        right: 100%;
+    }
 }
-.footer-container {
-    padding: 5% 10% 4% 10%;
-    height: 62%;
-    width: 90%;
-    display: flex;
 
-}
-
-
-
-.footer-v{
-    width: 50%;
-    padding: 0 0 3% 0;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: flex-start;
-
-}
-
-.b-light{
-    font-weight: 300;
-    font-size: 29px;
-    color: #FFFFFF;
-
-}
-.b-light2{
-    font-weight: 600;
-    font-size: 19px;
-    color: #FFFFFF;
-
-}
