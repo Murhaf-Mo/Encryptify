@@ -66,7 +66,7 @@ const Navbar = () => {
           <Link to="/"><img className="logo" src= {logo} alt='logo' onClick={onClick}/></Link>
           <div></div>
           <div className={'menu'}>
-          <Menu  onClick={onClick} selectedKeys={[current]} mode="horizontal"  items={items} theme={"light"} style={{background:'#27282C', color: '#757578', paddingTop:"2px"}} />
+          <Menu  onClick={onClick} selectedKeys={[current]} mode="horizontal"  items={items} theme={"light"} style={{background:'#27282C', color: '#757578', paddingTop:"2px", fontSize: "var(--step--1)"}} />
           </div>
           <div></div>
 
