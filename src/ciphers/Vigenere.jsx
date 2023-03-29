@@ -116,7 +116,6 @@ function Vigenere() {
     return (<>
             <div className={"cipher-container"}>
                 <img className={"french"} src={frenchStatue} alt={"french statue"}/>
-                <div className={"g-vigenere"}></div>
                 <div className={"cipher-title-container"}>
                     <img src={vigenereLogo} alt={"vigenere-logo"} className={"vigenere-logo"}/>
                     <p className={"cipher-title"}>Vigenère Cipher</p>
@@ -256,17 +255,184 @@ function Vigenere() {
                 </div>
 
 
-                <div id="visualize" style={{background: "#6B57FF",}}>
+                <div id="visualize" style={{background: "#19191C",}}>
+                    <div className={'g-vigenere'}>
+                        <h2>Visualizing the Vigenère cipher</h2>
+                        <div className={'v-grid'}>
+                        <div className={'grid-i'}>
+                            <table className="tg">
+                                <thead>
+                                <tr>
+                                    <th className="tg-7btt">Text</th>
+                                    <th className="tg-amwm">H</th>
+                                    <th className="tg-amwm">E</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">O</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            <p style={{padding:'5%'}} className={"pYou"}> 1. Add the text to the table.</p>
+                        </div>
 
+                        <div className={'grid-i'}>
+                            <table className="tg">
+                                <thead>
+                                <tr>
+                                    <th className="tg-7btt">Text</th>
+                                    <th className="tg-amwm">H</th>
+                                    <th className="tg-amwm">E</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">O</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td className="tg-amwm">Key</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                    <td className="tg-amwm">Y</td>
+                                    <td className="tg-amwm"></td>
+                                    <td className="tg-amwm"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p style={{padding:'5%'}} className={"pYou"}> 2. Add the key underneath.</p>
 
+                        </div>
+                        <div className={'grid-i'}>
+                            <table className="tg">
+                                <thead>
+                                <tr>
+                                    <th className="tg-7btt">Text</th>
+                                    <th className="tg-amwm">H</th>
+                                    <th className="tg-amwm">E</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">O</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td className="tg-amwm">Cipher</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                    <td className="tg-amwm">Y</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p style={{padding:'5%'}} className={"pYou"}> 3. Repeat the key for the length of the tex</p>
 
+                        </div>
 
+                        <div className={'grid-i'}>
+                            <table className="tg">
+                                <thead>
+                                <tr>
+                                    <th className="tg-7btt">Text</th>
+                                    <th className="tg-amwm">H</th>
+                                    <th className="tg-amwm">E</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">O</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td className="tg-amwm">Key</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                    <td className="tg-amwm">Y</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                </tr>
+                                <tr>
+                                    <td className="tg-amwm">Cipher</td>
+                                    <td className="tg-amwm">R</td>
+                                    <td className="tg-amwm"></td>
+                                    <td className="tg-amwm"></td>
+                                    <td className="tg-amwm"></td>
+                                    <td className="tg-amwm"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p style={{padding:'5%'}} className={"pYou"}> 4. Ei = (Pi + Ki) mod 26 for the first letter.</p>
 
+                        </div>
+                        <div className={'grid-i'}>
+                            <table className="tg">
+                                <thead>
+                                <tr>
+                                    <th className="tg-7btt">Text</th>
+                                    <th className="tg-amwm">H</th>
+                                    <th className="tg-amwm">E</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">O</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td className="tg-amwm">Key</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                    <td className="tg-amwm">Y</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                </tr>
+                                <tr>
+                                    <td className="tg-amwm">Cipher</td>
+                                    <td className="tg-amwm">R</td>
+                                    <td className="tg-amwm">I</td>
+                                    <td className="tg-amwm">J</td>
+                                    <td className="tg-amwm">V</td>
+                                    <td className="tg-amwm">S</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p style={{padding:'5%'}} className={"pYou"}> 5. Repeat until the end of the text.</p>
 
+                        </div>
+                        <div className={'grid-i'}>
+                            <table className="tg">
+                                <thead>
+                                <tr>
+                                    <th className="tg-7btt">Text</th>
+                                    <th className="tg-amwm">H</th>
+                                    <th className="tg-amwm">E</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">L</th>
+                                    <th className="tg-amwm">O</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td className="tg-amwm">Cipher</td>
+                                    <td className="tg-amwm">R</td>
+                                    <td className="tg-amwm">I</td>
+                                    <td className="tg-amwm">J</td>
+                                    <td className="tg-amwm">V</td>
+                                    <td className="tg-amwm">S</td>
+                                </tr>
+                                <tr>
+                                    <td className="tg-amwm">Key</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                    <td className="tg-amwm">Y</td>
+                                    <td className="tg-amwm">K</td>
+                                    <td className="tg-amwm">E</td>
+                                </tr>
 
+                                </tbody>
+                            </table>
+                            <p style={{padding:'5%'}} className={"pYou"}>6. You can decrypt the cipher by reversing the process. Di = (Ei – Ki) mod 26</p>
 
-
-
+                        </div>
+                        </div>
+                    </div>
                 </div>
 
 
