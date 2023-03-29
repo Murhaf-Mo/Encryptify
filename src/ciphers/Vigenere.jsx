@@ -255,7 +255,7 @@ function Vigenere() {
                 </div>
 
 
-                <div id="visualize" style={{background: "#19191C",}}>
+                <div id="visualize" style={{background: "#19191C",overflowX:'hidden'}}>
                     <div className={'g-vigenere'}>
                         <h2>Visualizing the Vigenère cipher</h2>
                         <div className={'v-grid'}>
