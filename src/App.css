@@ -77,6 +77,8 @@ h2 {
 
 .menu {
     width: min(470px, 90vw);
+    overflow-x: hidden;
+
 
 }
 

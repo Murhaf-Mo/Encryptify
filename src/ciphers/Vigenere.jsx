@@ -169,7 +169,7 @@ function Vigenere() {
                 </div>
             </div>
 
-            <div>
+            <div style={{overflowX:'hidden'}}>
                 <div className={"cipher-container"} id="cipher">
                     <div className={'small-container'}>
 
