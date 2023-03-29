@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7114c85-480b-423a-a642-328ff8e83301" name="Changes" comment="Initialize project using Create React App">
+      <change afterPath="$PROJECT_DIR$/src/assets/frenchStatue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tableV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/vigenereHimself.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ciphers/Vigenere.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciphers/Vigenere.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +89,7 @@
       <workItem from="1679823716472" duration="41245000" />
       <workItem from="1679928128658" duration="2195000" />
       <workItem from="1680019644618" duration="19937000" />
-      <workItem from="1680068425897" duration="14964000" />
+      <workItem from="1680068425897" duration="25372000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <created>1679780474391</created>
@@ -184,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680083008287</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Initialize project using Create React App">
+      <created>1680083427230</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680083427230</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,17 +246,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize project using Create React App" />
     <option name="LAST_COMMIT_MESSAGE" value="Initialize project using Create React App" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/ciphers/Vigenere.jsx</url>
-          <line>210</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

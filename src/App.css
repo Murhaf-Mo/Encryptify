@@ -39,39 +39,48 @@
 }
 
 
-
-
 * {
     padding: 0;
     margin: 0;
 
 }
+
 h2 {
     font-weight: 600;
     font-size: var(--step-3);
     color: white;
     margin: 0.5rem;
 }
+
 .pme {
-     font-weight: 400;
-     font-size: var(--step-0);
+    font-weight: 400;
+    font-size: var(--step-0);
     color: white;
     width: min(65ch, 90vw);
     padding: 0.5rem;
- }
+}
+
+.pYou {
+    font-weight: 400;
+    font-size: var(--step-0);
+    color: white;
+    padding: 0.5rem 4vw 0.5rem 0.5rem;
+}
 
 .nav {
     color: white;
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
     background-color: #27282c;
-    overflow: hidden;
+    overflow-x: hidden;
 
 }
-.menu{
+
+.menu {
     width: min(470px, 90vw);
 
 }
+
 .logo {
     height: auto;
     width: auto;
@@ -80,20 +89,22 @@ h2 {
 }
 
 
-
-.cipher-container{
+.cipher-container {
     background-color: #19191C;
-    overflow: hidden;
+    overflow-x: hidden;
+
 
 }
+
 .small-container {
     width: min(90vw, 100rem);
     margin-inline: auto;
     padding: 6%;
 
 }
+
 .cipher-title-container {
-    width: clamp(50rem,90vw, 100rem);
+    width: clamp(50rem, 90vw, 100rem);
     margin: auto;
     color: #FFFFFF;
     padding: 6%;
@@ -102,7 +113,7 @@ h2 {
 }
 
 
-.g-vigenere{
+.g-vigenere {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -111,13 +122,13 @@ h2 {
     /*background: radial-gradient(circle, rgba(255,84,71,1) 5%, rgba(132,28,164,1) 33%, rgba(25,25,28,1) 66%);*/
 }
 
-.vigenere-logo{
+.vigenere-logo {
     width: var(--step-8);
     height: var(--step-8);
 }
 
 
-.cipher-title{
+.cipher-title {
     font-style: normal;
     font-weight: 600;
     font-size: var(--step-4);
@@ -132,33 +143,36 @@ h2 {
     width: min(25ch, 90vw);
 }
 
+.french {
+    width: 557px;
+    height: 1566px;
+    position: absolute;
+    z-index: 1;
+    left: 70%;
+    top: 14%;
+
+}
+
+.tableV {
+    width: 545px;
+    height: 545px;
+    padding-top: 4rem;
+}
+
+.vigenereHimself {
+    width: 400px;
+    height: 540px;
+    padding: 3rem;
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer{
+.footer {
     background-color: #9C3CF7;
 
 
 }
+
 .footer-container {
     padding: 5%;
     height: 62%;
@@ -166,8 +180,8 @@ h2 {
     display: flex;
 
 
-
 }
+
 .footer-container2 {
     padding: 5%;
     height: 62%;
@@ -178,13 +192,13 @@ h2 {
 
 }
 
-.footer-input{
+.footer-input {
     padding: 1%;
     width: 100%;
 }
 
 
-.footer-v{
+.footer-v {
     width: 50%;
     padding: 0 0 3% 0;
     display: flex;
@@ -194,36 +208,19 @@ h2 {
 
 }
 
-.b-light{
+.b-light {
     font-weight: 300;
     font-size: var(--step-2);
     color: #FFFFFF;
 
 }
-.b-light2{
+
+.b-light2 {
     font-weight: 600;
     font-size: var(--step-0);
     color: #FFFFFF;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .g {
@@ -273,7 +270,6 @@ h2 {
     font-size: 39px;
     line-height: 49px;
 }
-
 
 
 .olive {
@@ -330,7 +326,7 @@ h2 {
     font-size: var(--step-0);
     align-self: flex-start;
     padding: 1rem;
-    }
+}
 
 .h-white {
     width: 768px;
@@ -423,42 +419,66 @@ h2 {
 }
 
 
-
-
-
-
-.text-input{
+.text-input {
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
 
 }
-.key-grid{
+
+.key-grid {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     padding: 1rem;
-    width: min(80vw,40rem);
+    width: min(80vw, 40rem);
 }
 
 
-
-
-
-@media (max-width:700px) {
-    .footer-container2{
+@media (max-width: 700px) {
+    .footer-container2 {
         flex-direction: column;
     }
-    .footer-v{
+
+    .footer-v {
         width: 100%;
         padding-top: 5%;
-        padding-bottom: 5%;
-        ;
+        padding-bottom: 5%;;
 
     }
 
 
+}
+
+@media (max-width: 1200px) {
+    .french {
+        width: 0;
+        height: 0;
+
+
+    }
+
+    .tableV {
+        width: 70vw;
+        height: auto;
+        padding: 3rem;
+    }
+
+
+    .vigenereHimself {
+        width: 50vw;
+        height: auto;
+
+    }
+
+    .small-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
 
 }
+
+
+
 

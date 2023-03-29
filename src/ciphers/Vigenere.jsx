@@ -1,6 +1,10 @@
 import vigenereLogo from "../assets/vigenere-logo.png";
 import {Anchor, ConfigProvider, Input, Switch} from "antd";
 import {useState} from "react";
+import frenchStatue from "../assets/frenchStatue.png";
+import tableV from "../assets/tableV.png";
+import vigenereHimself from "../assets/vigenereHimself.png"
+
 
 // JavaScript code to implement Vigenere Cipher
 /**
@@ -8,7 +12,7 @@ import {useState} from "react";
  * @param {String} str - character to check
  * @return {object} An array with the character or null if isn't a letter
  */
-function isLetter (str) {
+function isLetter(str) {
     return str.length === 1 && str.match(/[a-zA-Z]/i)
 }
 
@@ -17,7 +21,7 @@ function isLetter (str) {
  * @param {String} character - character to check
  * @return {Boolean} result of the checking
  */
-function isUpperCase (character) {
+function isUpperCase(character) {
     if (character === character.toUpperCase()) {
         return true
     }
@@ -32,7 +36,7 @@ function isUpperCase (character) {
  * @param {String} key - key for encrypt
  * @return {String} result - encrypted string
  */
-function encrypt (message, key) {
+function encrypt(message, key) {
     let result = ''
 
     for (let i = 0, j = 0; i < message.length; i++) {
@@ -57,7 +61,7 @@ function encrypt (message, key) {
  * @param {String} key - key for decrypt
  * @return {String} result - decrypted string
  */
-function decrypt (message, key) {
+function decrypt(message, key) {
     let result = ''
 
     for (let i = 0, j = 0; i < message.length; i++) {
@@ -83,11 +87,11 @@ function decrypt (message, key) {
 // console.log(messageDecrypt) // "Hello World!"
 
 
-function vigenereCipher(boo, str, key){
+function vigenereCipher(boo, str, key) {
     console.log(boo, str, key)
-    if (!boo){
-        return encrypt(str,key)
-    }else{
+    if (!boo) {
+        return encrypt(str, key)
+    } else {
         return decrypt(str, key)
     }
 }
@@ -97,7 +101,6 @@ function Vigenere() {
     const [text, setText] = useState("");
     const [key, setKey] = useState("LEMON");
     const [encrypt, setEncrypt] = useState(false);
-
 
 
     const onChange = (e) => {
@@ -112,6 +115,7 @@ function Vigenere() {
 
     return (<>
             <div className={"cipher-container"}>
+                <img className={"french"} src={frenchStatue} alt={"french statue"}/>
                 <div className={"g-vigenere"}></div>
                 <div className={"cipher-title-container"}>
                     <img src={vigenereLogo} alt={"vigenere-logo"} className={"vigenere-logo"}/>
@@ -169,8 +173,11 @@ function Vigenere() {
             <div>
                 <div className={"cipher-container"} id="cipher">
                     <div className={'small-container'}>
+
                         <h2>What is the Vigenère cipher?</h2>
-                        <p className={'pme'}>The Vigenère cipher is a polyalphabetic substitution cipher. It is a method of encrypting alphabetic text by using a series of different Caesar ciphers based on a keyword.</p>
+                        <p className={'pme'}>The Vigenère cipher is a polyalphabetic substitution cipher. It is a method
+                            of encrypting alphabetic text by using a series of different Caesar ciphers based on a
+                            keyword.</p>
                         <ConfigProvider theme={{
                             token: {
                                 colorTextBase: "#ffffff",
@@ -217,32 +224,80 @@ function Vigenere() {
 
                     </div>
                 </div>
-                <div
-                    id="how-it-works"
-                    style={{
-                        background: "#F4F4F4",
-                    }}>
+                <div id="how-it-works" style={{background: "#EEEEFF",}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <div>
+                            <h2 style={{color: '#19191C'}}>How does the Vigenère cipher work?</h2>
+                            <p className={"pYou"} style={{color: '#19191C',}}>
+                                To use the Vigenère cipher, you first choose a keyword. We then repeat the keyword over
+                                and over again until it matches the length of the message we want to encrypt. Next, we
+                                use each letter of the keyword to shift the letters of the message according to a Caesar
+                                cipher. </p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>
+                                The first letter of the keyword is used to shift the first letter of the message, the
+                                second letter of the keyword is used to shift the second letter of the message, and so
+                                on. To perform the encryption, we use modular arithmetic to add the numerical value of
+                                each letter in the message to the numerical value of the corresponding letter in the
+                                keyword. </p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>
+                                We continue this process for each letter of the message, using the corresponding letter
+                                of the keyword to create a new Caesar cipher for each letter. Once we have encrypted the
+                                entire message, we have created a polyalphabetic cipher that is much more secure than a
+                                simple Caesar cipher, because it is much more difficult to crack using frequency
+                                analysis. </p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>
+                                To decrypt the message, we simply reverse the process. We use the same keyword to create
+                                a series of Caesar ciphers, and we subtract the numerical value of each letter in the
+                                keyword from the numerical value of the corresponding letter in the encrypted message,
+                                using modular arithmetic. This gives us the original plaintext message. </p>
+                        </div>
+                        <img className={'tableV'} src={tableV} alt={'a table of the vinegenre cipher'}/>
+                    </div>
+                </div>
+
+
+                <div id="visualize" style={{background: "#6B57FF",}}>
+
+
+
+
+
+
+
+
+
 
                 </div>
 
 
-                <div
-                    id="visualize"
-                    style={{
+                <div id="history" style={{background: "#19191C"}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <div>
+                            <h2>History</h2>
+                            <p className={"pYou"}>The Vigenère cipher was invented in the mid-16th century by Blaise de
+                                Vigenère, a French diplomat and cryptographer. Vigenère was a contemporary of other
+                                famous cryptographers such as Johannes Trithemius and Giovan Battista Bellaso, and he
+                                was known for his expertise in cryptography and code-breaking.</p>
+                            <p className={"pYou"}>The Vigenère cipher is a development of earlier polyalphabetic ciphers,
+                                such as the Alberti cipher, which used multiple cipher alphabets. The Vigenère cipher
+                                improved on these earlier ciphers by using a repeating keyword to create a different
+                                cipher alphabet for each letter of the plaintext.</p>
+                            <p className={"pYou"}>Vigenère first described his cipher in his book "Traicté des Chiffres"
+                                (Treatise on Ciphers) in 1586. However, the cipher was not widely used until the 19th
+                                century, when it became popular among military and diplomatic organizations. It was used
+                                by the Confederacy during the American Civil War, and by the Union during World War
+                                I.</p>
+                            <p className={"pYou"}>The Vigenère cipher remained in use for several centuries, until the
+                                development of modern cryptographic methods such as the Enigma machine and the
+                                development of computer-based encryption systems. However, it remains an important
+                                historical cipher, and it is still studied today as an example of a polyalphabetic
+                                substitution cipher.</p>
 
-                        background: "#6B57FF",
-                    }}
-                >
-                </div>
+                        </div>
+                        <img className={'vigenereHimself'} src={vigenereHimself} alt={'vigenere Himself'}/>
+                    </div>
 
 
-                <div
-                    id="history"
-                    style={{
-                        background: "#19191C", overflow: "hidden"
-
-                    }}
-                >
                 </div>
             </div>
         </>
