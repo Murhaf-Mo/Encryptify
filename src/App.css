@@ -46,12 +46,26 @@
     margin: 0;
 
 }
+h2 {
+    font-weight: 600;
+    font-size: var(--step-3);
+    color: white;
+    margin: 0.5rem;
+}
+.pme {
+     font-weight: 400;
+     font-size: var(--step-0);
+    color: white;
+    width: min(65ch, 90vw);
+    padding: 0.5rem;
+ }
 
 .nav {
     color: white;
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
     background-color: #27282c;
+    overflow: hidden;
 
 }
 .menu{
@@ -65,35 +79,36 @@
     max-width: 48px;
 }
 
-.nav a {
-    color: inherit;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
+
 
 .cipher-container{
     background-color: #19191C;
+    overflow: hidden;
+
+}
+.small-container {
+    width: min(90vw, 100rem);
+    margin-inline: auto;
+    padding: 6%;
 
 }
 .cipher-title-container {
-    overflow: hidden;
-    width: min(90vw, 100rem);
+    width: clamp(50rem,90vw, 100rem);
     margin: auto;
     color: #FFFFFF;
     padding: 6%;
+    background: radial-gradient(42.43% 167.01% at 70.49% 50%, #F5B646 7.81%, #E1742B 25.52%, #AE3420 42.71%, #71234F 72.92%, #19191C 100%)
+
 }
 
 
 .g-vigenere{
     position: relative;
     z-index: 1;
-    width: max(2000px,100%);
+    width: 100%;
     height: 100%;
-    right: 5vw;
-    background: rgb(255,84,71);
-    background: radial-gradient(circle, rgba(255,84,71,1) 5%, rgba(132,28,164,1) 33%, rgba(25,25,28,1) 66%);
-
+    /*background: rgb(255,84,71);*/
+    /*background: radial-gradient(circle, rgba(255,84,71,1) 5%, rgba(132,28,164,1) 33%, rgba(25,25,28,1) 66%);*/
 }
 
 .vigenere-logo{
@@ -114,8 +129,10 @@
     font-style: normal;
     font-weight: 300;
     font-size: var(--step-1);
-    width: 25ch;
+    width: min(25ch, 90vw);
 }
+
+
 
 
 
@@ -189,6 +206,18 @@
     color: #FFFFFF;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -298,9 +327,10 @@
 .p-input {
     color: white;
     font-weight: 400;
-    font-size: 19px;
-    padding-right: 10px;
-}
+    font-size: var(--step-0);
+    align-self: flex-start;
+    padding: 1rem;
+    }
 
 .h-white {
     width: 768px;
@@ -397,8 +427,19 @@
 
 
 
+.text-input{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
 
-
+}
+.key-grid{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 1rem;
+    width: min(80vw,40rem);
+}
 
 
 
@@ -415,9 +456,8 @@
         ;
 
     }
-    .g-vigenere{
-        right: 100%;
-    }
+
+
 
 
 }
