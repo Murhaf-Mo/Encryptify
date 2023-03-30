@@ -11,6 +11,9 @@ function Ciphers() {
           <Link to="/ciphers/caesar" rel="noopener noreferrer">
             <Button>Caesar Cipher</Button>
           </Link>
+            <Link to="/ciphers/vigenere" rel="noopener noreferrer">
+                <Button>vigenere Cipher</Button>
+            </Link>
         </Space>
     </>
 
