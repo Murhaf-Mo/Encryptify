@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7114c85-480b-423a-a642-328ff8e83301" name="Changes" comment="Initialize project using Create React App" />
+    <list default="true" id="a7114c85-480b-423a-a642-328ff8e83301" name="Changes" comment="Initialize project using Create React App">
+      <change afterPath="$PROJECT_DIR$/src/assets/XORLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/alenTuring.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/boole.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/gilbertVernam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/xor.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/xorCipherGif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ciphers/XOR.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ciphers/Caesar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciphers/Caesar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ciphers/Vigenere.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciphers/Vigenere.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Ciphers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ciphers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/scroll.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +35,7 @@
         <option value="CSS File" />
         <option value="tsconfig.json" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,35 +59,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/murhaf/Desktop/tryingShit/mynewapp/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/murhaf/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/223.8617.44/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/murhaf/Desktop/tryingShit/mynewapp/src/assets",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "ts.external.directory.path": "/Users/murhaf/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/231.8109.174/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/ciphers" />
-      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/ciphers" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/ciphers" />
     </key>
   </component>
@@ -102,6 +122,11 @@
       <workItem from="1680173643790" duration="1284000" />
       <workItem from="1680178686165" duration="28000" />
       <workItem from="1680249663157" duration="18476000" />
+      <workItem from="1680278466673" duration="765000" />
+      <workItem from="1680340438502" duration="1113000" />
+      <workItem from="1680957067472" duration="5352000" />
+      <workItem from="1681054688403" duration="5963000" />
+      <workItem from="1681068051529" duration="16919000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <created>1679780474391</created>
@@ -257,19 +282,37 @@
       <option name="project" value="LOCAL" />
       <updated>1680272092221</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Initialize project using Create React App">
+      <created>1680278122548</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1680278122548</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Initialize project using Create React App">
+      <created>1680278505187</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680278505187</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="6bd006a4-37ae-4bc6-9cb8-a403a3ac67a1" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="6bd006a4-37ae-4bc6-9cb8-a403a3ac67a1">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -288,6 +331,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
@@ -296,11 +340,6 @@
             <State />
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="6bd006a4-37ae-4bc6-9cb8-a403a3ac67a1" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>

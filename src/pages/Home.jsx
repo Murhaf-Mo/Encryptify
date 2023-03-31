@@ -62,12 +62,17 @@ function Home() {
         <div className={"home-page"}>
             <div className={"canvas"}>
                 <p className={'home-title'}>Encryptify</p>
-                <Spline scene="https://prod.spline.design/DzXRUvEGSohQ8-rN/scene.splinecode"  />
+                   {/*<Spline scene="https://prod.spline.design/DzXRUvEGSohQ8-rN/scene.splinecode" />*/}
+                {/*<Spline scene="https://prod.spline.design/EIrpdyOLD3IQTFEK/scene.splinecode" />*/}
+                <Spline scene="https://prod.spline.design/N8-MpMbN4h0u2f9d/scene.splinecode" />
+
+
+
             </div>
             <div style={{backgroundColor: 'black', paddingTop: "5%",paddingBottom: "5%"}}>
                 <ParallaxText baseVelocity={-2}>HOW WE PROTECT THE INTERNET</ParallaxText>
                 <Cards/>
-                <ParallaxText baseVelocity={2}>FROM NOW AND FROM THE FUTURE</ParallaxText>
+                <ParallaxText baseVelocity={2}>NOW AND FROM THE FUTURE</ParallaxText>
             </div>
             <Facts/>
         </div>

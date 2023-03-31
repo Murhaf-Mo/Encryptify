@@ -65,7 +65,6 @@ function Caesar() {
                 <img className="olive" src={olive} alt="olive"/>
                 <h1 className="title"> Caesar Cipher</h1>
                 <p className="subtitle">A classic example of ancient cryptography</p>
-                <img className="caesar" src={caesar} alt="caesar"/>
 
             </div>
 
@@ -150,6 +149,9 @@ function Caesar() {
                                 fixed number of positions to produce a substitution alphabet.
                             </p>
                         </div>
+                        <img className="caesar" src={caesar} alt="caesar"/>
+
+                        <div style={{zIndex:2}}>
                         <ConfigProvider
                             theme={{
                                 token: {
@@ -240,8 +242,11 @@ function Caesar() {
                                     value={caesarShift(text, key)}
                                 />
                                 </ConfigProvider>
+
                             </div>
+
                         </ConfigProvider>
+                        </div>
 
                     </div>
                     <div

@@ -10,6 +10,7 @@ import Quantum from "./pages/Quantum";
 import Caesar from './ciphers/Caesar';
 import Footer from "./components/Footer";
 import Vigenere from "./ciphers/Vigenere";
+import XOR from "./ciphers/XOR";
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
                     <Route path="/quantum" element={<Quantum/>}/>
                     <Route path="/ciphers/caesar" element={<Caesar/>}/>
                     <Route path="/ciphers/vigenere" element={<Vigenere/>}/>
+                    <Route path="/ciphers/xor" element={<XOR/>}/>
+
                 </Routes>
             </div>
                 <Footer/>

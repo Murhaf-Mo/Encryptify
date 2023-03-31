@@ -223,7 +223,7 @@ function Vigenere() {
 
                     </div>
                 </div>
-                <div id="how-it-works" style={{background: "#EEEEFF",}}>
+                <div id="how-it-works" style={{background: "white",}}>
                     <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
                         <div>
                             <h2 style={{color: '#19191C'}}>How does the Vigenère cipher work?</h2>
@@ -436,24 +436,24 @@ function Vigenere() {
                 </div>
 
 
-                <div id="history" style={{background: "#19191C"}}>
+                <div id="history" style={{background: "white"}}>
                     <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
                         <div>
-                            <h2>History</h2>
-                            <p className={"pYou"}>The Vigenère cipher was invented in the mid-16th century by Blaise de
+                            <h2 style={{color:'black'}}>History</h2>
+                            <p className={"pYou"} style={{color:'black'}}>The Vigenère cipher was invented in the mid-16th century by Blaise de
                                 Vigenère, a French diplomat and cryptographer. Vigenère was a contemporary of other
                                 famous cryptographers such as Johannes Trithemius and Giovan Battista Bellaso, and he
                                 was known for his expertise in cryptography and code-breaking.</p>
-                            <p className={"pYou"}>The Vigenère cipher is a development of earlier polyalphabetic ciphers,
+                            <p className={"pYou"} style={{color:'black'}}>The Vigenère cipher is a development of earlier polyalphabetic ciphers,
                                 such as the Alberti cipher, which used multiple cipher alphabets. The Vigenère cipher
                                 improved on these earlier ciphers by using a repeating keyword to create a different
                                 cipher alphabet for each letter of the plaintext.</p>
-                            <p className={"pYou"}>Vigenère first described his cipher in his book "Traicté des Chiffres"
+                            <p className={"pYou"} style={{color:'black'}}>Vigenère first described his cipher in his book "Traicté des Chiffres"
                                 (Treatise on Ciphers) in 1586. However, the cipher was not widely used until the 19th
                                 century, when it became popular among military and diplomatic organizations. It was used
                                 by the Confederacy during the American Civil War, and by the Union during World War
                                 I.</p>
-                            <p className={"pYou"}>The Vigenère cipher remained in use for several centuries, until the
+                            <p className={"pYou"} style={{color:'black'}}>The Vigenère cipher remained in use for several centuries, until the
                                 development of modern cryptographic methods such as the Enigma machine and the
                                 development of computer-based encryption systems. However, it remains an important
                                 historical cipher, and it is still studied today as an example of a polyalphabetic
