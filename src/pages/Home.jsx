@@ -67,7 +67,7 @@ function Home() {
             <div style={{backgroundColor: 'black', paddingTop: "5%",paddingBottom: "5%"}}>
                 <ParallaxText baseVelocity={-2}>HOW WE PROTECT THE INTERNET</ParallaxText>
                 <Cards/>
-                <ParallaxText baseVelocity={2}>FROM NOW AND FROM THE FUTURE</ParallaxText>
+                <ParallaxText baseVelocity={2}>NOW AND FROM THE FUTURE</ParallaxText>
             </div>
             <Facts/>
         </div>
