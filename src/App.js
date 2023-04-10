@@ -18,21 +18,20 @@ function App() {
         <>
 
 
-                <Navbar/>
             <div>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/applications" element={<Applications/>}/>
-                    <Route path="/challenges" element={<Challenges/>}/>
-                    <Route path="/ciphers" element={<Ciphers/>}/>
-                    <Route path="/quantum" element={<Quantum/>}/>
-                    <Route path="/ciphers/caesar" element={<Caesar/>}/>
-                    <Route path="/ciphers/vigenere" element={<Vigenere/>}/>
-                    <Route path="/ciphers/xor" element={<XOR/>}/>
+                    <Route path="/applications" element={<div><Navbar/><Applications/></div>}/>
+                    <Route path="/challenges" element={<div><Navbar/><Challenges/></div>}/>
+                    <Route path="/ciphers" element={<div><Navbar/><Ciphers/></div>}/>
+                    <Route path="/quantum" element={<div><Navbar/><Quantum/></div>}/>
+                    <Route path="/ciphers/caesar" element={<div><Navbar/><Caesar/></div>}/>
+                    <Route path="/ciphers/vigenere" element={<div><Navbar/><Vigenere/></div>}/>
+                    <Route path="/ciphers/xor" element={<div><Navbar/><XOR/></div>}/>
 
                 </Routes>
             </div>
-                <Footer/>
+            <Footer/>
         </>
 
 
