@@ -728,3 +728,11 @@ tr:nth-child {
     height: auto;
     padding: 1rem 1rem 1rem 8%;
 }
+
+.cipher-title-container-bit {
+    width: clamp(50rem, 90vw, 100rem);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 6%;
+    background: linear-gradient(270.92deg, #83F2FA 8.26%, #7AB6F5 23.2%, #828CF5 33.3%, #9164F5 50.44%, #1A1A1D 84.26%);
+}
