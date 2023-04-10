@@ -67,6 +67,9 @@ function Ciphers() {
             <Link to="/ciphers/xor" rel="noopener noreferrer">
                 <Button>XOR Cipher</Button>
             </Link>
+            <Link to="/ciphers/bit-shift" rel="noopener noreferrer">
+                <Button>Bit Shift</Button>
+            </Link>
         </Space>
     </div>
 
