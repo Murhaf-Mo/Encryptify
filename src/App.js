@@ -11,7 +11,6 @@ import Caesar from './ciphers/Caesar';
 import Footer from "./components/Footer";
 import Vigenere from "./ciphers/Vigenere";
 import XOR from "./ciphers/XOR";
-import BitShift from "./ciphers/BitShift";
 
 function App() {
 
@@ -29,7 +28,6 @@ function App() {
                     <Route path="/ciphers/caesar" element={<div><Navbar/><Caesar/></div>}/>
                     <Route path="/ciphers/vigenere" element={<div><Navbar/><Vigenere/></div>}/>
                     <Route path="/ciphers/xor" element={<div><Navbar/><XOR/></div>}/>
-                    <Route path="/ciphers/bit-shift" element={<div><Navbar/><BitShift/></div>}/>
 
                 </Routes>
             </div>

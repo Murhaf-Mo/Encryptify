@@ -93,10 +93,17 @@ function XOR() {
     return (<>
             <div className={"cipher-container"}>
                 <img className={"boole"} src={boole} alt={"Gorge Boole"}/>
+<<<<<<< HEAD
                 <div className={"cipher-title-container-bit"}>
                     <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
                     <p className={"cipher-title"}>Bit Shift Cipher</p>
                     <p className={"cipher-subtitle"}>A simple encryption technique that operates on the binary representation.</p>
+=======
+                <div className={"cipher-title-container-XOR"}>
+                    <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
+                    <p className={"cipher-title"}>XOR Cipher</p>
+                    <p className={"cipher-subtitle"}>A symmetric key encryption cipher that is simple yet powerful.</p>
+>>>>>>> origin/main
                 </div>
             </div>
             <div className={'cipher-container'}>
@@ -150,8 +157,15 @@ function XOR() {
                 <div className={"cipher-container"} id="cipher">
                     <div className={'small-container'}>
 
+<<<<<<< HEAD
                         <h2>What is the Bit Shift cipher?</h2>
                         <p className={'pme'}>The Bitshift Cipher is a type of substitution cipher, as each character in the plaintext is replaced with a different character based on its binary representation. </p>
+=======
+                        <h2>What is the XOR cipher?</h2>
+                        <p className={'pme'}>The XOR cipher is a simple encryption algorithm that uses the XOR
+                            (exclusive or) operator. In this cipher, a key is used to perform the XOR operation on each
+                            character of the plaintext to produce the corresponding character of the ciphertext.</p>
+>>>>>>> origin/main
                         <ConfigProvider theme={{
                             token: {
                                 colorTextBase: "#ffffff",
