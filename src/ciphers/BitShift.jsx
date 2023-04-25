@@ -11,7 +11,7 @@ import gilbertVernam from '../assets/gilbertVernam.jpg';
 // };
 function encode(text) {
     let array = [];
-    for (let i = 0; i < text.length; i++){
+    for (let i = 0; i < text.length; i++) {
         array.push(text[i].charCodeAt(0))
     }
     return array
@@ -19,14 +19,12 @@ function encode(text) {
 
 
 // eslint-disable-next-line no-extend-native
-String.prototype.decrypt = function(key) {
+String.prototype.decrypt = function (key) {
     const keyEncoded = encode(key)
     if (typeof atob === 'undefined') {
         global.atob = b64Encoded => new Buffer(b64Encoded, 'base64').toString();
     }
-    let array = JSON.parse(
-        atob(this.toString())
-    )
+    let array = JSON.parse(atob(this.toString()))
     let decrypted = array.map(x => {
         keyEncoded.reverse()
         x = parseInt(x)
@@ -57,22 +55,21 @@ function encrypt(text, key) {
 }
 
 
-
 function bitShiftCipher(boo, str, key) {
     console.log(boo, str, key)
     if (!boo) {
         return encrypt(str, key)
     } else {
-        try{
-            return str.decrypt( key)
-        }
-        catch (e){
+        try {
+            return str.decrypt(key)
+        } catch (e) {
             // info();
 
         }
     }
 }
-function XOR() {
+
+export default function BitShift() {
     const {TextArea} = Input;
     const [text, setText] = useState("");
     const [key, setKey] = useState("Cool");
@@ -90,21 +87,14 @@ function XOR() {
     };
 
 
-    return (<>
-            <div className={"cipher-container"}>
-                <img className={"boole"} src={boole} alt={"Gorge Boole"}/>
-<<<<<<< HEAD
-                <div className={"cipher-title-container-bit"}>
-                    <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
-                    <p className={"cipher-title"}>Bit Shift Cipher</p>
-                    <p className={"cipher-subtitle"}>A simple encryption technique that operates on the binary representation.</p>
-=======
-                <div className={"cipher-title-container-XOR"}>
-                    <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
-                    <p className={"cipher-title"}>XOR Cipher</p>
-                    <p className={"cipher-subtitle"}>A symmetric key encryption cipher that is simple yet powerful.</p>
->>>>>>> origin/main
-                </div>
+    return (
+        <div className={"cipher-container"}>
+            <img className={"boole"} src={boole} alt={"Gorge Boole"}/>
+            <div className={"cipher-title-container-bit"}>
+                <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
+                <p className={"cipher-title"}>Bit Shift Cipher</p>
+                <p className={"cipher-subtitle"}>A simple encryption technique that operates on the binary
+                    representation.</p>
             </div>
             <div className={'cipher-container'}>
                 <div className={'small-container'}
@@ -157,15 +147,11 @@ function XOR() {
                 <div className={"cipher-container"} id="cipher">
                     <div className={'small-container'}>
 
-<<<<<<< HEAD
                         <h2>What is the Bit Shift cipher?</h2>
-                        <p className={'pme'}>The Bitshift Cipher is a type of substitution cipher, as each character in the plaintext is replaced with a different character based on its binary representation. </p>
-=======
-                        <h2>What is the XOR cipher?</h2>
-                        <p className={'pme'}>The XOR cipher is a simple encryption algorithm that uses the XOR
-                            (exclusive or) operator. In this cipher, a key is used to perform the XOR operation on each
-                            character of the plaintext to produce the corresponding character of the ciphertext.</p>
->>>>>>> origin/main
+                        <p className={'pme'}>The Bitshift Cipher is a type of substitution cipher, as each character in
+                            the plaintext is replaced with a different character based on its binary
+                            representation. </p>
+
                         <ConfigProvider theme={{
                             token: {
                                 colorTextBase: "#ffffff",
@@ -243,13 +229,12 @@ function XOR() {
 
 
                 <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
-                    <div className={'g-vigenere'} >
-                    <h2 style={{color:'black'}}>Visualizing the Vigenère cipher</h2>
+                    <div className={'g-vigenere'}>
+                        <h2 style={{color: 'black'}}>Visualizing the Vigenère cipher</h2>
                         <img className={'xorVis'} src={xorCipherGif} alt={'a visualisation of the xor cipher'}/>
 
 
                     </div>
-
 
 
                 </div>
@@ -258,11 +243,23 @@ function XOR() {
                 <div id="history" style={{background: "#fcfcff"}}>
                     <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
                         <div>
-                            <h2 style={{color:'black'}}>History</h2>
-                            <p className={"pYou"} style={{color:'black'}}>The XOR cipher, also known as the Vernam cipher, is a type of encryption that was invented in 1917 by Gilbert Vernam, an American telegraph engineer. Vernam's original invention used a paper tape that was punched with a random sequence of holes, which were used as the key for the encryption process.</p>
-                            <p className={"pYou"} style={{color:'black'}}>The XOR cipher was initially used for telegraphy and later for teletype systems. During World War II, the cipher was used by the United States for secure communications, particularly for messages transmitted over the transatlantic cable.</p>
-                            <p className={"pYou"} style={{color:'black'}}>In the 1950s and 1960s, the XOR cipher was used for computer encryption, particularly for military and diplomatic communications. However, the cipher was eventually found to be vulnerable to certain types of attacks, such as known plaintext attacks, where an attacker has access to both the encrypted message and the original message.</p>
-                            <p className={"pYou"} style={{color:'black'}}>Despite its vulnerabilities, the XOR cipher remains an important part of cryptography history and continues to be used in certain contexts, particularly as a component of more complex encryption algorithms.</p>
+                            <h2 style={{color: 'black'}}>History</h2>
+                            <p className={"pYou"} style={{color: 'black'}}>The XOR cipher, also known as the Vernam
+                                cipher, is a type of encryption that was invented in 1917 by Gilbert Vernam, an American
+                                telegraph engineer. Vernam's original invention used a paper tape that was punched with
+                                a random sequence of holes, which were used as the key for the encryption process.</p>
+                            <p className={"pYou"} style={{color: 'black'}}>The XOR cipher was initially used for
+                                telegraphy and later for teletype systems. During World War II, the cipher was used by
+                                the United States for secure communications, particularly for messages transmitted over
+                                the transatlantic cable.</p>
+                            <p className={"pYou"} style={{color: 'black'}}>In the 1950s and 1960s, the XOR cipher was
+                                used for computer encryption, particularly for military and diplomatic communications.
+                                However, the cipher was eventually found to be vulnerable to certain types of attacks,
+                                such as known plaintext attacks, where an attacker has access to both the encrypted
+                                message and the original message.</p>
+                            <p className={"pYou"} style={{color: 'black'}}>Despite its vulnerabilities, the XOR cipher
+                                remains an important part of cryptography history and continues to be used in certain
+                                contexts, particularly as a component of more complex encryption algorithms.</p>
 
 
                         </div>
@@ -272,10 +269,9 @@ function XOR() {
 
                 </div>
             </div>
-        </>
+        </div>
 
-    )
-}
+        )
+        }
 
-export default XOR;
 

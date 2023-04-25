@@ -191,7 +191,7 @@ function Vigenere() {
                             },
                         }}>
                             <div className={"text-input"}>
-                                <div className>
+                                <div >
                                     <p className="p-input">Plain Text</p>
                                     <TextArea style={{height: 220, width: "min(80vw,40rem)",}}
                                               onChange={onChange}

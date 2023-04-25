@@ -7,10 +7,12 @@ import Applications from "./pages/Applications";
 import Challenges from "./pages/Challenges";
 import Ciphers from "./pages/Ciphers";
 import Quantum from "./pages/Quantum";
-import Caesar from './ciphers/Caesar';
+// import Caesar from './ciphers/Caesar';
 import Footer from "./components/Footer";
 import Vigenere from "./ciphers/Vigenere";
 import XOR from "./ciphers/XOR";
+import BitShift from "./ciphers/BitShift";
+import Caesar2 from "./ciphers/Caesar2";
 
 function App() {
 
@@ -25,9 +27,10 @@ function App() {
                     <Route path="/challenges" element={<div><Navbar/><Challenges/></div>}/>
                     <Route path="/ciphers" element={<div><Navbar/><Ciphers/></div>}/>
                     <Route path="/quantum" element={<div><Navbar/><Quantum/></div>}/>
-                    <Route path="/ciphers/caesar" element={<div><Navbar/><Caesar/></div>}/>
+                    <Route path="/ciphers/caesar" element={<div><Navbar/><Caesar2/></div>}/>
                     <Route path="/ciphers/vigenere" element={<div><Navbar/><Vigenere/></div>}/>
                     <Route path="/ciphers/xor" element={<div><Navbar/><XOR/></div>}/>
+                    <Route path="/ciphers/bit-shift" element={<div><Navbar/><BitShift/></div>}/>
 
                 </Routes>
             </div>
