@@ -9,8 +9,7 @@ import Spline from '@splinetool/react-spline';
 import {Link} from "react-router-dom";
 
 
-const Cards = () => (
-    <ConfigProvider theme={{
+const Cards = () => (<ConfigProvider theme={{
         token: {
             colorTextBase: "#ffffff",
             colorBgBase: "#19191c",
@@ -25,12 +24,11 @@ const Cards = () => (
         <div className={'h-grid'}>
             <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'h-grid-i'}>
-
                     <div>
                         <img src={cube} alt={'cube'} className={'h-logo'}/>
                         <p className={'card-title'}>Ciphers</p>
                         <p className={'card-sub'}>Learn about the kinds of encryption algorithms and ciphers, how they
-                            work, and try out them yourself.</p>
+                            work, and try them out yourself.</p>
                     </div>
                 </Card>
             </Link>
@@ -40,7 +38,7 @@ const Cards = () => (
                     <div>
                         <img src={appLogo} alt={'cube'} className={'h-logo'}/>
                         <p className={'card-title'}>Applications</p>
-                        <p className={'card-sub'}>Learn where we are using encryption and the way it’s protecting our
+                        <p className={'card-sub'}>Learn where we are using encryption and the ways it’s protecting our
                             privacy and security.</p>
                     </div>
                 </Card>
@@ -51,7 +49,7 @@ const Cards = () => (
                     <div>
                         <img src={puzzle} alt={'cube'} className={'h-logo'}/>
                         <p className={'card-title'}>Challenges</p>
-                        <p className={'card-sub'}>Participate in challenges where test yourself and try decrypting
+                        <p className={'card-sub'}>Participate in challenges where you test yourself and try decrypting
                             ciphers from the given hint.</p>
                     </div>
                 </Card>
@@ -68,8 +66,7 @@ const Cards = () => (
                 </Card>
             </Link>
         </div>
-    </ConfigProvider>
-);
+    </ConfigProvider>);
 
 
 function Home() {

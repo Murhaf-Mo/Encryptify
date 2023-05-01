@@ -92,7 +92,7 @@ function Challenge1() {
                 console.log('nothing');
             }
             else {
-                console.log('wrong nigga boy');
+                console.log('wrong');
             }
 
         }
