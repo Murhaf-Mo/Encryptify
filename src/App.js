@@ -16,6 +16,7 @@ import Caesar2 from "./ciphers/Caesar2";
 import HashingApp from "./apps/HashingApp";
 import CommunicationApp from "./apps/CommunicationApp";
 import FileEncryption from "./apps/FileEncryption";
+import AES from "./ciphers/aes";
 
 function App() {
 
@@ -37,6 +38,8 @@ function App() {
                     <Route path="/ciphers/vigenere" element={<div><Navbar/><Vigenere/></div>}/>
                     <Route path="/ciphers/xor" element={<div><Navbar/><XOR/></div>}/>
                     <Route path="/ciphers/bit-shift" element={<div><Navbar/><BitShift/></div>}/>
+                    <Route path="/ciphers/aes" element={<div><Navbar/><AES/></div>}/>
+
 
                     <Route path="/challenges" element={<div><Navbar/><Challenges/></div>}/>
                     <Route path="/quantum" element={<div><Navbar/><Quantum/></div>}/>

@@ -49,6 +49,7 @@ export default function Facts() {
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
+
         restDelta: 0.001
     });
 

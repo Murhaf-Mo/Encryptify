@@ -60,9 +60,9 @@ function XOR() {
 
     return (<>
             <div className={"cipher-container"}>
-                <img className={"boole"} src={boole} alt={"Gorge Boole"}/>
+                <img className={"boole"} src={boole} alt={"Gorge Boole"} loading="lazy"/>
                 <div className={"cipher-title-container-XOR"}>
-                    <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
+                    <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"} loading="lazy"/>
                     <p className={"cipher-title"}>XOR Cipher</p>
                     <p className={"cipher-subtitle"}>A symmetric key encryption cipher that is simple yet powerful.</p>
                 </div>
@@ -195,7 +195,7 @@ function XOR() {
                                 typically used instead. However, the XOR cipher is still used in some applications where
                                 simplicity and speed are more important than security. </p>
                         </div>
-                        <img className={'tableX'} src={xorComp} alt={'xor cipher visualisation'}/>
+                        <img className={'tableX'} src={xorComp} alt={'xor cipher visualisation'} loading="lazy"/>
                     </div>
                 </div>
 
@@ -203,7 +203,7 @@ function XOR() {
                 <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
                     <div className={'g-vigenere'} >
                     <h2 style={{color:'black'}}>Visualizing the Vigenère cipher</h2>
-                        <img className={'xorVis'} src={xorCipherGif} alt={'a visualisation of the xor cipher'}/>
+                        <img className={'xorVis'} src={xorCipherGif} alt={'a visualisation of the xor cipher'} loading="lazy"/>
 
 
                     </div>
@@ -224,7 +224,7 @@ function XOR() {
 
 
                         </div>
-                        <img className={'vigenereHimself'} src={gilbertVernam} alt={'Gilbert Vernam'}/>
+                        <img className={'vigenereHimself'} src={gilbertVernam} alt={'Gilbert Vernam'} loading="lazy"/>
                     </div>
 
 

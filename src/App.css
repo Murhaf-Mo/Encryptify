@@ -526,64 +526,6 @@ h2 {
 }
 
 
-@media (max-width: 700px) {
-    .footer-container2 {
-        flex-direction: column;
-    }
-
-    .footer-v {
-        width: 100%;
-        padding-top: 5%;
-        padding-bottom: 5%;;
-
-    }
-
-
-}
-
-@media (max-width: 1500px) {
-    .french {
-        display: none;
-
-
-    }
-
-    .boole {
-        display: none;
-
-    }
-
-    .tableV {
-        width: 70vw;
-        height: auto;
-        padding: 3rem;
-    }
-
-    .tableX {
-        width: 70vw;
-        height: auto;
-        padding: 3rem;
-    }
-    .app-img{
-display: none;
-    }
-
-
-    .vigenereHimself {
-        width: 50vw;
-        height: auto;
-
-    }
-
-    .small-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .cube-canvas{
-display: none;
-    }
-
-}
 
 
 .tg {
@@ -798,12 +740,13 @@ tr:nth-child {
     text-align: justify;
 }
 
-.cube-canvas{
+.cube-canvas {
     height: 70rem;
     width: 60rem;
     left: 50%;
     position: absolute;
 }
+
 .char {
     font-weight: 600;
     font-size: var(--step-6);
@@ -812,52 +755,215 @@ tr:nth-child {
 
 
 }
-.animated-text-q{
+
+.animated-text-q {
     position: absolute;
     z-index: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.quantum-container{
+
+.quantum-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.applications-container{
+.applications-container {
 
     background-color: black;
     color: white;
 }
-.applications-grid{
+
+.applications-grid {
 
 }
-.app-grid-i{
+
+.app-grid-i {
     margin: 4% 4% 8%;
 }
-.app-img{
+
+.app-img {
     width: 40%;
     height: 40%;
     padding-left: 4%;
 }
-.app-card-title{
+
+.app-card-title {
     font-size: var(--step-2);
     font-weight: bold;
 }
-.app-card-sub{
+
+.app-card-sub {
     font-size: var(--step-0);
     padding-top: 0.7em;
 }
-.image-container{
+
+.image-container {
     width: 40%;
     padding: 3%;
 }
-.encrypted-image{
+
+.encrypted-image {
     width: 100%;
 }
-.image-name{
+
+.image-name {
     padding: 0.5em;
     font-size: var(--step-2);
+}
+
+.ch-logo {
+    width: var(--step-5);
+    height: var(--step-5);
+    padding-bottom: 5px;
+    object-fit: cover;
+}
+.ch-logo-1 {
+    width: var(--step-4);
+    height: var(--step-4);
+    padding-bottom: 5px;
+    object-fit: cover;
+}
+.ch-logo-2 {
+    width: var(--step-5);
+    height: var(--step-4);
+    padding-bottom: 5px;
+    object-fit: cover;
+}
+.ch-logo-3 {
+    width: var(--step-5);
+    height: var(--step-1);
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    object-fit: cover;
+}
+
+.ch-title {
+    font-size: var(--step-2);
+    font-weight: bold;
+}
+
+.ch-sub {
+    font-size: var(--step-0);
+
+}
+
+.ch-i {
+    width: 500px;
+    height: 240px;
+}
+
+.ch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    justify-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*hello media down there*/
+
+
+
+
+@media (max-width: 1500px) {
+    .french {
+        display: none;
+
+
+    }
+    .ch-i {
+        width: 400px;
+        height: 250px;
+    }
+    .ch-grid {
+        grid-template-columns: 1fr;
+
+    }
+
+    .boole {
+        display: none;
+
+    }
+
+    .tableV {
+        width: 70vw;
+        height: auto;
+        padding: 3rem;
+    }
+
+    .tableX {
+        width: 70vw;
+        height: auto;
+        padding: 3rem;
+    }
+
+    .app-img {
+        display: none;
+    }
+
+
+    .vigenereHimself {
+        width: 50vw;
+        height: auto;
+
+    }
+
+    .small-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cube-canvas {
+        display: none;
+    }
+    .ch-logo-3 {
+        width: var(--step-5);
+        height: var(--step-1);
+        padding-top: 0.5em;
+        padding-bottom: 1em;
+        object-fit: cover;
+    }
+
+}
+@media (max-width: 700px) {
+    .footer-container2 {
+        flex-direction: column;
+    }
+
+    .footer-v {
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;;
+
+    }
+    .ch-i {
+        width: 300px;
+        height: 200px;
+    }
+    .small-container{
+        padding-top: 3em;
+        padding-bottom: 3em;
+
+    }
+
+
+
 }

@@ -1,8 +1,13 @@
-import React, { useMemo, useRef } from 'react'
-import { Canvas, useFrame } from 'react-three-fiber'
+import React, {useMemo, useRef} from 'react'
+import {Canvas, useFrame} from 'react-three-fiber'
 import * as THREE from 'three'
 import AnimatedText from "../components/AnimatedText";
 import {motion, useScroll, useSpring} from "framer-motion";
+import qf from '../assets/q1.gif'
+import {Anchor, ConfigProvider, InputNumber} from "antd";
+import xorComp from "../assets/xor.webp";
+import xorCipherGif from "../assets/xorCipherGif.gif";
+import gilbertVernam from "../assets/gilbertVernam.jpg";
 
 const roundedSquareWave = (t, delta, a, f) => {
     return ((3 * a) / Math.PI) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
@@ -10,7 +15,7 @@ const roundedSquareWave = (t, delta, a, f) => {
 
 function Dots() {
     const ref = useRef()
-    const { vec, transform, positions, distances } = useMemo(() => {
+    const {vec, transform, positions, distances} = useMemo(() => {
         const vec = new THREE.Vector3()
         const transform = new THREE.Matrix4()
 
@@ -35,9 +40,9 @@ function Dots() {
         const distances = positions.map((pos) => {
             return pos.length() + Math.cos(pos.angleTo(right) * 8) * 0.5
         })
-        return { vec, transform, positions, distances }
+        return {vec, transform, positions, distances}
     }, [])
-    useFrame(({ clock }) => {
+    useFrame(({clock}) => {
         for (let i = 0; i < 10000; ++i) {
             const dist = distances[i]
 
@@ -58,45 +63,110 @@ function Dots() {
         }
         ref.current.instanceMatrix.needsUpdate = true
     })
-    return (
-        <instancedMesh ref={ref} args={[null, null, 10000]}>
-            <circleBufferGeometry args={[0.15]} />
-            <meshBasicMaterial />
-        </instancedMesh>
-    )
+    return (<instancedMesh ref={ref} args={[null, null, 10000]}>
+        <circleBufferGeometry args={[0.15]}/>
+        <meshBasicMaterial/>
+    </instancedMesh>)
 }
 
-export default function App() {
-    const {scrollYProgress} = useScroll();
-    const scaleX = useSpring(scrollYProgress, {stiffness: 100, damping: 30, restDelta: 0.001    });
+function App() {
 
-    return (
-        <div>
-        <div className={'quantum-container'}>
+    return (<div className={'quantum-container'}>
             <div className={'animated-text-q'}>
                 <AnimatedText text={'Quantum'}></AnimatedText>
                 <AnimatedText text={'Cryptography'}></AnimatedText>
             </div>
-            <Canvas orthographic camera={{ zoom: 20 }} colorManagement={false} style={{height: '100vh'}}>
-                <color attach="background" args={['#1B1B1B']} />
-                <Dots />
+            <Canvas orthographic camera={{zoom: 20}} colorManagement={false} style={{height: '100vh'}}>
+                <color attach="background" args={['#1B1B1B']}/>
+                <Dots/>
             </Canvas>
-    </div>
-            <div style={{background:'#1B1B1B'}}>
-                <div className={'small-container'}> </div>
-
-
-            </div>
-            <motion.div className="progress" style={{scaleX}}/>
-
         </div>
 
     )
 }
 
-// export default function Applications() {
-//
-//   return (
-//     <h1> Applications</h1>
-//   )
-// }
+export default function Applications() {
+    const {scrollYProgress} = useScroll();
+    const scaleX = useSpring(scrollYProgress, {stiffness: 100, damping: 30, restDelta: 0.001});
+
+
+    return (<div>
+            {/*<App/>*/}
+            <div style={{background: '#1B1B1B'}}>
+                <div className={'small-container'}></div>
+                <img src={qf} alt={'q1'}/>
+                    <div className={'small-container'}
+                         style={{
+                             background: "#19191C", padding: "1rem", display: "flex", justifyContent: "center",
+                         }}
+                    >
+                        <ConfigProvider
+                            theme={{
+                                token: {
+                                    colorTextBase: "#ffffff",
+                                    colorBgBase: "#19191c",
+                                    colorFill: "#f9f9f9",
+                                    borderRadius: 16,
+                                    fontSize: "var(--step-0)",
+                                    colorText: "#B5B5B5",
+                                    colorPrimary: "#ffffff",
+                                    colorBorder: "#B5B5B5",
+                                    colorBorderSecondary: "#76767d",
+                                },
+                            }}
+                        >
+                            <Anchor
+                                style={{
+                                    background: "#19191C",
+                                    padding: "0.2rem 1rem",
+                                    margin: "0.6rem",
+                                    borderColor: "#B5B5B5",
+                                    borderRadius: "2rem",
+                                    borderWidth: "1px",
+                                    borderStyle: "solid",
+
+                                }}
+                                direction="horizontal"
+                                items={[{
+                                    key: "cipher", href: "#cipher", title: " Cipher",
+                                }, {
+                                    key: "how-it-works", href: "#how-it-works", title: "How It Works",
+                                }, {
+                                    key: "visualize", href: "#visualize", title: "Visualize",
+                                }, {
+                                    key: "history", href: "#history", title: "History",
+                                },]}
+                            />
+                        </ConfigProvider>
+                    </div>
+                </div>
+
+                <div style={{overflowX: 'hidden'}}>
+                    <div className={"cipher-container"} id="cipher">
+
+                    </div>
+                    <div id="how-it-works" style={{background: "#fcfcff",}}>
+
+                    </div>
+
+
+                    <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
+
+
+                    </div>
+
+
+                    <div id="history" style={{background: "#fcfcff"}}>
+
+
+                    </div>
+                </div>
+
+
+            <motion.div className="progress" style={{scaleX}}/>
+
+
+        </div>
+
+    )
+}
