@@ -7,7 +7,7 @@ import Facts from "../components/scroll.tsx";
 import ParallaxText from "../components/movingText.tsx";
 import Spline from '@splinetool/react-spline';
 import {Link} from "react-router-dom";
-
+import {motion} from 'framer-motion'
 
 const Cards = () => (<ConfigProvider theme={{
         token: {
@@ -22,6 +22,11 @@ const Cards = () => (<ConfigProvider theme={{
     }}>
 
         <div className={'h-grid'}>
+            <motion.div
+                whileHover={{ scale: 1.08 }}
+                onHoverStart={e => {}}
+                onHoverEnd={e => {}}
+            >
             <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'h-grid-i'}>
                     <div>
@@ -32,6 +37,12 @@ const Cards = () => (<ConfigProvider theme={{
                     </div>
                 </Card>
             </Link>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.08 }}
+                onHoverStart={e => {}}
+                onHoverEnd={e => {}}
+            >
             <Link to="/applications" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
                 <Card hoverable className={'h-grid-i'}>
@@ -43,6 +54,12 @@ const Cards = () => (<ConfigProvider theme={{
                     </div>
                 </Card>
             </Link>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.08 }}
+                onHoverStart={e => {}}
+                onHoverEnd={e => {}}
+            >
             <Link to="/challenges" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
                 <Card hoverable className={'h-grid-i'}>
@@ -54,6 +71,12 @@ const Cards = () => (<ConfigProvider theme={{
                     </div>
                 </Card>
             </Link>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.08 }}
+                onHoverStart={e => {}}
+                onHoverEnd={e => {}}
+            >
             <Link to="/quantum" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
                 <Card hoverable className={'h-grid-i'}>
@@ -65,6 +88,7 @@ const Cards = () => (<ConfigProvider theme={{
                     </div>
                 </Card>
             </Link>
+            </motion.div>
         </div>
     </ConfigProvider>);
 

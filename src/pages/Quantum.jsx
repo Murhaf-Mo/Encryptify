@@ -2,6 +2,7 @@ import React, { useMemo, useRef } from 'react'
 import { Canvas, useFrame } from 'react-three-fiber'
 import * as THREE from 'three'
 import AnimatedText from "../components/AnimatedText";
+import {motion, useScroll, useSpring} from "framer-motion";
 
 const roundedSquareWave = (t, delta, a, f) => {
     return ((3 * a) / Math.PI) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
@@ -66,17 +67,29 @@ function Dots() {
 }
 
 export default function App() {
+    const {scrollYProgress} = useScroll();
+    const scaleX = useSpring(scrollYProgress, {stiffness: 100, damping: 30, restDelta: 0.001    });
+
     return (
+        <div>
         <div className={'quantum-container'}>
             <div className={'animated-text-q'}>
                 <AnimatedText text={'Quantum'}></AnimatedText>
                 <AnimatedText text={'Cryptography'}></AnimatedText>
             </div>
             <Canvas orthographic camera={{ zoom: 20 }} colorManagement={false} style={{height: '100vh'}}>
-                <color attach="background" args={['black']} />
+                <color attach="background" args={['#1B1B1B']} />
                 <Dots />
             </Canvas>
     </div>
+            <div style={{background:'#1B1B1B'}}>
+                <div className={'small-container'}> </div>
+
+
+            </div>
+            <motion.div className="progress" style={{scaleX}}/>
+
+        </div>
 
     )
 }

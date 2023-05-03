@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7114c85-480b-423a-a642-328ff8e83301" name="Changes" comment="Initialize project using Create React App">
-      <change afterPath="$PROJECT_DIR$/src/Apps/HashingApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AnimatedText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/FileEncryption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/FileEncryption.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Applications.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Applications.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Challenges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Challenges.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Quantum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Quantum.jsx" afterDir="false" />
     </list>
@@ -135,6 +132,7 @@
       <workItem from="1682607220286" duration="11940000" />
       <workItem from="1682659004864" duration="9123000" />
       <workItem from="1682753433074" duration="2092000" />
+      <workItem from="1683101608333" duration="19092000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <created>1679780474391</created>

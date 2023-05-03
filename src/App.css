@@ -564,6 +564,9 @@ h2 {
         height: auto;
         padding: 3rem;
     }
+    .app-img{
+display: none;
+    }
 
 
     .vigenereHimself {
@@ -771,7 +774,7 @@ tr:nth-child {
 
 .challenge-container {
     background-color: black;
-
+    overflow-inline: hidden;
 }
 
 .tabs-container {
@@ -821,4 +824,40 @@ tr:nth-child {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.applications-container{
+
+    background-color: black;
+    color: white;
+}
+.applications-grid{
+
+}
+.app-grid-i{
+    margin: 4% 4% 8%;
+}
+.app-img{
+    width: 40%;
+    height: 40%;
+    padding-left: 4%;
+}
+.app-card-title{
+    font-size: var(--step-2);
+    font-weight: bold;
+}
+.app-card-sub{
+    font-size: var(--step-0);
+    padding-top: 0.7em;
+}
+.image-container{
+    width: 40%;
+    padding: 3%;
+}
+.encrypted-image{
+    width: 100%;
+}
+.image-name{
+    padding: 0.5em;
+    font-size: var(--step-2);
 }
