@@ -73,8 +73,8 @@ function App() {
                 <AnimatedText text={'Quantum'}></AnimatedText>
                 <AnimatedText text={'Cryptography'}></AnimatedText>
             </div>
-            <Canvas orthographic camera={{zoom: 20}} colorManagement={false} style={{height: '100vh'}}>
-                <color attach="background" args={['#1B1B1B']}/>
+            <Canvas orthographic camera={{zoom: 20}} colorManagement={false} style={{height: '87vh'}}>
+                <color attach="background" args={['#181618']}/>
                 <Dots/>
             </Canvas>
         </div>
@@ -89,79 +89,82 @@ export default function Quantum() {
 
     return (<div>
             <App/>
-            <div style={{background: '#1B1B1B'}}>
-                <div className={'small-container'}></div>
-                <img src={qf} alt={'q1'}/>
-                    <div className={'small-container'}
-                         style={{
-                             background: "#19191C", padding: "1rem", display: "flex", justifyContent: "center",
-                         }}
+            <div style={{background: '#181618'}}>
+                <div className={'small-container'} style={{paddingTop: 0}}>
+                <div className={'small-container'}
+                     style={{
+                         background: "#181618", padding: "0.5em", display: "flex", justifyContent: "center",
+                     }}
+                >
+                    <ConfigProvider
+                        theme={{
+                            token: {
+                                colorTextBase: "#ffffff",
+                                colorBgBase: "#181618",
+                                colorFill: "#f9f9f9",
+                                borderRadius: 16,
+                                fontSize: "var(--step-0)",
+                                colorText: "#B5B5B5",
+                                colorPrimary: "#ffffff",
+                                colorBorder: "#B5B5B5",
+                                colorBorderSecondary: "#76767d",
+                            },
+                        }}
                     >
-                        <ConfigProvider
-                            theme={{
-                                token: {
-                                    colorTextBase: "#ffffff",
-                                    colorBgBase: "#19191c",
-                                    colorFill: "#f9f9f9",
-                                    borderRadius: 16,
-                                    fontSize: "var(--step-0)",
-                                    colorText: "#B5B5B5",
-                                    colorPrimary: "#ffffff",
-                                    colorBorder: "#B5B5B5",
-                                    colorBorderSecondary: "#76767d",
-                                },
+                        <Anchor
+                            style={{
+                                background: "#181618",
+                                padding: "0.2rem 1rem",
+                                margin: "0.6rem",
+                                borderColor: "#B5B5B5",
+                                borderRadius: "2rem",
+                                borderWidth: "1px",
+                                borderStyle: "solid",
+
                             }}
-                        >
-                            <Anchor
-                                style={{
-                                    background: "#19191C",
-                                    padding: "0.2rem 1rem",
-                                    margin: "0.6rem",
-                                    borderColor: "#B5B5B5",
-                                    borderRadius: "2rem",
-                                    borderWidth: "1px",
-                                    borderStyle: "solid",
-
-                                }}
-                                direction="horizontal"
-                                items={[{
-                                    key: "cipher", href: "#cipher", title: " Cipher",
-                                }, {
-                                    key: "how-it-works", href: "#how-it-works", title: "How It Works",
-                                }, {
-                                    key: "visualize", href: "#visualize", title: "Visualize",
-                                }, {
-                                    key: "history", href: "#history", title: "History",
-                                },]}
-                            />
-                        </ConfigProvider>
-                    </div>
+                            direction="horizontal"
+                            items={[{
+                                key: "cipher", href: "#cipher", title: "Current Encryption",
+                            }, {
+                                key: "how-it-works", href: "#how-it-works", title: "Quantum Computing",
+                            }, {
+                                key: "visualize", href: "#visualize", title: "Breaking Encryption",
+                            }, {
+                                key: "history", href: "#history", title: "Solution",
+                            },]}
+                        />
+                    </ConfigProvider>
                 </div>
 
-                <div style={{overflowX: 'hidden'}}>
-                    <div className={"cipher-container"} id="cipher">
-
-                    </div>
-                    <div id="how-it-works" style={{background: "#fcfcff",}}>
-
-                    </div>
+            <div style={{overflowX: 'hidden'}}>
+                <div  id="cipher">
+                    <img src={qf} alt={'q1'}/>
 
 
-                    <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
+                </div>
+                <div id="how-it-works" >
 
-
-                    </div>
-
-
-                    <div id="history" style={{background: "#fcfcff"}}>
-
-
-                    </div>
                 </div>
 
 
+                <div id="visualize" >
+
+
+                </div>
+
+
+                <div id="history" >
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+        </div>
             <motion.div className="progress" style={{scaleX}}/>
-
 
         </div>
 

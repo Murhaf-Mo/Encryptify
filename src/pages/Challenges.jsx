@@ -4,6 +4,7 @@ import {Collapse} from 'antd';
 import Spline from '@splinetool/react-spline';
 import {useState} from "react";
 import { Modal } from 'antd';
+import Confettii from "../components/Confetti";
 
 function Cube3D() {
     return (<Spline scene="https://prod.spline.design/lAccDAvJIlSfNLKa/scene.splinecode"/>);
@@ -68,18 +69,25 @@ function Challenge1() {
     const [open, setOpen] = useState(false);
     const showModal = () => {
         setOpen(true);
+        setParty(true)
+
     };
     const handleOk = (e) => {
         console.log(e);
         setOpen(false);
+        setParty(false)
     };
     const handleCancel = (e) => {
         console.log(e);
         setOpen(false);
+        setParty(false)
+
+
     };
 
     const {TextArea} = Input;
     // const [text, setText] = useState("");
+    const [party, setParty] = useState(false)
 
 
     const onChange = (e) => {
@@ -102,10 +110,11 @@ function Challenge1() {
 
 
 
-
     return (
         <div className={'small-container'} style={{textAlign: 'justify', paddingTop: '0', width: "min(100%,50rem)"}}>
             <div className={'hints-container'}>
+                {party && <Confettii/>}
+
                 <p className="pYou" style={{fontWeight: 'bold', fontSize: 'var(--step-1)', textAlign: 'left'}}>Senatus
                     PopulusQue Romanus</p>
                 <p className="pYou">Zk zj svkkvi kf tivrkv kyre kf cvrie! Tivrkzex zj kyv vjjvetv fw czwv.</p>
@@ -131,22 +140,43 @@ function Challenge1() {
                 </div>
                 <Hints/>
                 <>
+                    <ConfigProvider
+                        theme={{
+                            token: {
+                                colorTextBase: "#ffffff",
+                                colorBgBase: "#19191c",
+                                colorFill: "#f9f9f9",
+                                borderRadius: 5,
+                                fontSize: "var(--step-0)",
+                                colorText: "#B5B5B5",
+                                colorPrimary: "#ffffff",
+                                colorBorder: "#B5B5B5",
+                                colorBorderSecondary: "#76767d",
+                            },
+                        }}
+                    >
                     <Modal
-                        title="Good Job *clap* *clap* *clap*"
+
+                        title="Good Job *clap* *clap* *clap* 🎉"
                         open={open}
                         onOk={handleOk}
                         onCancel={handleCancel}
+                        cancelText={'Nice'}
                         autoFocusButton={null}
 
                         okButtonProps={{
+                            style:{display: 'none'}
                     }}
                         cancelButtonProps={{
+                            style:{ paddingRight: '0.5em', paddingLeft: '0.5em'}
+
+
                         }}
                     >
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
+                        <p>You have successfully deciphered the text and completed the challenge.</p>
+
                     </Modal>
+                    </ConfigProvider>
                 </>
 
 
