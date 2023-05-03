@@ -2,6 +2,9 @@
 
 Demo: https://encryptify.netlify.app/
 
+Encryptify is a learning platform focused on encryption. In a world where our online privacy and security are becoming more critical, Encryptify aims to educate people on the topic of encryption, how it works, and the threat that we will face in the near future. <img width="1705" alt="image" src="https://user-images.githubusercontent.com/99115205/236060258-8fff9b48-3641-4650-b0f6-17bfa210316b.png">
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
