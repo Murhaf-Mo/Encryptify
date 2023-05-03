@@ -4,10 +4,7 @@ import * as THREE from 'three'
 import AnimatedText from "../components/AnimatedText";
 import {motion, useScroll, useSpring} from "framer-motion";
 import qf from '../assets/q1.gif'
-import {Anchor, ConfigProvider, InputNumber} from "antd";
-import xorComp from "../assets/xor.webp";
-import xorCipherGif from "../assets/xorCipherGif.gif";
-import gilbertVernam from "../assets/gilbertVernam.jpg";
+import {Anchor, ConfigProvider} from "antd";
 
 const roundedSquareWave = (t, delta, a, f) => {
     return ((3 * a) / Math.PI) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
@@ -85,13 +82,13 @@ function App() {
     )
 }
 
-export default function Applications() {
+export default function Quantum() {
     const {scrollYProgress} = useScroll();
     const scaleX = useSpring(scrollYProgress, {stiffness: 100, damping: 30, restDelta: 0.001});
 
 
     return (<div>
-            {/*<App/>*/}
+            <App/>
             <div style={{background: '#1B1B1B'}}>
                 <div className={'small-container'}></div>
                 <img src={qf} alt={'q1'}/>

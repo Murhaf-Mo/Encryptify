@@ -1,4 +1,4 @@
-import {Button, Card, ConfigProvider, Space} from 'antd'
+import { Card, ConfigProvider,} from 'antd'
 import {Link} from "react-router-dom"
 import '../App.css'
 import {motion, useScroll, useSpring} from "framer-motion";
@@ -45,7 +45,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={caesarLogo} alt={'cube'} className={'ch-logo'}/>

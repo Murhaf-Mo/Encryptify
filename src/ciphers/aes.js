@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import * as CryptoJS from 'crypto-js';
 
-const cfg = {
-    mode: CryptoJS.mode.CBC,
-    padding: CryptoJS.pad.Pkcs7
-};
+
 
 export default class AES extends Component {
     constructor() {
@@ -90,7 +86,7 @@ export default class AES extends Component {
     }
 
     testForProblems = () => {
-        for (const i = 0; i < 20000; i++) {
+        for (let i = 0; i < 20000; i++) {
             setTimeout(() => {
                 const key = '123';
                 const passphrase = 'this is a very long passphrase with a ton of words in it but it shouldnt really matter';
@@ -106,7 +102,7 @@ export default class AES extends Component {
     }
 
     render() {
-        const {error, transactions, isLoading} = this.state;
+        const {error,} = this.state;
         if(error){
             return <h3>{error}</h3>
         }
@@ -127,7 +123,7 @@ export default class AES extends Component {
                 </div>
 
                 <pre className="output"><code>{this.state.outputText}</code></pre>
-                <small><a href="https://stackblitz.com/edit/cryptojs-aes-encrypt-decrypt" target="_blank">(View source code)</a></small>
+
 
             </>
         );
