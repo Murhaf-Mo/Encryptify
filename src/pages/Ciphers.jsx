@@ -45,7 +45,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers/" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/caesar" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={caesarLogo} alt={'cube'} className={'ch-logo'}/>
@@ -71,7 +71,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/vigenere" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={vigenereLogo} alt={'cube'} className={'ch-logo'}/>
@@ -99,7 +99,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/xor" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={XORLogo} alt={'cube'} className={'ch-logo-1'}/>
@@ -125,7 +125,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/bit-shift" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={shiftbitLogo} alt={'cube'} className={'ch-logo-2'}/>
@@ -152,7 +152,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/aes" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={aesLogo} alt={'cube'} className={'ch-logo-3'}/>
@@ -181,7 +181,7 @@ const Cards = () => (<ConfigProvider theme={{
             }}
             initial={{ opacity: 0, scale: 0.5 }}
         >
-            <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+            <Link to="/ciphers/rail-fence" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
                         <img src={fence} alt={'cube'} className={'ch-logo-2'}/>
