@@ -19,15 +19,21 @@ const Cards = () => (<ConfigProvider theme={{
 
     <div className={'applications-grid'}>
         <motion.div
-            whileHover={{scale: 1.05}}
-            onHoverStart={e => {
-            }}
-            onHoverEnd={e => {
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={e => {}}
+            onHoverEnd={e => {}}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+                type: "spring",
+                duration: 0.4,
+                stiffness: 50,
             }}
             className={'app-grid-i'}
         >
             <Link to="/applications/file-encryption" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
-                <Card hoverable>
+                <Card >
                     <div style={{display: "flex", alignItems: "center"}}>
                         <div style={{width: ' 100%'}}>
                             <FileImageOutlined style={{fontSize: 'var(--step-4)', paddingBottom: '0.2em'}}/>
@@ -48,16 +54,22 @@ const Cards = () => (<ConfigProvider theme={{
             </Link>
         </motion.div>
         <motion.div
-            whileHover={{scale: 1.05}}
-            onHoverStart={e => {
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={e => {}}
+            onHoverEnd={e => {}}
+            whileInView={{ x: [1000, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+                type: "spring",
+                duration: 0.4,
+                stiffness: 50,
             }}
-            onHoverEnd={e => {
-            }}
+            initial={{ opacity: 0, scale: 0.5 }}
             className={'app-grid-i'}
         >
             <Link to="/applications/password-storage" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
-                <Card hoverable>
+                <Card >
                     <div style={{display: "flex", alignItems: "center"}}>
                         <div style={{width: ' 100%'}}>
                         <EyeInvisibleOutlined style={{fontSize: 'var(--step-4)', paddingBottom: '0.2em'}}/>
@@ -75,16 +87,22 @@ const Cards = () => (<ConfigProvider theme={{
             </Link>
         </motion.div>
         <motion.div
-            whileHover={{scale: 1.05}}
-            onHoverStart={e => {
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={e => {}}
+            onHoverEnd={e => {}}
+            whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+                type: "spring",
+                duration: 0.4,
+                stiffness: 50,
             }}
-            onHoverEnd={e => {
-            }}
+            initial={{ opacity: 0, scale: 0.5 }}
             className={'app-grid-i'}
         >
             <Link to="/applications/communication" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
-                <Card hoverable>
+                <Card >
                     <div style={{display: "flex", alignItems: "center"}}>
                         <div style={{width: ' 100%'}}>
                         <MessageOutlined style={{fontSize: 'var(--step-4)', paddingBottom: '0.2em'}}/>

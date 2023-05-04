@@ -26,6 +26,13 @@ const Cards = () => (<ConfigProvider theme={{
                 whileHover={{ scale: 1.08 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
+                whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    type: "spring",
+                    stiffness: 40,
+                }}
+                initial={{ opacity: 0, scale: 0.4 }}
             >
             <Link to="/ciphers" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'h-grid-i'}>
@@ -42,6 +49,13 @@ const Cards = () => (<ConfigProvider theme={{
                 whileHover={{ scale: 1.08 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
+                whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    type: "spring",
+                    stiffness: 45,
+                }}
+                initial={{ opacity: 0, scale: 0.5 }}
             >
             <Link to="/applications" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
@@ -59,6 +73,13 @@ const Cards = () => (<ConfigProvider theme={{
                 whileHover={{ scale: 1.08 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
+                whileInView={{ x: [1000, 0], opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    type: "spring",
+                    stiffness: 45,
+                }}
+                initial={{ opacity: 0, scale: 0.5 }}
             >
             <Link to="/challenges" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 
@@ -76,6 +97,13 @@ const Cards = () => (<ConfigProvider theme={{
                 whileHover={{ scale: 1.08 }}
                 onHoverStart={e => {}}
                 onHoverEnd={e => {}}
+                whileInView={{ x: [1000, 0], opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    type: "spring",
+                    stiffness: 40
+                }}
+                initial={{ opacity: 0, scale: 0.5 }}
             >
             <Link to="/quantum" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
 

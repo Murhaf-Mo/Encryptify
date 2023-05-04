@@ -37,7 +37,8 @@ const Cards = () => (<ConfigProvider theme={{
             whileHover={{ scale: 1.08 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            animate={{ x: [-1000, 0], y: [-500, 0], opacity: 1, scale: 1 }}
+            whileInView={{ x: [-1000, 0], y: [-500, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{
                 type: "spring",
                 duration: 0.4,
@@ -63,7 +64,9 @@ const Cards = () => (<ConfigProvider theme={{
             whileHover={{ scale: 1.08 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            animate={{ x: [1000, 0], y: [-500, 0], opacity: 1, scale: 1 }}
+            whileInView={{ x: [1000, 0], y: [-500, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+
             transition={{
                 type: "spring",
                 duration: 0.4,
@@ -91,7 +94,9 @@ const Cards = () => (<ConfigProvider theme={{
             whileHover={{ scale: 1.08 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            animate={{ x: [-1000, 0], opacity: 1, scale: 1 }}
+            whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+
             transition={{
                 type: "spring",
                 duration: 0.4,
@@ -117,7 +122,9 @@ const Cards = () => (<ConfigProvider theme={{
             whileHover={{ scale: 1.08 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            animate={{ x: [1000, 0], opacity: 1, scale: 1 }}
+            whileInView={{ x: [1000, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+
             transition={{
                 type: "spring",
                 duration: 0.4,
@@ -144,7 +151,9 @@ const Cards = () => (<ConfigProvider theme={{
             whileHover={{ scale: 1.08 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            animate={{ x: [-1000, 0], y: [500, 0], opacity: 1, scale: 1 }}
+            whileInView={{ x: [-1000, 0], y: [500, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+
             transition={{
                 type: "spring",
                 duration: 0.4,
@@ -170,7 +179,9 @@ const Cards = () => (<ConfigProvider theme={{
             whileHover={{ scale: 1.08 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            animate={{ x: [1000, 0], y: [500, 0], opacity: 1, scale: 1 }}
+            whileInView={{ x: [1000, 0], y: [500, 0], opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+
 
             transition={{
                 type: "spring",
