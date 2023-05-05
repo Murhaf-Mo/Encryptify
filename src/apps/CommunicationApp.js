@@ -1,8 +1,17 @@
+import MessageList from "./messageSim/MessageList";
 
 function CommunicationApp() {
 
     return (
-        <h1>Communications</h1>
+        <div>
+            <div style={{width: '1400px', height: '600px'}}>
+                <MessageList/>
+
+            </div>
+
+        </div>
+
+
     )
 }
 
