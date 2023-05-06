@@ -3,7 +3,7 @@ import moment from 'moment';
 import './Messenger.css';
 import Search from "antd/es/input/Search";
 import {Message2, Message} from "../Message";
-
+import {motion} from "framer-motion";
 
 const MY_USER_ID = 'apple';
 
@@ -253,7 +253,14 @@ export default function MessageList(props) {
         <div className="messenger">
             <h2 className={'message-name'}>Recipient</h2>
 
-            <div className="scrollable content">
+            <motion.div
+                initial={{opacity: 0, scale: 0.5}}
+                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
+                viewport={{once: true}}
+                transition={{
+                    type: "spring", duration: 0.4, stiffness: 40,
+                }}
+                className="scrollable content">
 
                 <div className="message-list-container">{renderMessages()} {send && <Message
                     key={1}
@@ -266,11 +273,18 @@ export default function MessageList(props) {
                     }}
                 />}
                 </div>
-            </div>
+            </motion.div>
             <h2 className={'message-name'}>Database/Server</h2>
 
 
-            <div className="scrollable content">
+            <motion.div
+                initial={{opacity: 0, scale: 0.5}}
+                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
+                viewport={{once: true}}
+                transition={{
+                    type: "spring", duration: 0.8, stiffness: 40,
+                }}
+                className="scrollable content">
                 <div className="message-list-container">{renderMessages3()} {send && <Message2
                     key={1}
                     isMine={true}
@@ -282,28 +296,36 @@ export default function MessageList(props) {
                     }}
                 />}</div>
 
-            </div>
+            </motion.div>
 
             <h2 className={'message-name'}>Sender</h2>
 
-            <div className="scrollable content">
-                <div className="message-list-container" style={{marginBottom: '0'}}>{renderMessages2()} {send && <Message
-                    key={1}
-                    isMine={true}
-                    startsSequence={true}
-                    endsSequence={false}
-                    showTimestamp={false}
-                    data={{
-                        id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
-                    }}
-                />}</div>
+            <motion.div
+                initial={{opacity: 0, scale: 0.5}}
+                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
+                viewport={{once: true}}
+                transition={{
+                    type: "spring", duration: 1.2, stiffness: 40,
+                }}
+                className="scrollable content">
+                <div className="message-list-container" style={{marginBottom: '0'}}>{renderMessages2()} {send &&
+                    <Message
+                        key={1}
+                        isMine={true}
+                        startsSequence={true}
+                        endsSequence={false}
+                        showTimestamp={false}
+                        data={{
+                            id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
+                        }}
+                    />}</div>
 
                 <div className="compose">
 
                     <Search onSearch={onSearch} enterButton="Submit" placeholder="Type here..."/>
 
                 </div>
-            </div>
+            </motion.div>
         </div>
 
 

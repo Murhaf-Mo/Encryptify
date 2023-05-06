@@ -4,7 +4,7 @@ import {motion, useScroll, useSpring} from "framer-motion";
 import {EyeInvisibleOutlined, FileImageOutlined, MessageOutlined} from "@ant-design/icons";
 import imageEnc from '../assets/imge-encryption.gif';
 import passwordEnc from '../assets/password-hashing.jpg';
-import messageEnc from '../assets/end-to-end-encryption.jpg.png';
+import messageEnc from '../assets/Screenshot 2023-05-06 at 9.58.01 PM.jpg';
 const Cards = () => (<ConfigProvider theme={{
     token: {
         colorTextBase: "#ffffff",
@@ -113,7 +113,7 @@ const Cards = () => (<ConfigProvider theme={{
                             message during transmission, they will not be able to read it without the decryption
                             key.</p>
                     </div>
-                        <img src={messageEnc} alt={'cube'} className={'app-img'}/>
+                        <img src={messageEnc} alt={'cube'} className={'app-img'} style={{paddingTop:'3rem', paddingBottom: '3rem'}}/>
 
                     </div>
                 </Card>

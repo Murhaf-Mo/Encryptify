@@ -64,17 +64,20 @@ function App() {
         console.log(key)
 
         if (image !== null) {
-            handleChange(image)
+            handleChange(image,e.target.value)
         }
 
     };
-    const handleChange = (e) => {
+    const handleChange = (e, key2) => {
+        if (!key2){
+            key2 = key
+        }
         setImage(e)
         const reader = new FileReader();
         reader.onload = function (e) {
             setImagePreviewUrl(e.target.result);
 
-            resizeImage(e.target.result, key).then((result) => {
+            resizeImage(e.target.result, key2).then((result) => {
                 setImageResultedUrl(result);
             });
         };
@@ -94,7 +97,7 @@ function App() {
             colorBorderSecondary: "#76767d",
         },
     }}>
-        <div>
+        <div style={{paddingTop: '2rem'}}>
 
             <div>
 
@@ -116,9 +119,9 @@ function App() {
                     <input type="file" accept="image/*" className={'custom-file-input'} onChange={handleChange}/>
                     <UploadOutlined/>
                 </div>
-                <Alert style={{background: '#031625', width: 'max(330px, 45%)'}}
+                <Alert style={{background: '#031625', width: 'max(200px, 27%)'}}
                        message="Note"
-                       description='Save the password by clicking "Enter" twice. Decrypting is not perfect due to compresion.'
+                       description='Decrypting is not perfect due to compresion.'
                        type="info"
                        showIcon
                 />
@@ -165,7 +168,35 @@ function FileEncryption() {
 
     return (<div className={'applications-container'}>
             <div className={'small-container'}>
+                <h1 className={'cipher-title'}>Image Encryption</h1>
+                <p className={'paragraph-text'}>Image encryption is a method of securing digital images to prevent
+                    unauthorized access, modification, or viewing. It involves using encryption algorithms to convert
+                    the image data into a cipher that can only be decoded by those who have the decryption key. This
+                    ensures that the image can only be viewed by those who are authorized to do so. Image encryption is
+                    commonly used to protect sensitive images, such as medical images, classified documents, and
+                    personal photos.</p>
                 <App/>
+
+                <h1 className={'cipher-title'} style={{fontSize: 'var(--step-4)', paddingTop: '2rem'}}>How It Works</h1>
+                <p className={'paragraph-text'}>
+                    Image encryption works by using encryption algorithms to transform the pixel values of an image into
+                    a ciphered form that can only be deciphered by those with the decryption key. The encryption process
+                    involves scrambling the pixel values of the image using mathematical operations, such as
+                    substitution and permutation. This results in a ciphered image that is unintelligible to anyone
+                    without the decryption key.
+
+                    To decrypt the image, the same encryption algorithm is applied in reverse using the decryption key.
+                    The decryption process involves unscrambling the pixel values of the ciphered image to obtain the
+                    original image.
+                </p>
+                <p className={'paragraph-text'}>
+                    In symmetric key encryption, the same key is used for both encryption and decryption. This means
+                    that
+                    the encryption and decryption keys must be kept secret from anyone who should not have access to the
+                    image. In asymmetric key encryption, two different keys are used for encryption and decryption. This
+                    allows for more flexibility in sharing encrypted images, but requires a more complex key management
+                    system.
+                </p>
 
             </div>
             <motion.div className="progress" style={{scaleX}}/>
