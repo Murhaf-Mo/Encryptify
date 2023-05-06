@@ -53,7 +53,6 @@ function resizeImage(base64Str, key) {
 function App() {
 
 
-
     const [key, setKey] = useState(1000000);
     const [image, setImage] = useState(null);
 
@@ -112,29 +111,29 @@ function App() {
 
                 </Space>
 
-                <div style={{paddingTop: '1.5em', paddingBottom: '2em'}} >
+                <div style={{paddingTop: '1.5em', paddingBottom: '2em', overflowX: "hidden"}}>
 
                     <input type="file" accept="image/*" className={'custom-file-input'} onChange={handleChange}/>
                     <UploadOutlined/>
                 </div>
                 <Alert style={{background: '#031625', width: 'max(330px, 45%)'}}
-                    message="Note"
-                    description='Save the password by clicking "Enter" twice. Decrypting is not perfect due to compresion.'
-                    type="info"
-                    showIcon
+                       message="Note"
+                       description='Save the password by clicking "Enter" twice. Decrypting is not perfect due to compresion.'
+                       type="info"
+                       showIcon
                 />
 
 
-                <div style={{display: "flex", alignItems: 'center'}}>
+                <div className={'image-flex-enc'}>
                     <div className={'image-container'}>
 
                         <p className={'image-name'}>Original Image</p>
 
-                            <Card >
-                                {imagePreviewUrl &&
-                                    <img className={'encrypted-image'} src={imagePreviewUrl} alt={"original "}/>}
+                        <Card>
+                            {imagePreviewUrl &&
+                                <img className={'encrypted-image'} src={imagePreviewUrl} alt={"original "}/>}
 
-                            </Card>
+                        </Card>
 
                     </div>
                     <div className={'image-container'}>
@@ -142,11 +141,11 @@ function App() {
 
                         <p className={'image-name'}>Encrypted Image</p>
 
-                            <Card >
+                        <Card>
 
-                                {imageResultedUrl &&
-                                    <img className={'encrypted-image'} src={imageResultedUrl} alt={"encrypted "}/>}
-                            </Card>
+                            {imageResultedUrl &&
+                                <img className={'encrypted-image'} src={imageResultedUrl} alt={"encrypted "}/>}
+                        </Card>
 
                     </div>
 
@@ -158,8 +157,7 @@ function App() {
 }
 
 
-function FileEncryption()
-{
+function FileEncryption() {
     const {scrollYProgress} = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100, damping: 30, restDelta: 0.001
@@ -168,9 +166,10 @@ function FileEncryption()
     return (<div className={'applications-container'}>
             <div className={'small-container'}>
                 <App/>
-                <motion.div className="progress" style={{scaleX}}/>
 
             </div>
+            <motion.div className="progress" style={{scaleX}}/>
+
         </div>
 
     )

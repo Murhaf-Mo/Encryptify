@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import moment from 'moment';
-import './MessageList.css';
 import './Messenger.css';
-import './Compose.css';
 import Search from "antd/es/input/Search";
 import {Message2, Message} from "../Message";
 
@@ -14,48 +12,41 @@ export default function MessageList(props) {
 
     useEffect(() => {
         getMessages();
-        // eslint-disable-next-line 
+        // eslint-disable-next-line
     }, [])
 
 
     const getMessages = () => {
         const tempMessages = [{
             id: 1,
-            author: 'apple',
-            message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+            author: 'orange',
+            message: 'Hay lovely, I heard you were making a website to teach about encryption. Do you think anybody will understand or care about this? 🤔',
             timestamp: new Date().getTime()
         }, {
             id: 2,
-            author: 'orange',
-            message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
+            author: 'apple',
+            message: 'What do you mean. This is my final project!! 😭😭😭😭😭',
             timestamp: new Date().getTime()
         }, {
             id: 3,
             author: 'orange',
-            message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+            message: "I have took a look at your website. It seems to me that your little project isn't that appealing.",
             timestamp: new Date().getTime()
         }, {
-            id: 4,
-            author: 'apple',
-            message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
-            timestamp: new Date().getTime()
+            id: 4, author: 'orange', message: "It's SO BAD LOL ", timestamp: new Date().getTime()
         }, {
-            id: 5,
-            author: 'apple',
-            message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
-            timestamp: new Date().getTime()
+            id: 5, author: 'apple', message: 'OMG I cannot believe you rn', timestamp: new Date().getTime()
         }, {
             id: 6,
-            author: 'apple',
-            message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
+            author: 'orange',
+            message: 'JK I hope you do well on presentation day 💕💕',
             timestamp: new Date().getTime()
-        }, // {
-            //   id: 7,
-            //   author: 'orange',
-            //   message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
-            //   timestamp: new Date().getTime()
-            // },
-            // {
+        }, //     {
+            //     id: 7,
+            //     author: 'apple',
+            //     message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+            //     timestamp: new Date().getTime()
+            // }, {
             //   id: 8,
             //   author: 'orange',
             //   message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
@@ -260,6 +251,7 @@ export default function MessageList(props) {
 
 
         <div className="messenger">
+            <h2 className={'message-name'}>Recipient</h2>
 
             <div className="scrollable content">
 
@@ -272,8 +264,12 @@ export default function MessageList(props) {
                     data={{
                         id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
                     }}
-                />}</div>
+                />}
+                </div>
             </div>
+            <h2 className={'message-name'}>Database/Server</h2>
+
+
             <div className="scrollable content">
                 <div className="message-list-container">{renderMessages3()} {send && <Message2
                     key={1}
@@ -288,9 +284,10 @@ export default function MessageList(props) {
 
             </div>
 
+            <h2 className={'message-name'}>Sender</h2>
 
             <div className="scrollable content">
-                <div className="message-list-container">{renderMessages2()} {send && <Message
+                <div className="message-list-container" style={{marginBottom: '0'}}>{renderMessages2()} {send && <Message
                     key={1}
                     isMine={true}
                     startsSequence={true}

@@ -198,7 +198,7 @@ function Challenges() {
                 <div className={'cube-canvas'}>
                     <Cube3D/>
                 </div>
-                <h1 className={'cipher-title'}> Welcome To Challenges</h1>
+                <h1 className={'cipher-title'}>Challenges</h1>
                 <p className={'paragraph-text'}> Are you ready to put your
                     problem-solving skills to the test? Here, we'll provide you with a cipher text that you'll need to
                     decrypt to uncover the original text. We'll also provide you with one hint to get you started.</p>

@@ -2,9 +2,14 @@
   display: grid;
   width: 100%;
   height: 100%;
+  background-color: black;
 }
+.message-list-container {
+  margin: 0 7%;
+  border-radius: 5px;
+  background: white;
 
-
+}
 
 .scrollable {
   position: relative;
@@ -13,9 +18,117 @@
 }
 
 
-.content {
+
+
+
+.compose {
+  padding: 10px;
+  display: flex;
+  align-items: center;
   background: white;
-  grid-row-start: 1;
-  grid-row-end: span 3;
+  border-top: 1px solid #eeeef1;
+  margin: 0 7%;
+
+}
+
+@supports (backdrop-filter: blur(20px)) {
+  .compose {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+  }
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.message .timestamp {
+  display: flex;
+  justify-content: center;
+  color: #999;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.bubble{
+  overflow-wrap: break-word;
+
+}
+.message .bubble-container {
+  font-size: 14px;
+  display: flex;
+}
+
+.message.mine .bubble-container {
+  justify-content: flex-end;
+}
+
+.message.start .bubble-container .bubble {
+  /* margin-top: 10px; */
+  border-top-left-radius: 20px;
+}
+
+.message.end .bubble-container .bubble {
+  border-bottom-left-radius: 20px;
+  /* margin-bottom: 10px; */
+}
+
+.message.mine.start .bubble-container .bubble {
+  margin-top: 10px;
+  border-top-right-radius: 20px;
+}
+
+.message.mine.end .bubble-container .bubble {
+  border-bottom-right-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.message .bubble-container .bubble {
+  margin: 1px 0px;
+  background: #f4f4f8;
+  padding: 10px 15px;
+  max-width: 75%;
+  border-radius: 2px 20px 20px 2px;
+}
+
+.message.mine .bubble-container .bubble {
+  background: #007aff;
+  color: white;
+  border-radius: 20px 2px 2px 20px;
+}
+
+
+@media (min-width: 1001px) {
+  .content {
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+}
+
+
+
+
+@media (max-width: 1000px) {
+  .content {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+  .scrollable {
+    margin-bottom: 7%;
+
+
+  }
+  .message-list-container {
+    margin: 0 3%;
+
+  }
+  .compose {
+    margin: 0 3%;
+
+  }
+
 }
 
