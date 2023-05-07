@@ -36,6 +36,9 @@
 
     /* Step 9: 82.56px → 163.91px */
     --step-9: clamp(5.16rem, calc(3.39rem + 8.84vw), 10.24rem);
+
+    --step-10: clamp(8.16rem, calc(3.39rem + 8.84vw), 15.24rem);
+
 }
 
 
@@ -67,6 +70,10 @@ h2 {
     color: white;
     text-align: justify;
     padding: 0.5rem 4vw 0.5rem 0.5rem;
+}
+
+.pYou > li{
+    padding-top: 1rem;
 }
 
 .nav {
@@ -112,8 +119,7 @@ h2 {
     margin: auto;
     color: #FFFFFF;
     padding: 6%;
-    background: radial-gradient(42.43% 167.01% at 70.49% 50%, #F5B646 7.81%, #E1742B 25.52%, #AE3420 42.71%, #71234F 72.92%, #19191C 100%)
-
+    background: linear-gradient(275.24deg, #F5B646 5.63%, #E1742B 21.23%, #AE3420 36.36%, #71234F 62.96%, #19191C 86.8%);
 }
 
 
@@ -123,13 +129,6 @@ h2 {
     overflow-x: hidden;
     color: #FFFFFF;
     padding: 6%;
-    z-index: -1;
-}
-
-
-.vigenere-logo {
-    width: var(--step-8);
-    height: var(--step-8);
 }
 
 
@@ -146,12 +145,11 @@ h2 {
     font-style: normal;
     font-weight: 300;
     font-size: var(--step-2);
-    width: min(25ch, 90vw);
+    width: min(30ch, 90vw);
 }
 
 .french {
-    width: 557px;
-    height: 1566px;
+    height: 1400px;
     position: absolute;
     z-index: 1;
     left: 70%;
@@ -168,12 +166,21 @@ h2 {
 .tableX {
     width: 600px;
     height: 400px;
-    padding-top: 5rem;
+}
+.tableX2 {
+    height: 300px;
+    width: 600px
 }
 
 .vigenereHimself {
-    width: 400px;
-    height: 540px;
+    width: 500px;
+    height: 500px;
+    padding: 3rem;
+
+}
+.vigenereHimself2 {
+    width: 450px;
+    height: max-content;
     padding: 3rem;
 
 }
@@ -242,6 +249,14 @@ h2 {
 
     .h-grid {
         grid-template-columns: 1fr;
+
+    }
+    .vigenereHimself {
+        width: 90%
+
+    }
+    .vigenereHimself2 {
+        width: 90%
 
     }
 
@@ -314,104 +329,6 @@ h2 {
 }
 
 
-.g {
-    position: absolute;
-    background: radial-gradient(
-            42.43% 167.01% at 70.49% 50%,
-            #3bda96 10.42%,
-            #7866ff 42.32%,
-            #19191c 100%
-    );
-    left: -10%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-
-}
-
-.title-page {
-    color: white;
-    width: auto;
-    height: 574px;
-    position: relative;
-    z-index: 1;
-}
-
-.title {
-    padding-left: 150px;
-    width: 643px;
-    height: 84px;
-    position: relative;
-    z-index: 3;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 69px;
-    line-height: 72px;
-}
-
-.subtitle {
-    padding-left: 150px;
-    width: 643px;
-    height: 84px;
-    position: relative;
-    z-index: 3;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 39px;
-    line-height: 49px;
-}
-
-
-.olive {
-    position: relative;
-    z-index: 3;
-    width: 217px;
-    height: 129px;
-    padding: 100px 100px 20px;
-}
-
-.caesarTool {
-    position: relative;
-    overflow: hidden;
-    top: -900px;
-    left: 900px;
-
-
-}
-
-.caesar {
-    position: absolute;
-    width: 1200px;
-    left: 50%;
-    top: 20%;
-    z-index: 2;
-    pointer-events: none;
-
-
-}
-
-.h1-dark {
-    padding-left: 150px;
-    color: white;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 33px;
-    line-height: 42px;
-}
-
-.p-dark {
-    padding-left: 150px;
-    padding-top: 15px;
-    color: white;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 28px;
-    width: 785px;
-    height: 84px;
-
-}
 
 .p-input {
     color: white;
@@ -421,95 +338,6 @@ h2 {
     padding: 1rem;
 }
 
-.h-white {
-    width: 768px;
-    height: 100px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 43px;
-    line-height: 48px;
-    color: #27282C;
-    padding-left: 150px;
-    padding-top: 100px;
-}
-
-.h-dark {
-    width: 768px;
-    height: 100px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 43px;
-    line-height: 48px;
-    color: white;
-    padding-left: 150px;
-    padding-top: 100px;
-    margin-bottom: 20px;
-}
-
-.p2-white {
-    width: 974px;
-    height: 140px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-    color: #27282C;
-    padding-left: 150px;
-
-}
-
-.p2-dark {
-    width: 768px;;
-    margin: 0 50px 50px 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-    color: white;
-    padding-left: 150px;
-
-}
-
-.g-ball1 {
-    position: relative;
-    bottom: 20px;
-    left: 60px;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(72.01% 72.01% at 27.68% 51.63%, #21D789 0%, #24D48B 17%, #2CC991 32%, #39B89B 46%, #4C9FAA 59%, #647FBC 72%, #8258D3 85%, #A52AED 97%, #AF1DF5 100%);
-}
-
-.g-ball2 {
-    position: relative;
-    bottom: 850px;
-    left: 1200px;
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(89.05% 89.05% at 25.29% 6.35%, #293896 0%, #293A96 38%, #294195 53%, #284D94 64%, #275E93 73%, #267591 81%, #25918F 88%, #23B18C 94%, #21D789 100%);
-}
-
-.g-ball3 {
-    position: relative;
-    bottom: 1350px;
-    left: 1050px;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    z-index: 1;
-    background: radial-gradient(100.78% 100.78% at 56.75% 0.34%, #AF1DF5 0%, #AD20F4 25%, #A728EF 40%, #9C36E6 53%, #8C4ADB 64%, #7865CB 74%, #6085B9 83%, #43AAA3 92%, #21D789 100%);
-}
-
-.g-ball4 {
-    position: relative;
-    bottom: 1750px;
-    left: 1200px;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(72.01% 72.01% at 27.68% 51.63%, #21D789 0%, #24D48B 17%, #2CC991 32%, #39B89B 46%, #4C9FAA 59%, #647FBC 72%, #8258D3 85%, #A52AED 97%, #AF1DF5 100%);
-}
 
 
 .text-input {
@@ -664,8 +492,8 @@ h2 {
 
 .vigenere-logo {
     width: var(--step-6);
-    height: var(--step-6);
     padding-bottom: 1rem;
+
 }
 
 .cipher-title-container-XOR {
@@ -673,20 +501,35 @@ h2 {
     margin: auto;
     color: #FFFFFF;
     padding: 6%;
-    background: radial-gradient(42.43% 167.01% at 70.49% 50%, #FDF94B 8.85%, #E6F551 19.27%, #72E473 38.02%, #30DA85 44.79%, #19191C 100%)
-
+    background: linear-gradient(274.62deg, #FDF94B 10.49%, #E6F551 20.31%, #72E473 37.46%, #5DB589 51.89%, #19191C 88.79%);
 }
 
+.cipher-title-container-caesar {
+    width: clamp(50rem, 90vw, 100rem);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 6%;
+    background: linear-gradient(273.68deg, #3BDA96 8.85%, #7866FF 35.97%, #19191C 84.99%);
+}
 .boole {
-    width: 750px;
-    height: 1700px;
+    height: 1600px;
     position: absolute;
     z-index: 1;
     left: 65%;
-    top: 15%;
+    top: 5%;
     pointer-events: none;
 
 }
+.caesarst {
+    height: 1500px;
+    position: absolute;
+    z-index: 1;
+    left: 47%;
+    top: 12%;
+    pointer-events: none;
+
+}
+
 
 table {
     font-family: arial, sans-serif;
@@ -705,9 +548,9 @@ tr:nth-child {
 }
 
 .xorVis {
-    width: max(70vw, 330px);
+    width: max(60vw, 300px);
     height: auto;
-    padding: 1rem 1rem 1rem 8%;
+    padding: 1rem;
 }
 
 .cipher-title-container-bit {
@@ -715,8 +558,7 @@ tr:nth-child {
     margin: auto;
     color: #FFFFFF;
     padding: 6%;
-    background: linear-gradient(270.92deg, #83F2FA 8.26%, #7AB6F5 23.2%, #828CF5 33.3%, #9164F5 50.44%, #1A1A1D 84.26%);
-}
+    background: linear-gradient(275.4deg, #83F2FA 9.6%, #7AB6F5 24.28%, #828CF5 34.21%, #9164F5 51.05%, #1A1A1D 84.3%);}
 
 .challenge-container {
     background-color: black;
@@ -953,6 +795,9 @@ tr:nth-child {
         display: none;
 
     }
+    .caesarst{
+        display: none;
+    }
 
     .tableV {
         width: 70vw;
@@ -962,6 +807,11 @@ tr:nth-child {
 
     .tableX {
         width: 70vw;
+        height: auto;
+        padding: 3rem;
+    }
+    .tableX2 {
+        width: 100%;
         height: auto;
         padding: 3rem;
     }
@@ -976,6 +826,7 @@ tr:nth-child {
         height: auto;
 
     }
+
 
     .small-container {
         flex-direction: column;

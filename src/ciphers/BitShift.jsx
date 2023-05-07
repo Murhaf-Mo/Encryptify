@@ -1,10 +1,12 @@
 import {Anchor, ConfigProvider, Input, Switch} from "antd";
 import {useState} from "react";
-import XORLogo from '../assets/XORLogo.png';
-import boole from '../assets/boole.png';
-import xorCipherGif from '../assets/xorCipherGif.gif';
-import xorComp from '../assets/xor.webp';
-import gilbertVernam from '../assets/gilbertVernam.jpg';
+import boole from '../assets/My project-1-2.png';
+import left from '../assets/Bitwise-operator-left-shift.png';
+import right from '../assets/Bitwise-operator-right-shift.png';
+import xorComp from '../assets/rshift.webp';
+import gilbertVernam from '../assets/claudeshannon-1.jpg.webp';
+import bitShiftLogo from '../assets/pixil-frame-0.png';
+
 
 // const info = () => {
 //     message.info('Invalid input');
@@ -87,11 +89,11 @@ export default function BitShift() {
     };
 
 
-    return (
-        <div className={"cipher-container"}>
-            <img className={"boole"} src={boole} alt={"Gorge Boole"}/>
+    return (<div className={"cipher-container"}>
+            <img loading={'lazy'} className={"boole"} src={boole} alt={"bitshift "}
+                 style={{height: '1700px', left: '48%', top: '-2%'}}/>
             <div className={"cipher-title-container-bit"}>
-                <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
+                <img loading={'lazy'} src={bitShiftLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
                 <p className={"cipher-title"}>Bit Shift Cipher</p>
                 <p className={"cipher-subtitle"}>A simple encryption technique that operates on the binary
                     representation.</p>
@@ -99,7 +101,7 @@ export default function BitShift() {
             <div className={'cipher-container'}>
                 <div className={'small-container'}
                      style={{
-                         background: "#19191C", padding: "1rem", display: "flex", justifyContent: "center",
+                         background: "#19191C", padding: "1.5rem", display: "flex", justifyContent: "center",
                      }}
                 >
                     <ConfigProvider
@@ -121,6 +123,7 @@ export default function BitShift() {
                             style={{
                                 background: "#19191C",
                                 padding: "0.2rem 1rem",
+
                                 margin: "0.6rem",
                                 borderColor: "#B5B5B5",
                                 borderRadius: "2rem",
@@ -145,7 +148,7 @@ export default function BitShift() {
 
             <div style={{overflowX: 'hidden'}}>
                 <div className={"cipher-container"} id="cipher">
-                    <div className={'small-container'}>
+                    <div className={'small-container'} style={{paddingTop: '0',}}>
 
                         <h2>What is the Bit Shift cipher?</h2>
                         <p className={'pme'}>The Bitshift Cipher is a type of substitution cipher, as each character in
@@ -177,6 +180,8 @@ export default function BitShift() {
                                 <div className={'key-grid'}>
                                     <p className="p-input">Decrypt</p>
                                     <Switch onChange={onChange3}/>
+                                    <div style={{width:'20%'}}></div>
+
                                     <p className="p-input">Key</p>
                                     <div style={{padding: '0.5rem', width: "10rem"}}>
                                         <TextArea defaultValue={key} onChange={onChange2} value={key}
@@ -199,39 +204,49 @@ export default function BitShift() {
                     </div>
                 </div>
                 <div id="how-it-works" style={{background: "#fcfcff",}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'}
+                         style={{display: 'flex', justifyContent: 'space-between', alignItems: ' center'}}>
                         <div>
-                            <h2 style={{color: '#19191C'}}>How does the XOR cipher work?</h2>
-                            <p className={"pYou"} style={{color: '#19191C',}}>The XOR cipher is a type of encryption
-                                algorithm that uses the XOR (exclusive or) operation to encrypt plaintext into
-                                ciphertext. In this cipher, a key, which is also a binary string, is used to perform the
-                                XOR operation on each bit of the plaintext to produce the corresponding bit of the
-                                ciphertext. </p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>The XOR operation takes two input bits and
-                                outputs a single bit, which is 1 if the two input bits are different, and 0 if they are
-                                the same. When the XOR operation is applied to the plaintext and the key, the resulting
-                                binary string is the ciphertext. </p>
+                            <h2 style={{color: '#19191C'}}>How does the Bit Shift cipher work?</h2>
+                            <p className={"pYou"} style={{color: '#19191C',}}> The Bitshift Cipher works by shifting
+                                over the bits of the text's ASCII using the bitwise &lt;&lt; operator. To encode the
+                                text, the cipher loops through the text, and for each character, it loops through the
+                                key array and shifts the bits a certain number of places based on the current key
+                                character. The maximum shift is limited using modulo to avoid having a bit shifted by
+                                hundreds of places. After each character is encoded, it is added to an array, and the
+                                key is reversed to make frequency analysis harder. </p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>To decode, the cipher reverses the key and
+                                loops through the text and key, shifting the bits back to their original position based
+                                on the current key character. The key can be as long as you want, making brute force
+                                harder, and reversing the key makes frequency analysis hard. However, different
+                                programming languages may have different outputs depending on the base64 support.</p>
                             <p className={"pYou"} style={{color: '#19191C'}}>
-                                To decrypt the ciphertext, the same key is used to perform the XOR operation on each bit
-                                of the ciphertext to recover the original plaintext message. The strength of the XOR
-                                cipher depends on the strength and randomness of the key used. If the key is too short
-                                or predictable, the ciphertext can be easily decrypted through brute force or other
-                                methods. </p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>
-                                Therefore, the XOR cipher is not considered a secure encryption algorithm for modern
-                                cryptographic applications, and more advanced algorithms such as AES and RSA are
-                                typically used instead. However, the XOR cipher is still used in some applications where
-                                simplicity and speed are more important than security. </p>
+                                The bit shift cipher is a very basic encryption technique and is not considered to be
+                                secure, as it can easily be broken with simple techniques like frequency analysis.
+                                However, it can be a useful tool for teaching basic encryption principles and for
+                                encoding messages that do not require high levels of security. </p>
+
                         </div>
-                        <img className={'tableX'} src={xorComp} alt={'xor cipher visualisation'}/>
+                        <img loading={'lazy'} className={'tableX2'} src={xorComp}
+                             alt={'bitshift cipher visualisation'}/>
                     </div>
                 </div>
 
 
                 <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
                     <div className={'g-vigenere'}>
-                        <h2 style={{color: 'black'}}>Visualizing the Vigenère cipher</h2>
-                        <img className={'xorVis'} src={xorCipherGif} alt={'a visualisation of the xor cipher'}/>
+                        <h2 style={{color: 'black'}}>Visualizing the Bit Shift cipher</h2>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                            <img loading={'lazy'} className={'xorVis'} src={left}
+                                 alt={'a visualisation of the xor cipher'}/>
+                            <img loading={'lazy'} className={'xorVis'} src={right}
+                                 alt={'a visualisation of the xor cipher'}/>
+                        </div>
 
 
                     </div>
@@ -241,29 +256,41 @@ export default function BitShift() {
 
 
                 <div id="history" style={{background: "#fcfcff"}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                         <div>
                             <h2 style={{color: 'black'}}>History</h2>
-                            <p className={"pYou"} style={{color: 'black'}}>The XOR cipher, also known as the Vernam
-                                cipher, is a type of encryption that was invented in 1917 by Gilbert Vernam, an American
-                                telegraph engineer. Vernam's original invention used a paper tape that was punched with
-                                a random sequence of holes, which were used as the key for the encryption process.</p>
-                            <p className={"pYou"} style={{color: 'black'}}>The XOR cipher was initially used for
-                                telegraphy and later for teletype systems. During World War II, the cipher was used by
-                                the United States for secure communications, particularly for messages transmitted over
-                                the transatlantic cable.</p>
-                            <p className={"pYou"} style={{color: 'black'}}>In the 1950s and 1960s, the XOR cipher was
-                                used for computer encryption, particularly for military and diplomatic communications.
-                                However, the cipher was eventually found to be vulnerable to certain types of attacks,
-                                such as known plaintext attacks, where an attacker has access to both the encrypted
-                                message and the original message.</p>
-                            <p className={"pYou"} style={{color: 'black'}}>Despite its vulnerabilities, the XOR cipher
-                                remains an important part of cryptography history and continues to be used in certain
-                                contexts, particularly as a component of more complex encryption algorithms.</p>
+                            <p className={"pYou"} style={{color: 'black'}}>The history of the Bit shift cipher can be
+                                traced back to the early days of computing. In the 1950s and 1960s, computers were
+                                large, expensive machines that were primarily used for scientific and military
+                                applications. At the time, encryption was primarily done using mechanical devices, such
+                                as the Enigma machine used by the Germans during World War II.
+
+                                However, as computers became more powerful and more widely available, researchers began
+                                to explore new ways of encrypting data. One of the earliest methods to emerge was the
+                                Bit shift cipher. This method is based on the concept of shifting the bits of the
+                                plaintext to produce the ciphertext.</p>
+                            <p className={"pYou"} style={{color: 'black'}}>The Bit shift cipher was first described in
+                                detail in the late 1970s by a group of researchers at the Massachusetts Institute of
+                                Technology (MIT). The researchers were working on a system for encrypting data on
+                                computer networks, and they developed the Bit shift cipher as part of this effort.
+
+                                Since then, the Bit shift cipher has been used in a wide variety of applications,
+                                including computer programming, cryptography, and digital signal processing. It is a
+                                simple but effective encryption method that can be implemented quickly and easily in
+                                software, making it a popular choice for many applications.</p>
+                            <p className={"pYou"} style={{color: 'black'}}>One of the strengths of the Bit shift cipher
+                                is its flexibility. The key used in the encryption process can be of any length, and the
+                                plaintext can be of any size. This makes it easy to customize the encryption method to
+                                suit the needs of a particular application.
+
+                                However, the Bit shift cipher is not without its weaknesses. One of the main
+                                vulnerabilities is that it is vulnerable to brute-force attacks. Because the key is
+                                relatively short and the encryption method is relatively simple, it is possible for an
+                                attacker to try all possible keys until the correct one is found.</p>
 
 
                         </div>
-                        <img className={'vigenereHimself'} src={gilbertVernam} alt={'Gilbert Vernam'}/>
+                        <img loading={'lazy'} className={'vigenereHimself2'} src={gilbertVernam} alt={'Gilbert Vernam'} />
                     </div>
 
 
@@ -271,7 +298,7 @@ export default function BitShift() {
             </div>
         </div>
 
-        )
-        }
+    )
+}
 
 

@@ -7,7 +7,7 @@ import XORLogo from '../assets/XORLogo.png';
 import vigenereLogo from "../assets/vigenere-logo.png";
 import aesLogo from '../assets/AES.D-4e854400.png'
 import fence from '../assets/fence-icon.png'
-import shiftbitLogo from '../assets/pixil-frame-0.png'
+import bitShiftLogo from '../assets/pixil-frame-0.png'
 
 // <Route path="/ciphers/aes" element={<div><Navbar/><AES/></div>}/>
 // <Link to="/ciphers/caesar" rel="noopener noreferrer">
@@ -135,7 +135,7 @@ const Cards = () => (<ConfigProvider theme={{
             <Link to="/ciphers/bit-shift" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Card hoverable className={'ch-i'}>
                     <div>
-                        <img src={shiftbitLogo} alt={'cube'} className={'ch-logo-2'}/>
+                        <img src={bitShiftLogo} alt={'cube'} className={'ch-logo-2'}/>
                         <p className={'ch-title'}>Bit Shift</p>
                         <p className={'ch-sub'}>A simple encryption technique that operates on the binary
                             representation.</p>

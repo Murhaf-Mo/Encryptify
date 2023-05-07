@@ -1,10 +1,11 @@
-import {Anchor, ConfigProvider, Input, InputNumber} from "antd";
+import {Anchor, ConfigProvider, Input, InputNumber, Switch} from "antd";
 import {useState} from "react";
-import XORLogo from '../assets/XORLogo.png';
-import boole from '../assets/boole.png';
-import xorCipherGif from '../assets/xorCipherGif.gif';
-import xorComp from '../assets/xor.webp';
-import gilbertVernam from '../assets/gilbertVernam.jpg';
+import olive from "../assets/olive-branch.png";
+import caesarst from '../assets/caesar.png';
+import caesarCipherGif from '../assets/D3ypD.gif';
+import caesarVis from "../assets/caesarVis.png";
+import caesarTool from "../assets/caesar-tool.png";
+import {motion, useScroll, useSpring} from "framer-motion";
 
 const caesarShift = function (str, amount) {
     // Wrap the amount
@@ -45,7 +46,7 @@ const caesarShift = function (str, amount) {
 function XOR() {
     const {TextArea} = Input;
     const [text, setText] = useState("");
-    const [key, setKey] = useState(999);
+    const [key, setKey] = useState(12);
 
 
     const onChange = (e) => {
@@ -54,21 +55,32 @@ function XOR() {
     const onChange2 = (value) => {
         setKey(value);
     };
+    const onChange3 = () => {
+        setKey(26 - key);
+    };
+    const {scrollYProgress} = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100, damping: 30, restDelta: 0.001
+    });
 
 
     return (<>
             <div className={"cipher-container"}>
-                <img className={"boole"} src={boole} alt={"Gorge Boole"}/>
-                <div className={"cipher-title-container-XOR"}>
-                    <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
-                    <p className={"cipher-title"}>XOR Cipher</p>
-                    <p className={"cipher-subtitle"}>A symmetric key encryption cipher that is simple yet powerful.</p>
+                <img loading={'lazy'} className={"caesarst"} src={caesarst} alt={"Caesar"}/>
+                <div className={"cipher-title-container-caesar"}>
+                    <img loading={'lazy'} src={olive} alt={"olive"} className={"vigenere-logo"} style={{width: 'var(--step-10)', paddingLeft: '0',paddingTop:' 0', position: "relative",left:'-3%'}}/>
+                    <p className={"cipher-title"}>Caesar Cipher</p>
+                    <p className={"cipher-subtitle"}>A classic example of ancient cryptography.</p>
                 </div>
             </div>
             <div className={'cipher-container'}>
                 <div className={'small-container'}
                      style={{
-                         background: "#19191C", padding: "1rem", display: "flex", justifyContent: "center",
+                         background: "#19191C",
+                         padding: "1rem",
+                         paddingBottom: '0',
+                         display: "flex",
+                         justifyContent: "center",
                      }}
                 >
                     <ConfigProvider
@@ -114,12 +126,11 @@ function XOR() {
 
             <div style={{overflowX: 'hidden'}}>
                 <div className={"cipher-container"} id="cipher">
-                    <div className={'small-container'}>
-
+                    <div className={'small-container'} style={{paddingTop: '1.5rem'}}>
                         <h2>What is the XOR cipher?</h2>
-                        <p className={'pme'}>The XOR cipher is a simple encryption algorithm that uses the XOR
-                            (exclusive or) operator. In this cipher, a key is used to perform the XOR operation on each
-                            character of the plaintext to produce the corresponding character of the ciphertext.</p>
+                        <p className={'pme'}>The Caesar cipher is a straightforward technique for encoding
+                            messages that involves shifting letters in the alphabet by a
+                            fixed number of positions to produce a substitution alphabet.</p>
                         <ConfigProvider theme={{
                             token: {
                                 colorTextBase: "#ffffff",
@@ -143,6 +154,13 @@ function XOR() {
                                 </div>
 
                                 <div className={'key-grid'}>
+                                    <p className="p-input">Decrypt</p>
+                                    <div style={{padding: '0.5rem', width: "10rem"}}>
+                                        <Switch onChange={onChange3}/>
+                                    </div>
+                                    <div style={{width:'20%'}}></div>
+
+
                                     <p className="p-input">Key</p>
                                     <div style={{padding: '0.5rem', width: "10rem"}}>
                                         <InputNumber
@@ -151,7 +169,10 @@ function XOR() {
                                             onChange={onChange2}
                                             value={key}
                                         />
+
                                     </div>
+
+
                                 </div>
                                 <div className>
                                     <p className="p-input">Cipher Text</p>
@@ -171,74 +192,91 @@ function XOR() {
                 <div id="how-it-works" style={{background: "#fcfcff",}}>
                     <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
                         <div>
-                            <h2 style={{color: '#19191C'}}>How does the XOR cipher work?</h2>
-                            <p className={"pYou"} style={{color: '#19191C',}}>The XOR cipher is a type of encryption
-                                algorithm that uses the XOR (exclusive or) operation to encrypt plaintext into
-                                ciphertext. In this cipher, a key, which is also a binary string, is used to perform the
-                                XOR operation on each bit of the plaintext to produce the corresponding bit of the
-                                ciphertext. </p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>The XOR operation takes two input bits and
-                                outputs a single bit, which is 1 if the two input bits are different, and 0 if they are
-                                the same. When the XOR operation is applied to the plaintext and the key, the resulting
-                                binary string is the ciphertext. </p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>
-                                To decrypt the ciphertext, the same key is used to perform the XOR operation on each bit
-                                of the ciphertext to recover the original plaintext message. The strength of the XOR
-                                cipher depends on the strength and randomness of the key used. If the key is too short
-                                or predictable, the ciphertext can be easily decrypted through brute force or other
-                                methods. </p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>
-                                Therefore, the XOR cipher is not considered a secure encryption algorithm for modern
-                                cryptographic applications, and more advanced algorithms such as AES and RSA are
-                                typically used instead. However, the XOR cipher is still used in some applications where
-                                simplicity and speed are more important than security. </p>
+                            <h2 style={{color: '#19191C'}}>How does the Caesar cipher work?</h2>
+                            <p className={"pYou"} style={{color: '#19191C',}}>The Caesar cipher works by shifting each
+                                letter in the plaintext (the original message) a fixed number of positions down the alphabet to produce the
+                                ciphertext (the encoded message). The fixed shift value is usually referred to as the "key."</p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>For example, if the key is 3, each letter
+                                in the plaintext would be shifted 3 positions down the alphabet. So, an A would become a
+                                D, a B would become an E, and so on. To decode the message, the process is simply reversed. Each letter in the ciphertext is shifted back 3
+                                positions to
+                                reveal the original plaintext.</p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>Although the Caesar cipher is a very basic
+                                encryption method, it was once used for military and diplomatic purposes. However, it is now considered to be very
+                                insecure, as the key space (i.e., the number of possible keys) is very small, making it vulnerable to
+                                brute-force attacks.</p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>The Caesar cipher is a very basic
+                                encryption technique and is not considered to be secure, as it can easily be broken with
+                                simple frequency analysis or by trying all possible shift values. However, it can be a
+                                fun and educational tool for teaching basic encryption principles.</p>
                         </div>
-                        <img className={'tableX'} src={xorComp} alt={'xor cipher visualisation'}/>
+                        <img loading={'lazy'} className={'tableX'} style={{width: '130%', height: "max-content", padding: '0'}}
+                             src={caesarCipherGif} alt={'xor cipher visualisation'}/>
                     </div>
                 </div>
 
 
-                <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
-                    <div className={'g-vigenere'}>
-                        <h2 style={{color: 'black'}}>Visualizing the Vigenère cipher</h2>
-                        <img className={'xorVis'} src={xorCipherGif} alt={'a visualisation of the xor cipher'}/>
+                <div id="visualize" style={{background: "#fcfcff", color: '#19191C', overflowX: 'hidden'}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <div>
+                            <h2 style={{color: '#19191C'}}>Visualizing the Caesar cipher</h2>
+                            <ol className={"pYou"} style={{color: '#19191C'}}>
+                                <li>Choose a fixed shift value to use for encrypting your message.</li>
+                                <li>Create a table with two rows. The top row should contain letters in alphabetical order,
+                                    and the bottom row should contain the shifted letters according to the shift value you
+                                    chose.
+                                </li>
+                                <li> Encode your message by replacing each letter in the original message with the
+                                    corresponding letter in the shifted alphabet.
+                                </li>
+                                <li> Make sure the person who will receive your message knows the shift value you used so
+                                    they can decode it properly.
+                                </li>
+                                <li>To decrypt an encoded message, subtract the original shift value from 26, and use the
+                                    resulting value to shift the encoded message back to its original form.
+                                </li>
+                            </ol>
+                        </div>
 
-
+                        <img loading={'lazy'} className={'tableX'} style={{width: '100%', height: "max-content", }}
+                             src={caesarVis} alt={'xor cipher visualisation'}/>
                     </div>
+
 
 
                 </div>
 
 
-                <div id="history" style={{background: "#fcfcff"}}>
+                <div id="history" style={{background: "#19191C"}}>
                     <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
                         <div>
-                            <h2 style={{color: 'black'}}>History</h2>
-                            <p className={"pYou"} style={{color: 'black'}}>The XOR cipher, also known as the Vernam
-                                cipher, is a type of encryption that was invented in 1917 by Gilbert Vernam, an American
-                                telegraph engineer. Vernam's original invention used a paper tape that was punched with
-                                a random sequence of holes, which were used as the key for the encryption process.</p>
-                            <p className={"pYou"} style={{color: 'black'}}>The XOR cipher was initially used for
-                                telegraphy and later for teletype systems. During World War II, the cipher was used by
-                                the United States for secure communications, particularly for messages transmitted over
-                                the transatlantic cable.</p>
-                            <p className={"pYou"} style={{color: 'black'}}>In the 1950s and 1960s, the XOR cipher was
-                                used for computer encryption, particularly for military and diplomatic communications.
-                                However, the cipher was eventually found to be vulnerable to certain types of attacks,
-                                such as known plaintext attacks, where an attacker has access to both the encrypted
-                                message and the original message.</p>
-                            <p className={"pYou"} style={{color: 'black'}}>Despite its vulnerabilities, the XOR cipher
-                                remains an important part of cryptography history and continues to be used in certain
-                                contexts, particularly as a component of more complex encryption algorithms.</p>
-
-
+                            <h2 >How does the Caesar cipher work?</h2>
+                            <p className={"pYou"} >The Caesar cipher works by shifting each
+                                letter in the plaintext (the original message) a fixed number of positions down the alphabet to produce the
+                                ciphertext (the encoded message). The fixed shift value is usually referred to as the "key."</p>
+                            <p className={"pYou"} >For example, if the key is 3, each letter
+                                in the plaintext would be shifted 3 positions down the alphabet. So, an A would become a
+                                D, a B would become an E, and so on. To decode the message, the process is simply reversed. Each letter in the ciphertext is shifted back 3
+                                positions to
+                                reveal the original plaintext.</p>
+                            <p className={"pYou"}>Although the Caesar cipher is a very basic
+                                encryption method, it was once used for military and diplomatic purposes. However, it is now considered to be very
+                                insecure, as the key space (i.e., the number of possible keys) is very small, making it vulnerable to
+                                brute-force attacks.</p>
+                            <p className={"pYou"} >The Caesar cipher is a very basic
+                                encryption technique and is not considered to be secure, as it can easily be broken with
+                                simple frequency analysis or by trying all possible shift values. However, it can be a
+                                fun and educational tool for teaching basic encryption principles.</p>
                         </div>
-                        <img className={'vigenereHimself'} src={gilbertVernam} alt={'Gilbert Vernam'}/>
+                        <img loading={'lazy'} className={'tableX'} style={{width: '130%', height: "max-content", padding: '0'}}
+                             src={caesarTool} alt={'xor cipher visualisation'}/>
                     </div>
 
-
                 </div>
+
             </div>
+            <motion.div className="progress" style={{scaleX}}/>
+
         </>
 
     )

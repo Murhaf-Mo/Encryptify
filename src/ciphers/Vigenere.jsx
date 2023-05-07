@@ -119,13 +119,13 @@ function Vigenere() {
                 <div className={"cipher-title-container"}>
                     <img src={vigenereLogo} alt={"vigenere-logo"} className={"vigenere-logo"}/>
                     <p className={"cipher-title"}>Vigenère Cipher</p>
-                    <p className={"cipher-subtitle"}>A complex polyalphabetic substitution cipher with French roots.</p>
+                    <p className={"cipher-subtitle"}>A complex French polyalphabetic substitution cipher roots.</p>
                 </div>
             </div>
             <div className={'cipher-container'}>
                 <div className={'small-container'}
                      style={{
-                         background: "#19191C", padding: "1rem", display: "flex", justifyContent: "center",
+                         background: "#19191C", padding: "1.5rem", display: "flex", justifyContent: "center",
                      }}
                 >
                     <ConfigProvider
@@ -171,7 +171,7 @@ function Vigenere() {
 
             <div style={{overflowX:'hidden'}}>
                 <div className={"cipher-container"} id="cipher">
-                    <div className={'small-container'}>
+                    <div className={'small-container'} style={{paddingTop: '0'}}>
 
                         <h2>What is the Vigenère cipher?</h2>
                         <p className={'pme'}>The Vigenère cipher is a polyalphabetic substitution cipher. It is a method
@@ -202,6 +202,8 @@ function Vigenere() {
                                 <div className={'key-grid'}>
                                     <p className="p-input">Decrypt</p>
                                     <Switch onChange={onChange3}/>
+                                    <div style={{width:'20%'}}></div>
+
                                     <p className="p-input">Key</p>
                                     <div style={{padding: '0.5rem', width: "10rem"}}>
                                         <TextArea defaultValue={key} onChange={onChange2} value={key}

@@ -70,7 +70,7 @@ function XOR() {
             <div className={'cipher-container'}>
                 <div className={'small-container'}
                      style={{
-                         background: "#19191C", padding: "1rem", display: "flex", justifyContent: "center",
+                         background: "#19191C", padding: "1.5rem", display: "flex", justifyContent: "center",
                      }}
                 >
                     <ConfigProvider
@@ -116,7 +116,7 @@ function XOR() {
 
             <div style={{overflowX: 'hidden'}}>
                 <div className={"cipher-container"} id="cipher">
-                    <div className={'small-container'}>
+                    <div className={'small-container'} style={{paddingTop: '0'}}>
 
                         <h2>What is the XOR cipher?</h2>
                         <p className={'pme'}>The XOR cipher is a simple encryption algorithm that uses the XOR
@@ -171,7 +171,7 @@ function XOR() {
                     </div>
                 </div>
                 <div id="how-it-works" style={{background: "#fcfcff",}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: ' center'}}>
                         <div>
                             <h2 style={{color: '#19191C'}}>How does the XOR cipher work?</h2>
                             <p className={"pYou"} style={{color: '#19191C',}}>The XOR cipher is a type of encryption
