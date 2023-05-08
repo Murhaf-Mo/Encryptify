@@ -140,7 +140,6 @@ h2 {
 
 
 .cipher-title {
-    font-style: normal;
     font-weight: 600;
     font-size: var(--step-5);
     padding-bottom: 2%;
@@ -357,7 +356,7 @@ h2 {
 .key-grid {
     display: flex;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
     padding: 1rem;
     width: min(80vw, 40rem);
 }
@@ -508,8 +507,7 @@ h2 {
     margin: auto;
     color: #FFFFFF;
     padding: 6%;
-    background: linear-gradient(274.62deg, #FDF94B 10.49%, #E6F551 20.31%, #72E473 37.46%, #5DB589 51.89%, #19191C 88.79%);
-}
+    background: linear-gradient(275.91deg, #DCF161 -5.08%, #C0EB75 13.74%, #36CDD3 31.29%, #0987D6 57.17%, #1F52AB 68.59%, #19191C 87.67%);}
 
 .cipher-title-container-caesar {
     width: clamp(50rem, 90vw, 100rem);
@@ -571,7 +569,7 @@ tr:nth-child {
 }
 
 .cipher-title-container-bit {
-    width: clamp(50rem, 90vw, 100rem);
+    width: min(50rem, 90vw, 100rem);
     margin: auto;
     color: #FFFFFF;
     padding: 6%;

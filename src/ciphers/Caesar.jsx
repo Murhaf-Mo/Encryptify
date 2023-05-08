@@ -64,7 +64,13 @@ function XOR() {
     });
 
 
-    return (<>
+    return (<motion.div
+            whileInView={{ opacity: 1}}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.5,
+            }}
+            initial={{ opacity: 0}} >
             <div className={"cipher-container"}>
                 <motion.img
                     whileInView={{x: [500, 0],}}
@@ -163,7 +169,7 @@ function XOR() {
                             },
                         }}>
                             <div className={"text-input"}>
-                                <div className>
+                                <div >
                                     <p className="p-input">Plain Text</p>
                                     <TextArea style={{height: 220, width: "min(80vw,40rem)",}}
                                               onChange={onChange}
@@ -311,7 +317,7 @@ function XOR() {
             </div>
             <motion.div className="progress" style={{scaleX}}/>
 
-        </>
+        </motion.div>
 
     )
 }

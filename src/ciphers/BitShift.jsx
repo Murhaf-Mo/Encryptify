@@ -89,7 +89,13 @@ export default function BitShift() {
     };
 
 
-    return (<div className={"cipher-container"}>
+    return (<motion.div
+            whileInView={{ opacity: 1}}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.5,
+            }}
+            initial={{ opacity: 0}}  className={"cipher-container"}>
             <motion.img
                 whileInView={{x: [500, 0],}}
                 viewport={{once: true}}
@@ -307,7 +313,7 @@ export default function BitShift() {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
 
     )
 }

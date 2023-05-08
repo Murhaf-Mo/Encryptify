@@ -113,7 +113,13 @@ function Vigenere() {
         setEncrypt(prevCheck => !prevCheck);
     };
 
-    return (<>
+    return (<motion.div
+            whileInView={{ opacity: 1}}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.5,
+            }}
+            initial={{ opacity: 0}} >
             <div className={"cipher-container"}>
                 <motion.img
                     whileInView={{x: [500, 0],}}
@@ -479,7 +485,7 @@ function Vigenere() {
 
                 </div>
             </div>
-        </>
+        </motion.div>
 
     )
 }
