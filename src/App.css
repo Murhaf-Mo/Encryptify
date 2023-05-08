@@ -112,9 +112,12 @@ h2 {
 
 .cipher-container {
     background-color: #19191C;
-    overflow-x: hidden;
 
 
+}
+.overflowHider{
+    overflow: hidden;
+    position: relative;
 }
 
 .small-container {
@@ -162,7 +165,7 @@ h2 {
     position: absolute;
     z-index: 1;
     left: 70%;
-    top: 14%;
+    top: 2.5%;
 
 }
 
@@ -193,7 +196,6 @@ h2 {
 }
 .vigenereHimself2 {
     width: 450px;
-    height: max-content;
     padding: 3rem;
 
 }
@@ -537,7 +539,7 @@ h2 {
     position: absolute;
     z-index: 1;
     left: 65%;
-    top: 5%;
+    top: 1%;
     pointer-events: none;
 
 }
@@ -546,7 +548,7 @@ h2 {
     position: absolute;
     z-index: 1;
     left: 47%;
-    top: 12%;
+    top: 2%;
     pointer-events: none;
 
 }
@@ -554,17 +556,17 @@ h2 {
     height: 1450px;
     position: absolute;
     z-index: 1;
-    left: 70%;
-    top: 10%;
+    left: 68%;
+    top: 0.85%;
     pointer-events: none;
 
 }
 .greek {
-    height: 1350px;
+    height: 1400px;
     position: absolute;
     z-index: 1;
     left: 73%;
-    top: 26%;
+    top: 3%;
     pointer-events: none;
 
 }

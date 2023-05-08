@@ -90,12 +90,13 @@ export default function BitShift() {
 
 
     return (<motion.div
+
             whileInView={{ opacity: 1}}
             viewport={{ once: true }}
             transition={{
                 duration: 0.5,
             }}
-            initial={{ opacity: 0}}  className={"cipher-container"}>
+            initial={{ opacity: 0}}  className={"cipher-container overflowHider"}>
             <motion.img
                 whileInView={{x: [500, 0],}}
                 viewport={{once: true}}

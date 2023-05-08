@@ -65,6 +65,7 @@ function XOR() {
 
 
     return (<motion.div
+            className={'overflowHider'}
             whileInView={{opacity: 1}}
             viewport={{once: true}}
             transition={{
@@ -214,7 +215,7 @@ function XOR() {
                     </div>
                 </div>
                 <div id="how-it-works" style={{background: "#fcfcff",}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                         <div>
                             <h2 style={{color: '#19191C'}}>How does the Caesar cipher work?</h2>
                             <p className={"pYou"} style={{color: '#19191C',}}>The Caesar cipher works by shifting each
@@ -240,7 +241,7 @@ function XOR() {
                                 fun and educational tool for teaching basic encryption principles.</p>
                         </div>
                         <img loading={'lazy'} className={'tableX'}
-                             style={{width: '130%', height: "max-content", padding: '0'}}
+                             style={{ padding: '0'}}
                              src={caesarCipherGif} alt={'xor cipher visualisation'}/>
                     </div>
                 </div>

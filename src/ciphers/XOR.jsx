@@ -59,6 +59,8 @@ function XOR() {
 
 
     return (<motion.div
+            className={'overflowHider'}
+
             whileInView={{ opacity: 1}}
             viewport={{ once: true }}
             transition={{
