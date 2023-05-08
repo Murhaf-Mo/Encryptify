@@ -65,12 +65,12 @@ function XOR() {
 
 
     return (<motion.div
-            whileInView={{ opacity: 1}}
-            viewport={{ once: true }}
+            whileInView={{opacity: 1}}
+            viewport={{once: true}}
             transition={{
                 duration: 0.5,
             }}
-            initial={{ opacity: 0}} >
+            initial={{opacity: 0}}>
             <div className={"cipher-container"}>
                 <motion.img
                     whileInView={{x: [500, 0],}}
@@ -85,15 +85,15 @@ function XOR() {
                                 transition={{
                                     type: "spring", stiffness: 50,
                                 }}>
-                    <img loading={'lazy'} src={olive} alt={"olive"} className={"vigenere-logo"} style={{
-                        width: 'var(--step-10)',
-                        paddingLeft: '0',
-                        paddingTop: ' 0',
-                        position: "relative",
-                        left: '-3%'
-                    }}/>
-                    <p className={"cipher-title"}>Caesar Cipher</p>
-                    <p className={"cipher-subtitle"}>A classic example of ancient cryptography.</p>
+                        <img loading={'lazy'} src={olive} alt={"olive"} className={"vigenere-logo"} style={{
+                            width: 'var(--step-10)',
+                            paddingLeft: '0',
+                            paddingTop: ' 0',
+                            position: "relative",
+                            left: '-3%'
+                        }}/>
+                        <p className={"cipher-title"}>Caesar Cipher</p>
+                        <p className={"cipher-subtitle"}>A classic example of ancient cryptography.</p>
                     </motion.div>
                 </div>
             </div>
@@ -169,7 +169,7 @@ function XOR() {
                             },
                         }}>
                             <div className={"text-input"}>
-                                <div >
+                                <div>
                                     <p className="p-input">Plain Text</p>
                                     <TextArea style={{height: 220, width: "min(80vw,40rem)",}}
                                               onChange={onChange}
@@ -282,33 +282,40 @@ function XOR() {
 
 
                 <div id="history" style={{background: "#19191C"}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                         <div>
-                            <h2>How does the Caesar cipher work?</h2>
-                            <p className={"pYou"}>The Caesar cipher works by shifting each
-                                letter in the plaintext (the original message) a fixed number of positions down the
-                                alphabet to produce the
-                                ciphertext (the encoded message). The fixed shift value is usually referred to as the
-                                "key."</p>
-                            <p className={"pYou"}>For example, if the key is 3, each letter
-                                in the plaintext would be shifted 3 positions down the alphabet. So, an A would become a
-                                D, a B would become an E, and so on. To decode the message, the process is simply
-                                reversed. Each letter in the ciphertext is shifted back 3
-                                positions to
-                                reveal the original plaintext.</p>
-                            <p className={"pYou"}>Although the Caesar cipher is a very basic
-                                encryption method, it was once used for military and diplomatic purposes. However, it is
-                                now considered to be very
-                                insecure, as the key space (i.e., the number of possible keys) is very small, making it
-                                vulnerable to
-                                brute-force attacks.</p>
-                            <p className={"pYou"}>The Caesar cipher is a very basic
-                                encryption technique and is not considered to be secure, as it can easily be broken with
-                                simple frequency analysis or by trying all possible shift values. However, it can be a
-                                fun and educational tool for teaching basic encryption principles.</p>
+                            <h2>History</h2>
+                            <p className={"pYou"}>The Caesar cipher is one of the oldest and simplest encryption
+                                techniques, and it is named after Julius Caesar, who is believed to have used it to
+                                protect his messages. The cipher is a type of substitution cipher, where each letter in
+                                the plaintext is replaced with a letter a fixed number of positions down the alphabet.
+
+                                The Caesar cipher was developed around 100 B.C. by Julius Caesar as a means to
+                                communicate with his military commanders without the risk of interception by his
+                                enemies. </p>
+                            <p className={"pYou"}>He used a shift of 3 to encrypt his messages, so that a letter A would
+                                be replaced by a D, B would be replaced by E, and so on. This was a simple and effective
+                                way to keep the messages secret, as only those who knew the shift value could decipher
+                                the message.
+
+                                The Caesar cipher remained in use for many centuries, and it was a popular encryption
+                                technique during the Renaissance period. In fact, it was not until the invention of the
+                                frequency analysis technique in the 19th century that the Caesar cipher was no longer
+                                considered a secure method of encryption.</p>
+                            <p className={"pYou"}>In the frequency analysis technique, an attacker would analyze the
+                                frequency of letters in the ciphertext and compare it to the frequency of letters in the
+                                English language. By doing so, they could deduce the shift value and thus decrypt the
+                                message.
+
+                                Despite being a relatively weak encryption technique, the Caesar cipher is still used
+                                today as a simple introduction to cryptography and as a basic building block for more
+                                complex ciphers. It has also been used in popular culture, such as in Dan Brown's novel
+                                "The Da Vinci Code," where the main character solves a message encrypted using the
+                                Caesar cipher.</p>
                         </div>
-                        <img loading={'lazy'} className={'tableX'}
-                             style={{width: '130%', height: "max-content", padding: '0'}}
+                        <img loading={'lazy'}
+                             className={'tableX'}
+                             style={{ padding: '0'}}
                              src={caesarTool} alt={'xor cipher visualisation'}/>
                     </div>
 

@@ -220,7 +220,7 @@ function XOR() {
 
                 <div id="visualize" style={{background: "#fcfcff", overflowX: 'hidden'}}>
                     <div className={'g-vigenere'} >
-                    <h2 style={{color:'black'}}>Visualizing the Vigenère cipher</h2>
+                    <h2 style={{color:'black'}}>Visualizing the XOR cipher</h2>
                         <img className={'xorVis'} src={xorCipherGif} alt={'a visualisation of the xor cipher'} loading="lazy"/>
 
 

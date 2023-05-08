@@ -14,7 +14,7 @@ import BitShift from "./ciphers/BitShift";
 import HashingApp from "./apps/HashingApp";
 import CommunicationApp from "./apps/CommunicationApp";
 import FileEncryption from "./apps/FileEncryption";
-import AES from "./ciphers/aes";
+import Aes from "./ciphers/Aes";
 import NotFound from "./pages/NotFound";
 import Caesar from "./ciphers/Caesar";
 import RailFence from "./ciphers/RailFence";
@@ -40,7 +40,7 @@ function App() {
                     <Route path="/ciphers/xor" element={<div><Navbar/><XOR/></div>}/>
                     <Route path="/ciphers/bit-shift" element={<div><Navbar/><BitShift/></div>}/>
                     <Route path="/ciphers/rail-fence" element={<div><Navbar/><RailFence/></div>}/>
-                    <Route path="/ciphers/aes" element={<div><Navbar/><AES/></div>}/>
+                    <Route path="/ciphers/aes" element={<div><Navbar/><Aes/></div>}/>
 
                     <Route path="/challenges" element={<div><Navbar/><Challenges/></div>}/>
                     <Route path="/quantum" element={<div><Navbar/><Quantum/></div>}/>

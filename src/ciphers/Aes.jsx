@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import * as CryptoJS from 'crypto-js';
 import {motion} from "framer-motion";
-import caesarst from "../assets/caesar.png";
+import caesarst from "../assets/pngwing.com-3.png";
 import aesLogo from '../assets/AES.D-4e854400.png'
 import {Anchor, ConfigProvider, Input, Switch} from "antd";
-import caesarCipherGif from "../assets/D3ypD.gif";
-import caesarVis from "../assets/caesarVis.png";
-import caesarTool from "../assets/caesar-tool.png";
+import aesPhoto from "../assets/AES_(Rijndael)_Round_Function.png";
+import video from "../assets/WeakCornyBedlingtonterrier.mp4";
+import aesCreators from "../assets/joan-daemen-5a036429-e292-4d10-867a-0c22e65f658-resize-750.jpeg";
 import TextArea from "antd/es/input/TextArea";
 
 
-export default class AES extends Component {
+export default class Aes extends Component {
     constructor() {
         super();
         this.state = {
@@ -98,21 +98,6 @@ export default class AES extends Component {
         })
     }
 
-    testForProblems = () => {
-        for (let i = 0; i < 20000; i++) {
-            setTimeout(() => {
-                const key = '123';
-                const passphrase = 'this is a very long passphrase with a ton of words in it but it shouldnt really matter';
-                const encrypted = this.encryptAES(passphrase, key);
-
-                setTimeout(() => {
-                    if (passphrase !== this.decryptAES(encrypted, key)) {
-                        console.log('big trouble in little tokyo');
-                    }
-                }, 1000 + i);
-            }, 100 + i);
-        }
-    }
 
     render() {
         const {error,} = this.state;
@@ -121,12 +106,12 @@ export default class AES extends Component {
         }
 
         return (<motion.div
-                whileInView={{ opacity: 1}}
-                viewport={{ once: true }}
+                whileInView={{opacity: 1}}
+                viewport={{once: true}}
                 transition={{
                     duration: 0.5,
                 }}
-                initial={{ opacity: 0}} >
+                initial={{opacity: 0}}>
                 <div className={"cipher-container"}>
                     <motion.img
                         whileInView={{x: [500, 0],}}
@@ -134,8 +119,8 @@ export default class AES extends Component {
                         transition={{
                             type: "spring", stiffness: 50,
                         }}
-                        loading={'lazy'} className={"caesarst"} src={caesarst} alt={"Caesar"}/>
-                    <div className={"cipher-title-container-caesar"}>
+                        loading={'lazy'} className={"freedooooom gonePhoto"} src={caesarst} alt={"Caesar"}/>
+                    <div className={"cipher-title-container-aes"}>
                         <motion.div whileInView={{x: [-500, 0],}}
                                     viewport={{once: true}}
                                     transition={{
@@ -146,7 +131,8 @@ export default class AES extends Component {
 
                             }}/>
                             <p className={"cipher-title"}>Advanced Encryption Standard</p>
-                            <p className={"cipher-subtitle"}>A widely used encryption standard that is secure and efficient.</p>
+                            <p className={"cipher-subtitle"}>A widely used encryption standard that is secure and
+                                efficient.</p>
                         </motion.div>
                     </div>
                 </div>
@@ -204,10 +190,10 @@ export default class AES extends Component {
                 <div style={{overflowX: 'hidden'}}>
                     <div className={"cipher-container"} id="cipher">
                         <div className={'small-container'} style={{paddingTop: '1.5rem'}}>
-                            <h2>What is the Caesar cipher?</h2>
-                            <p className={'pme'}>The Caesar cipher is a straightforward technique for encoding
-                                messages that involves shifting letters in the alphabet by a
-                                fixed number of positions to produce a substitution alphabet.</p>
+                            <h2>What is the AES?</h2>
+                            <p className={'pme'}>The AES (Advanced Encryption Standard) is a widely used symmetric
+                                encryption algorithm that uses a fixed block size and a variable key length to securely
+                                encrypt and decrypt digital information.</p>
                             <ConfigProvider theme={{
                                 token: {
                                     colorTextBase: "#ffffff",
@@ -221,8 +207,7 @@ export default class AES extends Component {
                                     colorBorderSecondary: "#76767d",
                                 },
                             }}>
-                                <div> {this.state.encrypt ?
-                                    <div className={"text-input"}>
+                                <div> {this.state.encrypt ? <div className={"text-input"}>
                                     <div style={{flexDirection: 'column'}}>
 
                                         <p className="p-input">Plain Text</p>
@@ -233,7 +218,7 @@ export default class AES extends Component {
                                     </div>
 
 
-                                    <div className={'key-grid'} >
+                                    <div className={'key-grid'}>
                                         <p className="p-input">Decrypt</p>
                                         <div style={{padding: '0.5rem', width: "10rem"}}>
                                             <Switch onChange={this.onChange3}/>
@@ -257,7 +242,7 @@ export default class AES extends Component {
                                     </div>
                                 </div> : <div className={"text-input"}>
 
-                                <div style={{flexDirection: 'column'}}>
+                                    <div style={{flexDirection: 'column'}}>
 
                                         <p className="p-input">Encrypted Text</p>
                                         <TextArea style={{height: 220, width: "min(80vw,40rem)",}}
@@ -276,9 +261,9 @@ export default class AES extends Component {
                                         <p className="p-input">Key</p>
                                         <div style={{padding: '0.5rem', width: "10rem"}}>
                                             <Input.TextArea style={{padding: '0.5rem', width: "10rem"}}
-                                                   value={this.state.key}
-                                                   onChange={this.handleDecryptKeyChange}
-                                                   placeholder="Key"/>
+                                                            value={this.state.key}
+                                                            onChange={this.handleDecryptKeyChange}
+                                                            placeholder="Key"/>
                                         </div>
                                     </div>
 
@@ -300,67 +285,52 @@ export default class AES extends Component {
                 </div>
 
                 <div id="how-it-works" style={{background: "#fcfcff",}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'} style={{display: 'flex', alignItems: 'center'}}>
                         <div>
-                            <h2 style={{color: '#19191C'}}>How does the Caesar cipher work?</h2>
-                            <p className={"pYou"} style={{color: '#19191C',}}>The Caesar cipher works by shifting each
-                                letter in the plaintext (the original message) a fixed number of positions down the
-                                alphabet to produce the
-                                ciphertext (the encoded message). The fixed shift value is usually referred to as the
-                                "key."</p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>For example, if the key is 3, each letter
-                                in the plaintext would be shifted 3 positions down the alphabet. So, an A would become a
-                                D, a B would become an E, and so on. To decode the message, the process is simply
-                                reversed. Each letter in the ciphertext is shifted back 3
-                                positions to
-                                reveal the original plaintext.</p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>Although the Caesar cipher is a very basic
-                                encryption method, it was once used for military and diplomatic purposes. However, it is
-                                now considered to be very
-                                insecure, as the key space (i.e., the number of possible keys) is very small, making it
-                                vulnerable to
-                                brute-force attacks.</p>
-                            <p className={"pYou"} style={{color: '#19191C'}}>The Caesar cipher is a very basic
-                                encryption technique and is not considered to be secure, as it can easily be broken with
-                                simple frequency analysis or by trying all possible shift values. However, it can be a
-                                fun and educational tool for teaching basic encryption principles.</p>
+                            <h2 style={{color: '#19191C'}}>How does the AES work?</h2>
+                            <p className={"pYou"} style={{color: '#19191C',}}>
+                                AES is a symmetric-key block cipher algorithm, which means that the same key is used for
+                                both encryption and decryption. The algorithm works
+                                by dividing the plaintext into blocks of 128 bits and applying a series of mathematical
+                                operations to each block to transform it into the ciphertext. The key used for
+                                encryption is a fixed-length sequence of bytes, typically either 128, 192, or 256 bits
+                                long. The algorithm processes the key using a key schedule to generate
+                                a set of round keys, which are used in each round of encryption and decryption.</p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>The algorithm consists of several rounds,
+                                each of which performs a series of substitution and permutation operations on the input
+                                block. The first step is called the "SubBytes" transformation, which applies a nonlinear
+                                substitution to each byte in the block. The next step is called the "ShiftRows"
+                                transformation, which shifts the rows of the block cyclically. The third step is the
+                                "MixColumns" transformation, which operates on the columns of the block. The final step
+                                is the "AddRoundKey" transformation, which applies the current round key to the
+                                block.</p>
+                            <p className={"pYou"} style={{color: '#19191C'}}>The process is repeated for a fixed number
+                                of rounds, depending on the key size. The number of rounds for each key size is as
+                                follows: 10 rounds for 128-bit keys, 12 rounds for 192-bit keys, and 14 rounds for
+                                256-bit keys. The AES algorithm is considered secure and widely used for encryption in
+                                various applications, such as data storage, communication protocols, and financial
+                                transactions. Its strength lies in its ability to resist attacks, such as brute force,
+                                differential, and linear cryptanalysis. Additionally, the algorithm is efficient and can
+                                be implemented in hardware and software with reasonable performance.</p>
+
                         </div>
                         <img loading={'lazy'} className={'tableX'}
-                             style={{width: '130%', height: "max-content", padding: '0'}}
-                             src={caesarCipherGif} alt={'xor cipher visualisation'}/>
+                             style={{ padding: '0'}}
+                             src={aesPhoto} alt={'xor cipher visualisation'}/>
                     </div>
                 </div>
 
 
                 <div id="visualize" style={{background: "#fcfcff", color: '#19191C', overflowX: 'hidden'}}>
-                    <div className={'small-container'}
-                         style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                    <div className={'small-container'}>
                         <div>
-                            <h2 style={{color: '#19191C'}}>Visualizing the Caesar cipher</h2>
-                            <ol className={"pYou"} style={{color: '#19191C'}}>
-                                <li>Choose a fixed shift value to use for encrypting your message.</li>
-                                <li>Create a table with two rows. The top row should contain letters in alphabetical
-                                    order,
-                                    and the bottom row should contain the shifted letters according to the shift value
-                                    you
-                                    chose.
-                                </li>
-                                <li> Encode your message by replacing each letter in the original message with the
-                                    corresponding letter in the shifted alphabet.
-                                </li>
-                                <li> Make sure the person who will receive your message knows the shift value you used
-                                    so
-                                    they can decode it properly.
-                                </li>
-                                <li>To decrypt an encoded message, subtract the original shift value from 26, and use
-                                    the
-                                    resulting value to shift the encoded message back to its original form.
-                                </li>
-                            </ol>
+                            <h2 style={{color: '#19191C'}}>Visualizing the AES cipher</h2>
+
                         </div>
 
-                        <img loading={'lazy'} className={'tableX'} style={{width: '100%', height: "max-content",}}
-                             src={caesarVis} alt={'xor cipher visualisation'}/>
+                        <video autoPlay playsInline muted loop style={{width: '80%', height: "max-content",}}
+                               className={'tableX'} src={video} width="750" height="500"></video>
+
                     </div>
 
 
@@ -368,34 +338,18 @@ export default class AES extends Component {
 
 
                 <div id="history" style={{background: "#19191C"}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                         <div>
-                            <h2>How does the Caesar cipher work?</h2>
-                            <p className={"pYou"}>The Caesar cipher works by shifting each
-                                letter in the plaintext (the original message) a fixed number of positions down the
-                                alphabet to produce the
-                                ciphertext (the encoded message). The fixed shift value is usually referred to as the
-                                "key."</p>
-                            <p className={"pYou"}>For example, if the key is 3, each letter
-                                in the plaintext would be shifted 3 positions down the alphabet. So, an A would become a
-                                D, a B would become an E, and so on. To decode the message, the process is simply
-                                reversed. Each letter in the ciphertext is shifted back 3
-                                positions to
-                                reveal the original plaintext.</p>
-                            <p className={"pYou"}>Although the Caesar cipher is a very basic
-                                encryption method, it was once used for military and diplomatic purposes. However, it is
-                                now considered to be very
-                                insecure, as the key space (i.e., the number of possible keys) is very small, making it
-                                vulnerable to
-                                brute-force attacks.</p>
-                            <p className={"pYou"}>The Caesar cipher is a very basic
-                                encryption technique and is not considered to be secure, as it can easily be broken with
-                                simple frequency analysis or by trying all possible shift values. However, it can be a
-                                fun and educational tool for teaching basic encryption principles.</p>
+                            <h2>History</h2>
+                            <p className={"pYou"}>The Advanced Encryption Standard (AES) is a widely used encryption algorithm that is considered to be highly secure and has become a standard for government and commercial use. Its development was the result of a global effort to replace the Data Encryption Standard (DES), which was becoming less secure due to advances in technology.</p>
+                            <p className={"pYou"}>The Rijndael algorithm was created by two Belgian cryptographers, Joan Daemen and Vincent Rijmen, in the late 1990s. They developed the algorithm as a response to a call from the Belgian government for a new encryption algorithm that was both secure and efficient. The algorithm was named after its creators, combining their surnames.</p>
+                            <p className={"pYou"}>The adoption of the AES algorithm has been widespread, with many government and commercial organizations using it to secure their sensitive data. It has been adopted as the encryption standard by the US government and is used in a wide range of applications, including data encryption, secure communications, and digital signatures. Its wide adoption and the fact that it has never been publicly broken have made it one of the most trusted encryption algorithms in use today.</p>
+                            <p className={'pYou'}>In the late 1990s, the National Institute of Standards and Technology (NIST) issued a call for proposals to develop a new encryption standard. The finalists were evaluated based on their security, implementation complexity, and performance. In 2000, NIST selected Rijndael as the winner of the competition and announced it as the new Advanced Encryption Standard. Rijndael was chosen because of its superior performance and security compared to the other finalists. It was also highly efficient in hardware and software implementations, making it suitable for a wide range of applications.</p>
+
                         </div>
                         <img loading={'lazy'} className={'tableX'}
-                             style={{width: '130%', height: "max-content", padding: '0'}}
-                             src={caesarTool} alt={'xor cipher visualisation'}/>
+                             style={{ padding: '1rem'}}
+                             src={aesCreators} alt={'the creates of the Aes'}/>
                     </div>
 
                 </div>

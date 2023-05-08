@@ -9,7 +9,7 @@ import aesLogo from '../assets/AES.D-4e854400.png'
 import fence from '../assets/fence-icon.png'
 import bitShiftLogo from '../assets/pixil-frame-0.png'
 
-// <Route path="/ciphers/aes" element={<div><Navbar/><AES/></div>}/>
+// <Route path="/ciphers/aes" element={<div><Navbar/><Aes/></div>}/>
 // <Link to="/ciphers/caesar" rel="noopener noreferrer">
 //     <Button>Caesar Cipher</Button>
 // </Link>
