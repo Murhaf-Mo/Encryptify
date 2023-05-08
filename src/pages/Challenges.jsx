@@ -5,9 +5,14 @@ import Spline from '@splinetool/react-spline';
 import {useState} from "react";
 import { Modal } from 'antd';
 import Confettii from "../components/Confetti";
+import sha256 from "crypto-js/sha256";
 
 function Cube3D() {
-    return (<Spline scene="https://prod.spline.design/lAccDAvJIlSfNLKa/scene.splinecode"/>);
+    return (
+        <Spline scene="https://prod.spline.design/HQJ-jcyRUGfsve0b/scene.splinecode" />
+
+    // <Spline scene="https://prod.spline.design/lAccDAvJIlSfNLKa/scene.splinecode"/>
+);
 }
 
 const {Panel} = Collapse;
@@ -89,11 +94,13 @@ function Challenge1() {
     // const [text, setText] = useState("");
     const [party, setParty] = useState(false)
 
-
+    function cleanString(str) {
+        return str.toLowerCase().replace(/[\s\n]/g, '');
+    }
     const onChange = (e) => {
-        if (e.target.value === "It is better to create than to learn! Creating is the essence of life.\n" +
-            "\n" +
-            "-Julius Caesar") {
+        console.log(cleanString(e.target.value))
+        console.log(sha256(cleanString(e.target.value)).toString())
+        if (sha256(cleanString(e.target.value)).toString() === "22620d1a52f6bc26a62e16ba5ec93b9e027dc6f2dd278e0ed8d7dd4ce320bcbe") {
              showModal()
         } else {
             if (e.target.value === "") {

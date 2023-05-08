@@ -4,7 +4,7 @@ import {useState} from "react";
 import frenchStatue from "../assets/frenchStatue.png";
 import tableV from "../assets/tableV.png";
 import vigenereHimself from "../assets/vigenereHimself.png"
-
+import {motion} from "framer-motion";
 
 // JavaScript code to implement Vigenere Cipher
 /**
@@ -115,11 +115,22 @@ function Vigenere() {
 
     return (<>
             <div className={"cipher-container"}>
-                <img className={"french"} src={frenchStatue} alt={"french statue"}/>
+                <motion.img
+                    whileInView={{x: [500, 0],}}
+                    viewport={{once: true}}
+                    transition={{
+                        type: "spring", stiffness: 50,
+                    }} className={"french"} src={frenchStatue} alt={"french statue"}/>
                 <div className={"cipher-title-container"}>
+                    <motion.div whileInView={{x: [-500, 0],}}
+                                viewport={{once: true}}
+                                transition={{
+                                    type: "spring", stiffness: 50,
+                                }}>
                     <img src={vigenereLogo} alt={"vigenere-logo"} className={"vigenere-logo"}/>
                     <p className={"cipher-title"}>Vigenère Cipher</p>
                     <p className={"cipher-subtitle"}>A complex French polyalphabetic substitution cipher roots.</p>
+                    </motion.div>
                 </div>
             </div>
             <div className={'cipher-container'}>

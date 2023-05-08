@@ -1,8 +1,9 @@
 import {useState} from "react";
 import {UploadOutlined} from "@ant-design/icons";
-import {Alert, Card, ConfigProvider, Input, Space} from "antd";
+import {Alert, Card, ConfigProvider, InputNumber} from "antd";
 import React from 'react';
 import {motion, useScroll, useSpring} from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 function resizeImage(base64Str, key) {
     return new Promise((resolve) => {
@@ -83,7 +84,6 @@ function App() {
         };
         reader.readAsDataURL(e.target.files[0]);
     };
-    const [passwordVisible, setPasswordVisible] = React.useState(false);
 
 
     return (<ConfigProvider theme={{
@@ -102,24 +102,24 @@ function App() {
             <div>
 
 
-                <Space direction="horizontal">
-                    <Input.Password
+                <h3 style={{padding: '1rem', paddingLeft: '0'}}>Encryption Key: </h3>
+                    <InputNumber
                         placeholder="input password"
                         onPressEnter={handelKey}
+                        style={{width: 'max(20%, 230px)'}}
 
-                        visibilityToggle={{
-                            visible: passwordVisible, onVisibleChange: setPasswordVisible,
-                        }}
+
                     />
 
-                </Space>
 
-                <div style={{paddingTop: '1.5em', paddingBottom: '2em', overflowX: "hidden"}}>
+                    <div style={{paddingTop: '1.5em', paddingBottom: '2em', overflowX: "hidden"}}>
+                        <h3 style={{padding: '1rem', paddingLeft: '0'}}>Input Image: </h3>
 
-                    <input type="file" accept="image/*" className={'custom-file-input'} onChange={handleChange}/>
+                        <input type="file" accept="image/*" className={'custom-file-input'} onChange={handleChange}/>
                     <UploadOutlined/>
                 </div>
-                <Alert style={{background: '#031625', width: 'max(200px, 27%)'}}
+
+                <Alert style={{background: '#031625', width: 'max(320px, 30%)'}}
                        message="Note"
                        description='Decrypting is not perfect due to compresion.'
                        type="info"
@@ -167,8 +167,11 @@ function FileEncryption() {
     });
 
     return (<div className={'applications-container'}>
-            <div className={'small-container'}>
-                <h1 className={'cipher-title'}>Image Encryption</h1>
+            <h1 style={{position: "absolute", left: '5%', top: '13%', fontSize: 'var(--step-7)'}} className={'cipher-title'}>Image Encryption</h1>
+
+            <Spline style={{height: '20rem'}} scene="https://prod.spline.design/hWhRNry3laoLwx1H/scene.splinecode" />
+
+            <div className={'small-container'} style={{paddingTop:'0'}}>
                 <p className={'paragraph-text'}>Image encryption is a method of securing digital images to prevent
                     unauthorized access, modification, or viewing. It involves using encryption algorithms to convert
                     the image data into a cipher that can only be decoded by those who have the decryption key. This

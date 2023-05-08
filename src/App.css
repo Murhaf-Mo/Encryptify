@@ -50,6 +50,13 @@
 
 }
 
+html{
+    background-color: black;
+
+}
+
+
+
 h2 {
     font-weight: 600;
     font-size: var(--step-3);
@@ -530,6 +537,16 @@ h2 {
 
 }
 
+.greek {
+    height: 1350px;
+    position: absolute;
+    z-index: 1;
+    left: 73%;
+    top: 26%;
+    pointer-events: none;
+
+}
+
 
 table {
     font-family: arial, sans-serif;
@@ -559,6 +576,17 @@ tr:nth-child {
     color: #FFFFFF;
     padding: 6%;
     background: linear-gradient(275.4deg, #83F2FA 9.6%, #7AB6F5 24.28%, #828CF5 34.21%, #9164F5 51.05%, #1A1A1D 84.3%);}
+
+
+
+.cipher-title-container-rail {
+    width: clamp(50rem, 90vw, 100rem);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 6%;
+    background: linear-gradient(274.62deg, #FFBABA 5.12%, #FF7E8C 16.76%, #F14177 29.28%, #D03670 41.36%, #96276A 51.66%, #5B1465 63.29%, #421063 72.68%, #1B1B1E 88.79%);
+}
+
 
 .challenge-container {
     background-color: black;
@@ -796,6 +824,9 @@ tr:nth-child {
 
     }
     .caesarst{
+        display: none;
+    }
+    .gonePhoto{
         display: none;
     }
 

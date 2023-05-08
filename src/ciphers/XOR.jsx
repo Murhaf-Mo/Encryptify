@@ -5,7 +5,7 @@ import boole from '../assets/boole.png';
 import xorCipherGif from '../assets/xorCipherGif.gif';
 import xorComp from '../assets/xor.webp';
 import gilbertVernam from '../assets/gilbertVernam.jpg';
-
+import { motion} from "framer-motion";
 // JavaScript program to implement XOR - Encryption
 
 // The same function is used to encrypt and
@@ -58,13 +58,31 @@ function XOR() {
     };
 
 
-    return (<>
+    return (<motion.div
+            whileInView={{ opacity: 1}}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.5,
+            }}
+            initial={{ opacity: 0}} >
+
             <div className={"cipher-container"}>
-                <img className={"boole"} src={boole} alt={"Gorge Boole"} loading="lazy"/>
+                <motion.img
+                    whileInView={{x: [500, 0],}}
+                    viewport={{once: true}}
+                    transition={{
+                        type: "spring", stiffness: 50,
+                    }} className={"boole"} src={boole} alt={"Gorge Boole"} loading="lazy"/>
                 <div className={"cipher-title-container-XOR"}>
+                    <motion.div whileInView={{x: [-500, 0],}}
+                                viewport={{once: true}}
+                                transition={{
+                                    type: "spring", stiffness: 50,
+                                }}>
                     <img src={XORLogo} alt={"XORLogo"} className={"vigenere-logo"} loading="lazy"/>
                     <p className={"cipher-title"}>XOR Cipher</p>
                     <p className={"cipher-subtitle"}>A symmetric key encryption cipher that is simple yet powerful.</p>
+                    </motion.div>
                 </div>
             </div>
             <div className={'cipher-container'}>
@@ -230,7 +248,7 @@ function XOR() {
 
                 </div>
             </div>
-        </>
+        </motion.div>
 
     )
 }

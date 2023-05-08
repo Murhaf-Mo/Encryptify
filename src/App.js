@@ -17,6 +17,7 @@ import FileEncryption from "./apps/FileEncryption";
 import AES from "./ciphers/aes";
 import NotFound from "./pages/NotFound";
 import Caesar from "./ciphers/Caesar";
+import RailFence from "./ciphers/RailFence";
 
 function App() {
 
@@ -35,10 +36,10 @@ function App() {
 
                     <Route path="/ciphers" element={<div><Navbar/><Ciphers/></div>}/>
                     <Route path="/ciphers/caesar" element={<div><Navbar/><Caesar/></div>}/>
-
                     <Route path="/ciphers/vigenere" element={<div><Navbar/><Vigenere/></div>}/>
                     <Route path="/ciphers/xor" element={<div><Navbar/><XOR/></div>}/>
                     <Route path="/ciphers/bit-shift" element={<div><Navbar/><BitShift/></div>}/>
+                    <Route path="/ciphers/rail-fence" element={<div><Navbar/><RailFence/></div>}/>
                     <Route path="/ciphers/aes" element={<div><Navbar/><AES/></div>}/>
 
                     <Route path="/challenges" element={<div><Navbar/><Challenges/></div>}/>

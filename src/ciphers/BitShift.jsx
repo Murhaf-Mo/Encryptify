@@ -6,7 +6,7 @@ import right from '../assets/Bitwise-operator-right-shift.png';
 import xorComp from '../assets/rshift.webp';
 import gilbertVernam from '../assets/claudeshannon-1.jpg.webp';
 import bitShiftLogo from '../assets/pixil-frame-0.png';
-
+import {motion} from "framer-motion";
 
 // const info = () => {
 //     message.info('Invalid input');
@@ -90,13 +90,24 @@ export default function BitShift() {
 
 
     return (<div className={"cipher-container"}>
-            <img loading={'lazy'} className={"boole"} src={boole} alt={"bitshift "}
+            <motion.img
+                whileInView={{x: [500, 0],}}
+                viewport={{once: true}}
+                transition={{
+                type: "spring", stiffness: 50,
+            }}  loading={'lazy'} className={"boole"} src={boole} alt={"bitshift "}
                  style={{height: '1700px', left: '48%', top: '-2%'}}/>
             <div className={"cipher-title-container-bit"}>
+                <motion.div whileInView={{x: [-500, 0],}}
+                            viewport={{once: true}}
+                            transition={{
+                                type: "spring", stiffness: 50,
+                            }}>
                 <img loading={'lazy'} src={bitShiftLogo} alt={"XORLogo"} className={"vigenere-logo"}/>
                 <p className={"cipher-title"}>Bit Shift Cipher</p>
                 <p className={"cipher-subtitle"}>A simple encryption technique that operates on the binary
                     representation.</p>
+                </motion.div>
             </div>
             <div className={'cipher-container'}>
                 <div className={'small-container'}

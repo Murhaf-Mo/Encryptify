@@ -1,11 +1,27 @@
-import {Button, ConfigProvider, Input} from "antd";
+import {Button, ConfigProvider, Input, message} from "antd";
 import {GithubOutlined, InstagramOutlined, LinkedinOutlined, WhatsAppOutlined} from "@ant-design/icons";
 import {useForm, ValidationError} from '@formspree/react';
 
 
 function Footer() {
     const [state, handleSubmit] = useForm("mayzdglg");
-
+    const [messageApi, contextHolder] = message.useMessage();
+    const key = 'updatable';
+    const openMessage = () => {
+        messageApi.open({
+            key,
+            type: 'loading',
+            content: 'Loading...',
+        });
+        setTimeout(() => {
+            messageApi.open({
+                key,
+                type: 'success',
+                content: 'Message Sent successfully!',
+                duration: 2,
+            });
+        }, 2000);
+    };
     return (<div className={"footer"}>
             <div className={"footer-container2"}>
                 <form onSubmit={handleSubmit} className={"footer-v"}>
@@ -44,7 +60,8 @@ function Footer() {
                             </p>
                     </ConfigProvider>
                     <ConfigProvider theme={{token: {colorTextBase: "#ffffff", colorBgBase: "#19191c", colorFill: "#f9f9f9", colorText: "#ffffff", colorPrimary: "#19191c", colorBorder: "#ffffff", colorBorderSecondary: "#76767d",},}}>
-                        <Button htmlType="submit" disabled={state.submitting} type={"primary"} shape="round"
+                        {contextHolder}
+                        <Button onClick={openMessage} htmlType="submit"  disabled={state.submitting} type={"primary"} shape="round"
                                 size={"large"} style={{
                             border: "1px",
                             borderColor: "#B5B5B5",
