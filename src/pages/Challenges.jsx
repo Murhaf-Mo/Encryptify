@@ -10,14 +10,14 @@ import {Button, Tour} from 'antd';
 import {useRef} from 'react';
 
 
-function Cube3D() {
-    return (
-        <div></div>
-        // <Spline scene="https://prod.spline.design/HQJ-jcyRUGfsve0b/scene.splinecode"/>
-
-        // <Spline scene="https://prod.spline.design/lAccDAvJIlSfNLKa/scene.splinecode"/>
-    );
-}
+// function Cube3D() {
+//     return (
+//         <div></div>
+//         // <Spline scene="https://prod.spline.design/HQJ-jcyRUGfsve0b/scene.splinecode"/>
+//
+//         // <Spline scene="https://prod.spline.design/lAccDAvJIlSfNLKa/scene.splinecode"/>
+//     );
+// }
 
 const {Panel} = Collapse;
 
