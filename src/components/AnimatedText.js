@@ -18,20 +18,21 @@ const AnimatedTextWord = ({ text }) => {
     const child = {
         visible: {
             opacity: 1,
-            x: 0,
+            y: 0,
             transition: {
                 type: "spring",
-                damping: 12,
+                damping: 10,
                 stiffness: 100,
             },
         },
         hidden: {
             opacity: 0,
-            x: 200,
+            y: 200,
             transition: {
                 type: "spring",
                 damping: 12,
                 stiffness: 100,
+
             },
         },
     };

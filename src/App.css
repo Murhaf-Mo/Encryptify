@@ -305,6 +305,7 @@ h2 {
 
 .footer-container2 {
     padding: 5%;
+    padding-bottom: 0;
     height: 62%;
     display: flex;
     width: min(90vw, 100rem);
@@ -649,11 +650,8 @@ tr:nth-child {
 
 .char {
     font-weight: 600;
-    font-size: var(--step-6);
-    height: var(--step-7);
+    font-size: var(--step-9);
     color: white;
-
-
 }
 
 .animated-text-q {
@@ -903,6 +901,11 @@ tr:nth-child {
 
 }
 @media (max-width: 700px) {
+    .char {
+        font-weight: 600;
+        font-size: var(--step-6);
+        color: white;
+    }
     .footer-container2 {
         flex-direction: column;
     }

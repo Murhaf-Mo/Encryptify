@@ -55,7 +55,7 @@ function Footer() {
                                 errors={state.errors}
                             />
                         </div>
-                            <p className={"b-light"} style={{fontSize: "var(--step--2)", paddingTop: "2%", paddingBottom: "3%"}}>
+                            <p className={"b-light"} style={{fontSize: "var(--step--2)", paddingTop: "2%", paddingBottom: "1rem", marginBottom: ' 0'}}>
                                 By submitting you will be helping me improve on the content of this project.
                             </p>
                     </ConfigProvider>
@@ -67,6 +67,7 @@ function Footer() {
                             borderColor: "#B5B5B5",
                             borderWidth: "1px",
                             borderStyle: "solid",
+                            paddingTop: '4px',
                             fontSize: "var(--step--1)"
 
                         }}>
@@ -90,7 +91,7 @@ function Footer() {
                         <div className={"footer-v"}>
                             <Button href="https://github.com/Murhaf-Mo/Encryptify" target="_blank" type="text"
                                     size={"large"} style={{"color": "white",fontSize: "var(--step-0"}} icon={<GithubOutlined/>}>GitHub</Button>
-                            <Button href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" type="text"
+                            <Button href="https://api.whatsapp.com/send?phone=96598981400" target="_blank" type="text"
                                     size={"large"} style={{"color": "white",fontSize: "var(--step-0"}}
                                     icon={<WhatsAppOutlined/>}>WhatsApp</Button>
                         </div>

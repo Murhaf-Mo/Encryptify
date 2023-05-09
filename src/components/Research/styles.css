@@ -1,0 +1,54 @@
+
+
+section > h2 {
+    font-weight: 400;
+    font-size: var(--step-4);
+    margin: 0 0 10px;
+
+    position: sticky;
+    top: 2%;
+    padding: 0;
+    background-color: #1B1B1B;
+    z-index: 2;
+
+}
+.back{
+    position: sticky;
+    height: 20px;
+    top: 0;
+    padding: 0;
+    background-color: #1B1B1B;
+    width: 100%;
+    z-index: 1;
+}
+
+
+section > p {
+    font-size: var(--step-1);
+    margin: 0 0 30px 0;
+    color: white;
+    text-align: justify;
+}
+
+
+article {
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+    /*margin-left: 0;*/
+    position: relative;
+}
+article > section{
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+video {
+    width: 100%;
+    height: max-content;
+    outline: none;
+    border: none !important;
+    overflow: hidden;
+}
+

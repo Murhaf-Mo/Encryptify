@@ -285,7 +285,7 @@ export default class Aes extends Component {
                     </div>
                 </div>
 
-                <div id="how-it-works" style={{background: "#fcfcff",}}>
+                <div id="how-it-works" style={{background: "white",}}>
                     <div className={'small-container'} style={{display: 'flex', alignItems: 'center'}}>
                         <div>
                             <h2 style={{color: '#19191C'}}>How does the AES work?</h2>
@@ -322,7 +322,7 @@ export default class Aes extends Component {
                 </div>
 
 
-                <div id="visualize" style={{background: "#fcfcff", color: '#19191C', overflowX: 'hidden'}}>
+                <div id="visualize" style={{background: "white", color: '#19191C', overflowX: 'hidden'}}>
                     <div className={'small-container'}>
                         <div>
                             <h2 style={{color: '#19191C'}}>Visualizing the AES cipher</h2>
