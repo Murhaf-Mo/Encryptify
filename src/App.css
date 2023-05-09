@@ -642,6 +642,7 @@ tr:nth-child {
     height: 70rem;
     width: 60rem;
     left: 50%;
+    top: 46%;
     position: absolute;
     overflow-x: hidden;
 }
@@ -685,8 +686,8 @@ tr:nth-child {
 }
 
 .app-img {
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
     padding-left: 4%;
 }
 

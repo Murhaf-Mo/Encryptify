@@ -5,6 +5,9 @@ import {EyeInvisibleOutlined, FileImageOutlined, MessageOutlined} from "@ant-des
 import imageEnc from '../assets/imge-encryption.gif';
 import passwordEnc from '../assets/password-hashing.jpg';
 import messageEnc from '../assets/Screenshot 2023-05-06 at 9.58.01 PM.jpg';
+
+
+
 const Cards = () => (<ConfigProvider theme={{
     token: {
         colorTextBase: "#ffffff",
@@ -47,7 +50,7 @@ const Cards = () => (<ConfigProvider theme={{
                                 restored to its original form.
                             </p>
                         </div>
-                        <img src={imageEnc} alt={'cube'} className={'app-img'}/>
+                        <img src={imageEnc} alt={'cube'} className={'app-img'} />
 
                     </div>
                 </Card>
