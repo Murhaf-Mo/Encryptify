@@ -11,7 +11,9 @@ import {useRef} from 'react';
 
 
 function Cube3D() {
-    return (<Spline scene="https://prod.spline.design/HQJ-jcyRUGfsve0b/scene.splinecode"/>
+    return (
+        <div></div>
+        // <Spline scene="https://prod.spline.design/HQJ-jcyRUGfsve0b/scene.splinecode"/>
 
         // <Spline scene="https://prod.spline.design/lAccDAvJIlSfNLKa/scene.splinecode"/>
     );
@@ -167,13 +169,14 @@ function Challenge1() {
     return (
         <div className={'small-container'} style={{textAlign: 'justify', paddingTop: '0', width: "min(100%,50rem)"}}>
             <div className={'hints-container'}>
-                <Button onClick={() => setOpen(true)} style={{
+                <Button className={'gonePhoto'} onClick={() => setOpen(true)} style={{
                     borderRadius: '5px',
                     marginBottom: '1rem',
                     marginLeft: '1rem',
                     padding: '6px',
                     paddingBottom: '0',
                     paddingTop: '0'
+
                 }}>
                     How To Start
                 </Button>
@@ -395,10 +398,10 @@ function Challenges() {
     return (<div className={'challenge-container'}>
             <Spline scene="https://prod.spline.design/tsHo75QzO5C8rKzv/scene.splinecode" style={{height: '50vh'}}/>
 
-            <div className={'small-container'} style={{paddingTop: '1%'}}>
-                <div className={'cube-canvas'}>
-                    <Cube3D/>
-                </div>
+            <div className={'small-container'} style={{paddingTop: '1%' ,display: "flex", justifyContent: 'center'}} >
+                {/*<div className={'cube-canvas'}>*/}
+                {/*    <Cube3D/>*/}
+                {/*</div>*/}
                 {/*<h1 className={'cipher-title'}>Challenges</h1>*/}
                 {/*<p className={'paragraph-text'}> Are you ready to put your*/}
                 {/*    problem-solving skills to the test? Here, we'll provide you with a cipher text that you'll need to*/}

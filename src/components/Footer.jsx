@@ -80,15 +80,15 @@ function Footer() {
                     <p className={"b-light2"}> Find Me</p>
                     <div className={"footer-container"} style={{paddingLeft: "5%"}}>
                         <div className={"footer-v"}>
-                            <Button href="https://www.youtube.com/watch?v=fOO1mWLGhh8" target="_blank" type="text"
+                            <Button href="https://www.linkedin.com/in/murhaf-abul-ees-17508418b/" target="_blank" type="text"
                                     size={"large"} style={{"color": "white",fontSize: "var(--step-0"}}
                                     icon={<LinkedinOutlined/>}>LinkedIn</Button>
-                            <Button href="https://www.youtube.com/watch?v=PmD6ONQqi9Y" target="_blank" type="text"
+                            <Button href="https://www.instagram.com/murhaf300/" target="_blank" type="text"
                                     size={"large"} style={{"color": "white",fontSize: "var(--step-0"}}
                                     icon={<InstagramOutlined/>}>Instagram</Button>
                         </div>
                         <div className={"footer-v"}>
-                            <Button href="https://www.youtube.com/watch?v=IBP5NUDP28A" target="_blank" type="text"
+                            <Button href="https://github.com/Murhaf-Mo/Encryptify" target="_blank" type="text"
                                     size={"large"} style={{"color": "white",fontSize: "var(--step-0"}} icon={<GithubOutlined/>}>GitHub</Button>
                             <Button href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" type="text"
                                     size={"large"} style={{"color": "white",fontSize: "var(--step-0"}}

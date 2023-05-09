@@ -618,7 +618,7 @@ tr:nth-child {
 }
 
 .tabs-container {
-    padding-top: 3rem;
+    padding-top: 0;
     width: min(85vw, 55.5rem)
 
 }
