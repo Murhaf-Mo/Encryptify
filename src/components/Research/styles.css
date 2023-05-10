@@ -11,13 +11,8 @@ section > h2 {
 
 }
 
-@media (max-width: 700px) {
-    section > h2 {
-        font-size: var(--step-3);
-        padding: 12px 0;
 
-    }
-}
+
 
 
 section > p {
@@ -27,9 +22,9 @@ section > p {
     text-align: justify;
 }
 
+
 section > img{
     width: 100%;
-    height: max-content;
     outline: none;
     padding-top: 0.5rem;
     padding-bottom: 2rem;
@@ -76,4 +71,17 @@ video {
 *::-webkit-media-controls-start-playback-button {
     display: none!important;
     -webkit-appearance: none;
+}
+
+@media (max-width: 700px) {
+    section > h2 {
+        font-size: var(--step-3);
+        padding: 12px 0;
+    }
+
+    section > p {
+        font-size: var(--step-0);
+        text-align: start;
+    }
+
 }

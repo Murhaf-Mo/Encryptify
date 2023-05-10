@@ -24,8 +24,6 @@ const Cards = () => (<ConfigProvider theme={{
         <div className={'h-grid'}>
             <motion.div
                 whileHover={{ scale: 1.08 }}
-                onHoverStart={e => {}}
-                onHoverEnd={e => {}}
                 whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{
@@ -47,8 +45,7 @@ const Cards = () => (<ConfigProvider theme={{
             </motion.div>
             <motion.div
                 whileHover={{ scale: 1.08 }}
-                onHoverStart={e => {}}
-                onHoverEnd={e => {}}
+
                 whileInView={{ x: [-1000, 0], opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{
@@ -71,8 +68,6 @@ const Cards = () => (<ConfigProvider theme={{
             </motion.div>
             <motion.div
                 whileHover={{ scale: 1.08 }}
-                onHoverStart={e => {}}
-                onHoverEnd={e => {}}
                 whileInView={{ x: [1000, 0], opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{
@@ -95,8 +90,6 @@ const Cards = () => (<ConfigProvider theme={{
             </motion.div>
             <motion.div
                 whileHover={{ scale: 1.08 }}
-                onHoverStart={e => {}}
-                onHoverEnd={e => {}}
                 whileInView={{ x: [1000, 0], opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{

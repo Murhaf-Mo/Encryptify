@@ -239,7 +239,6 @@ h2 {
 
 .card-sub {
     font-size: var(--step--2);
-    text-align: justify;
 
 }
 
@@ -444,7 +443,7 @@ h2 {
     position: sticky;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 8px;
     background: white;
     bottom: 0;
 }

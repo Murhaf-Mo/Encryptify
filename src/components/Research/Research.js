@@ -1,4 +1,6 @@
 import "./styles.css";
+import React from "react";
+import {motion} from "framer-motion";
 import video1 from "../../assets/v0/v1.mp4";
 import video2 from "../../assets/v0/v2.mp4";
 import video3 from "../../assets/v0/v3.mp4";
@@ -12,9 +14,6 @@ import video10 from "../../assets/v0/v10.mp4";
 import video11 from "../../assets/v0/v11.mp4";
 import video12 from "../../assets/v0/v12.mp4";
 import video13 from "../../assets/v0/v13.mp4";
-
-import React from "react";
-import {motion} from "framer-motion";
 import quantumComputerPic from '../../assets/google sycamore quantum computing chip.png'
 
 export function Research() {
@@ -114,7 +113,7 @@ export function Research() {
                     whileInView={{y: [500, 0], opacity: 1, scale: 1}}
                     viewport={{once: true}}
                     transition={{type: "spring", duration: 0, stiffness: 50,}}>
-                    16,000,000 years
+                    16,000,000 Years
                 </motion.p>
 
                 <p>
@@ -258,16 +257,16 @@ export function Research() {
                     difficult for everyone else. This problem is believed to be very difficult to solve for both
                     classical and quantum computers.
                 </p>
-
+                <div style={{display:'flex', alignItems: 'center', justifyContent: 'center', color: "white"}}>
                 <motion.p
                     className={'big-number'}
                     initial={{opacity: 0}}
                     whileInView={{y: [500, 0], opacity: 1, scale: 1}}
                     viewport={{once: true}}
                     transition={{type: "spring", duration: 0, stiffness: 50,}}>
-                    Thank You
+                    Thank You!
                 </motion.p>
-
+            </div>
             </section>
 
 

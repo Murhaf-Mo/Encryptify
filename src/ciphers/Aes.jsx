@@ -228,7 +228,6 @@ export default class Aes extends Component {
                                         <p className="p-input">Key</p>
                                         <div style={{padding: '0.5rem', width: "10rem"}}>
                                             <Input style={{padding: '0.5rem'}}
-                                                   value={this.state.inputKey}
                                                    onChange={this.handleInputKeyChange}
                                                    placeholder="Key"/>
                                         </div>
@@ -261,8 +260,7 @@ export default class Aes extends Component {
                                         <div style={{width: '20%'}}></div>
                                         <p className="p-input">Key</p>
                                         <div style={{padding: '0.5rem', width: "10rem"}}>
-                                            <Input.TextArea style={{padding: '0.5rem', width: "10rem"}}
-                                                            value={this.state.key}
+                                            <Input style={{padding: '0.5rem'}}
                                                             onChange={this.handleDecryptKeyChange}
                                                             placeholder="Key"/>
                                         </div>
