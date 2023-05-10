@@ -19,6 +19,7 @@ import {useRef} from 'react';
 //     );
 // }
 
+
 const {Panel} = Collapse;
 
 function Hints(props) {
@@ -61,7 +62,7 @@ const ChallengeTabs = () => (<ConfigProvider
         }, {
             label: 'II Easy',
             key: '2',
-            children: <Challenge cipher={'hello'} title={'titlegoood'} hash={'fkaldjfhaljsdhf'} resultTitle={'dfklsdf'}
+            children: <Challenge cipher={'Ysktii hzqh fsumc Av yepni ux iej cvexvdhrk Z hf rff bzsn.'} title={'It’s not as if you have to drink the sea.'} hash={'77848ddabeb6a81c5fd3ab549fa09d54f19a6ab3b41082b8b31f2af014e43b7d'} resultTitle={'dfklsdf'}
                                  result={'isdofsjdf'} h2={'hel1'} h3={'hel1'} h1={'hel1'}/>,
         }, {
             label: 'III Easy',
@@ -145,12 +146,16 @@ function Challenge1() {
     const [party, setParty] = useState(false)
 
     function cleanString(str) {
+
         return str.toLowerCase().replace(/[\s\n]/g, '');
+
     }
+
 
     const onChange = (e) => {
         console.log(cleanString(e.target.value))
         console.log(sha256(cleanString(e.target.value)).toString())
+
         if (sha256(cleanString(e.target.value)).toString() === "22620d1a52f6bc26a62e16ba5ec93b9e027dc6f2dd278e0ed8d7dd4ce320bcbe") {
             showModal()
         } else {

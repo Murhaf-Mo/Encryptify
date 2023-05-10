@@ -114,9 +114,7 @@ function SignUp() {
 
 
                     <Form.Item
-                        wrapperCol={{
-                            offset: 8, span: 16,
-                        }}
+
                     >
                         <Button htmlType="submit" style={{padding: '0.5rem', paddingTop: '0', paddingBottom: '0'}}>
                             Submit
@@ -125,7 +123,7 @@ function SignUp() {
                 </Form>
             </Card>
             <Card title="Database" size='large' style={{
-                width: 'var(--card-width-app)', margin: '3rem', background: '#19191c', fontSize: 'var(--step--1)'
+                width: 'var(--card-width-app)', marginTop: '3rem',marginBottom: '3rem', background: '#19191c', fontSize: 'var(--step--1)'
             }}>
                 <div>
                     <strong>Username:</strong>
@@ -166,9 +164,6 @@ function SignUp() {
 
 
                     <Form.Item
-                        wrapperCol={{
-                            offset: 8, span: 16,
-                        }}
                     >
                         <Button htmlType="submit" style={{padding: '0.5rem', paddingTop: '0', paddingBottom: '0'}}>
                             Submit

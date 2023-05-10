@@ -496,11 +496,11 @@ h2 {
 }
 
 .home-title {
-    font-size: var(--step-7);
+    font-size: var(--step-9);
     color: white;
     position: absolute;
     font-weight: bold;
-    bottom: 50%;
+    bottom: 40%;
     left: 5%;
 
 }
@@ -933,6 +933,15 @@ tr:nth-child {
     }
     .m-pt{
         padding-top: 2rem;
+    }
+    .home-title {
+        font-size: var(--step-7);
+        bottom: 50%;
+
+    }
+    .canvas {
+        height: 35vh;
+        position: relative;;
     }
 
 
