@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import sha256 from "crypto-js/sha256";
 import {Button, message, Card, ConfigProvider, Form, Input} from 'antd';
 import {motion, useScroll, useSpring} from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 function SignUp() {
 
@@ -205,19 +206,32 @@ function HashingApp() {
 
 
     return (<div className={'applications-container'}>
-        <div className={'small-container'}>
-            <h1 className={'cipher-title'}>Password Storage</h1>
-            <p className={'paragraph-text'}>Hashing is important for storing passwords because it protects users'
-                passwords by converting them into a unique and irreversible string of characters. This makes it
-                difficult for attackers to crack the passwords and gain access to users' accounts, even if they have
-                access to the database. Hashing helps protect users' privacy by ensuring that their actual
-                passwords are not stored in plain text, but instead are transformed into a hash.</p>
-            <div className={'hash-logic'}>
+        <h1 style={{position: "absolute", left: '5%', top: '13%', fontSize: 'var(--step-7)'}}
+            className={'cipher-title'}>Password Storage</h1>
+
+        <Spline style={{height: '20rem'}} scene="https://prod.spline.design/ntO4EKGiPTwie5Pc/scene.splinecode"/>
+
+        <div className={'small-container hash-logic'} style={{paddingTop: '0'}}>
                 <SignUp/>
 
-            </div>
+
 
         </div>
+        <article>
+            <section>
+                <h1>What is end-to-end encryption?</h1>
+
+                <p>
+                    Hashing is important for storing passwords because it protects users'
+                    passwords by converting them into a unique and irreversible string of characters. This makes it
+                    difficult for attackers to crack the passwords and gain access to users' accounts, even if they have
+                    access to the database.</p>
+                <p>
+                    Hashing helps protect users' privacy by ensuring that their actual
+                    passwords are not stored in plain text, but instead are transformed into a hash.
+                </p>
+            </section>
+        </article>
         <motion.div className="progress" style={{scaleX}}/>
 
     </div>);

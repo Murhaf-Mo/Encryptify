@@ -86,10 +86,15 @@ function decryptRailFence(cipher, key) {
 
 function railCipher(boo, str, key) {
     console.log(boo, str, key)
-    if (!boo) {
-        return encryptRailFence(str, key)
-    } else {
-        return decryptRailFence(str, key)
+    try {
+        if (!boo) {
+            return encryptRailFence(str, key)
+        } else {
+            return decryptRailFence(str, key)
+        }
+    }
+    catch (err){
+        return 'Invalid input'
     }
 }
 
@@ -105,7 +110,10 @@ function RailFence() {
         setText(e.target.value);
     };
     const onChange2 = (value) => {
-        setKey(value);
+
+            setKey(value);
+
+
     };
     const onChange3 = () => {
         setEncrypt(!encrypt)
@@ -237,6 +245,7 @@ function RailFence() {
                                     <div style={{padding: '0.5rem', width: "10rem"}}>
                                         <InputNumber
                                             min={0}
+                                            max ={1999}
                                             defaultValue={key}
                                             onChange={onChange2}
                                             value={key}

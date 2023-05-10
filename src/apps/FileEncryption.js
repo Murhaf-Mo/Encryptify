@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {UploadOutlined} from "@ant-design/icons";
 import {Alert, Card, ConfigProvider, InputNumber} from "antd";
 import React from 'react';
 import {motion, useScroll, useSpring} from "framer-motion";
@@ -65,12 +64,12 @@ function App() {
         console.log(key)
 
         if (image !== null) {
-            handleChange(image,e.target.value)
+            handleChange(image, e.target.value)
         }
 
     };
     const handleChange = (e, key2) => {
-        if (!key2){
+        if (!key2) {
             key2 = key
         }
         setImage(e)
@@ -97,34 +96,26 @@ function App() {
             colorBorderSecondary: "#76767d",
         },
     }}>
-        <div style={{paddingTop: '2rem'}}>
+        <div>
 
             <div>
+                <div className={'row-to-colum'} style={{maxWidth: '40rem'}}>
+                    <div>
+                        <h3 style={{}}>Encryption Key: </h3>
+                        <InputNumber
+                            placeholder="input password"
+                            onPressEnter={handelKey}
+                            style={{width: '100%'}}
 
 
-                <h3 style={{padding: '1rem', paddingLeft: '0'}}>Encryption Key: </h3>
-                    <InputNumber
-                        placeholder="input password"
-                        onPressEnter={handelKey}
-                        style={{width: 'max(20%, 230px)'}}
+                        />
+                    </div>
 
-
-                    />
-
-
-                    <div style={{paddingTop: '1.5em', paddingBottom: '2em', overflowX: "hidden"}}>
-                        <h3 style={{padding: '1rem', paddingLeft: '0'}}>Input Image: </h3>
-
+                    <div className={"m-pt"} style={{width: '15rem', overflowX: "hidden"}}>
+                        <h3>Input Image: </h3>
                         <input type="file" accept="image/*" className={'custom-file-input'} onChange={handleChange}/>
-                    <UploadOutlined/>
+                    </div>
                 </div>
-
-                <Alert style={{background: '#031625', width: 'max(320px, 30%)'}}
-                       message="Note"
-                       description='Decrypting is not perfect due to compresion.'
-                       type="info"
-                       showIcon
-                />
 
 
                 <div className={'image-flex-enc'}>
@@ -154,6 +145,12 @@ function App() {
 
 
                 </div>
+                <Alert style={{background: '#031625', width: 'max(320px, 30%)', marginLeft: '3%', marginTop: '1.5rem'}}
+                       message="Note"
+                       description='Decrypting is not perfect due to compresion.'
+                       type="info"
+                       showIcon
+                />
             </div>
         </div>
     </ConfigProvider>);
@@ -167,41 +164,47 @@ function FileEncryption() {
     });
 
     return (<div className={'applications-container'}>
-            <h1 style={{position: "absolute", left: '5%', top: '13%', fontSize: 'var(--step-7)'}} className={'cipher-title'}>Image Encryption</h1>
+            <h1 style={{position: "absolute", left: '5%', top: '13%', fontSize: 'var(--step-7)'}}
+                className={'cipher-title'}>Image Encryption</h1>
 
-            <Spline style={{height: '20rem'}} scene="https://prod.spline.design/hWhRNry3laoLwx1H/scene.splinecode" />
+            <Spline style={{height: '20rem'}} scene="https://prod.spline.design/ntO4EKGiPTwie5Pc/scene.splinecode"/>
 
-            <div className={'small-container'} style={{paddingTop:'0'}}>
-                <p className={'paragraph-text'}>Image encryption is a method of securing digital images to prevent
-                    unauthorized access, modification, or viewing. It involves using encryption algorithms to convert
-                    the image data into a cipher that can only be decoded by those who have the decryption key. This
-                    ensures that the image can only be viewed by those who are authorized to do so. Image encryption is
-                    commonly used to protect sensitive images, such as medical images, classified documents, and
-                    personal photos.</p>
+
+            <div className={'small-container'} style={{paddingTop: '0'}}>
                 <App/>
-
-                <h1 className={'cipher-title'} style={{fontSize: 'var(--step-4)', paddingTop: '2rem'}}>How It Works</h1>
-                <p className={'paragraph-text'}>
-                    Image encryption works by using encryption algorithms to transform the pixel values of an image into
-                    a ciphered form that can only be deciphered by those with the decryption key. The encryption process
-                    involves scrambling the pixel values of the image using mathematical operations, such as
-                    substitution and permutation. This results in a ciphered image that is unintelligible to anyone
-                    without the decryption key.
-
-                    To decrypt the image, the same encryption algorithm is applied in reverse using the decryption key.
-                    The decryption process involves unscrambling the pixel values of the ciphered image to obtain the
-                    original image.
-                </p>
-                <p className={'paragraph-text'}>
-                    In symmetric key encryption, the same key is used for both encryption and decryption. This means
-                    that
-                    the encryption and decryption keys must be kept secret from anyone who should not have access to the
-                    image. In asymmetric key encryption, two different keys are used for encryption and decryption. This
-                    allows for more flexibility in sharing encrypted images, but requires a more complex key management
-                    system.
-                </p>
-
             </div>
+            <article>
+                <section>
+                    <h1>What is image encryption?</h1>
+
+                    <p>
+                        Image encryption is a method of securing digital images to prevent unauthorized access,
+                        modification, or viewing. It involves using encryption algorithms to convert the image data into a cipher that can only be decoded by those who have the decryption
+                        key. This ensures that the image can only be viewed by those who are authorized to do so. Image
+                        encryption is commonly used to protect sensitive images, such as medical images, classified documents, and
+                        personal photos. </p>
+                </section>
+                <section>
+                    <h1>How does it work?</h1>
+                    <p>
+                        Image encryption works by using encryption algorithms to transform the pixel values of an image
+                        into a ciphered form that can only be deciphered by those with the decryption key. The
+                        encryption process involves scrambling the pixel values of the image using mathematical operations, such as
+                        substitution and permutation. This results in a ciphered image that is unintelligible to anyone
+                        without the decryption key. </p>
+                    <p>
+                        To decrypt the image, the same encryption algorithm is applied in reverse using the decryption
+                        key. The decryption process involves unscrambling the pixel values of the ciphered image to
+                        obtain the original image.
+                    </p>
+                    <p>
+                        In symmetric key encryption, the same key is used for both encryption and decryption. This means
+                        that the encryption and decryption keys must be kept secret from anyone who should not have
+                        access to the image. In asymmetric key encryption, two different keys are used for encryption and
+                        decryption. This allows for more flexibility in sharing encrypted images, but requires a more complex key management system.
+                    </p>
+                </section>
+            </article>
             <motion.div className="progress" style={{scaleX}}/>
 
         </div>

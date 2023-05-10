@@ -1,14 +1,16 @@
 
-section > h2 {
+section > h2, h1 {
     font-weight: bold;
     font-size: var(--step-4);
     margin: 0;
+    padding: 6px 0;
+
+}
+
+section > h2 {
     position: sticky;
     top: 0;
     background-color: #1B1B1B;
-    padding: 6px 0;
-
-
 }
 
 
@@ -74,7 +76,7 @@ video {
 }
 
 @media (max-width: 700px) {
-    section > h2 {
+    section > h2,h1 {
         font-size: var(--step-3);
         padding: 12px 0;
     }
@@ -83,5 +85,6 @@ video {
         font-size: var(--step-0);
         text-align: start;
     }
+
 
 }
