@@ -20,7 +20,13 @@ const Cards = () => (<ConfigProvider theme={{
     },
 }}>
 
-    <div className={'applications-grid'}>
+    <motion.div
+        whileInView={{opacity: 1}}
+        viewport={{once: true}}
+        transition={{
+            duration: 1.5,
+        }}
+        initial={{opacity: 0}} className={'applications-grid'}>
         <motion.div
             whileHover={{ scale: 1.05 }}
             onHoverStart={e => {}}
@@ -123,7 +129,7 @@ const Cards = () => (<ConfigProvider theme={{
             </Link>
         </motion.div>
 
-    </div>
+    </motion.div>
 </ConfigProvider>);
 
 export default function Applications() {

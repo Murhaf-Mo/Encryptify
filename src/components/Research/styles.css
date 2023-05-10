@@ -1,25 +1,22 @@
 
-
 section > h2 {
-    font-weight: 400;
+    font-weight: bold;
     font-size: var(--step-4);
-    margin: 0 0 10px;
-
+    margin: 0;
     position: sticky;
-    top: 2%;
-    padding: 0;
+    top: 0;
     background-color: #1B1B1B;
-    z-index: 2;
+    padding: 6px 0;
+
 
 }
-.back{
-    position: sticky;
-    height: 20px;
-    top: 0;
-    padding: 0;
-    background-color: #1B1B1B;
-    width: 100%;
-    z-index: 1;
+
+@media (max-width: 700px) {
+    section > h2 {
+        font-size: var(--step-3);
+        padding: 12px 0;
+
+    }
 }
 
 
@@ -30,6 +27,16 @@ section > p {
     text-align: justify;
 }
 
+section > img{
+    width: 100%;
+    height: max-content;
+    outline: none;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+
+    border: none !important;
+    overflow: hidden;
+}
 
 article {
     max-width: 1000px;
@@ -38,17 +45,35 @@ article {
     /*margin-left: 0;*/
     position: relative;
 }
-article > section{
+
+article > section {
     position: relative;
     margin-bottom: 50px;
 
 }
 
+
 video {
     width: 100%;
     height: max-content;
     outline: none;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+
     border: none !important;
     overflow: hidden;
 }
 
+.big-number{
+    font-size: var(--step-9);
+    font-weight: bolder;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}

@@ -395,7 +395,13 @@ function Challenges() {
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100, damping: 30, restDelta: 0.001
     });
-    return (<div className={'challenge-container'}>
+    return (<motion.div
+            whileInView={{opacity: 1}}
+            viewport={{once: true}}
+            transition={{
+                duration: 1.5,
+            }}
+            initial={{opacity: 0}} className={'challenge-container'}>
             <Spline scene="https://prod.spline.design/tsHo75QzO5C8rKzv/scene.splinecode" style={{height: '50vh'}}/>
 
             <div className={'small-container'} style={{paddingTop: '1%' ,display: "flex", justifyContent: 'center'}} >
@@ -422,7 +428,7 @@ function Challenges() {
             </div>
             <motion.div className="progress" style={{scaleX}}/>
 
-        </div>
+        </motion.div>
 
     )
 }

@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7114c85-480b-423a-a642-328ff8e83301" name="Changes" comment="Initialize project using Create React App">
-      <change afterPath="$PROJECT_DIR$/src/components/Research/Research.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Research/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/google sycamore quantum computing chip.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ciphers/Aes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciphers/Aes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/v0/Snapshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/v0/Snapshot_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/v0/Snapshot_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/v0/v14.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/v0/v15.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AnimatedText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnimatedText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Research/Research.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Research/Research.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Research/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Research/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Applications.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Applications.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Challenges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Challenges.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Quantum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Quantum.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +145,7 @@
       <workItem from="1683178209293" duration="1781000" />
       <workItem from="1683294407328" duration="4136000" />
       <workItem from="1683299482384" duration="100031000" />
-      <workItem from="1683639695789" duration="11940000" />
+      <workItem from="1683639695789" duration="27878000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <created>1679780474391</created>

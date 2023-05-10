@@ -69,7 +69,7 @@ function App() {
 
     return (<div className={'quantum-container'}>
             <div className={'animated-text-q'}>
-                <AnimatedText text={'Quantum'}></AnimatedText>
+                <AnimatedText text={'Post-quantum'}></AnimatedText>
                 <AnimatedText text={'Cryptography'}></AnimatedText>
             </div>
             <Canvas orthographic camera={{zoom: 20}} colorManagement={false} style={{height: '95vh'}}>
@@ -87,8 +87,18 @@ export default function Quantum() {
 
 
     return (<div>
-            <App/>
-            <div style={{background: '#1B1B1B', }}>
+
+            <motion.div
+                className={'overflowHider'}
+                whileInView={{opacity: 1}}
+                viewport={{once: true}}
+                transition={{
+                    duration: 1.5,
+                }}
+                initial={{opacity: 0}}>
+                <App/>
+            </motion.div>
+            <div style={{background: '#1B1B1B',}}>
                 <Research/>
             </div>
 

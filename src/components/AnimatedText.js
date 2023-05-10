@@ -23,6 +23,7 @@ const AnimatedTextWord = ({ text }) => {
                 type: "spring",
                 damping: 10,
                 stiffness: 100,
+
             },
         },
         hidden: {
