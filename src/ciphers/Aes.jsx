@@ -261,8 +261,8 @@ export default class Aes extends Component {
                                         <p className="p-input">Key</p>
                                         <div style={{padding: '0.5rem', width: "10rem"}}>
                                             <Input style={{padding: '0.5rem'}}
-                                                            onChange={this.handleDecryptKeyChange}
-                                                            placeholder="Key"/>
+                                                   onChange={this.handleDecryptKeyChange}
+                                                   placeholder="Key"/>
                                         </div>
                                     </div>
 
@@ -275,7 +275,6 @@ export default class Aes extends Component {
                                     </div>
 
 
-                                    <pre className="output"><code>{this.state.outputText}</code></pre>
                                 </div>}
                                 </div>
                             </ConfigProvider>
@@ -314,7 +313,7 @@ export default class Aes extends Component {
 
                         </div>
                         <img loading={'lazy'} className={'tableX'}
-                             style={{ padding: '0'}}
+                             style={{padding: '0'}}
                              src={aesPhoto} alt={'xor cipher visualisation'}/>
                     </div>
                 </div>
@@ -337,17 +336,38 @@ export default class Aes extends Component {
 
 
                 <div id="history" style={{background: "#19191C"}}>
-                    <div className={'small-container'} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                    <div className={'small-container'}
+                         style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                         <div>
                             <h2>History</h2>
-                            <p className={"pYou"}>The Advanced Encryption Standard (AES) is a widely used encryption algorithm that is considered to be highly secure and has become a standard for government and commercial use. Its development was the result of a global effort to replace the Data Encryption Standard (DES), which was becoming less secure due to advances in technology.</p>
-                            <p className={"pYou"}>The Rijndael algorithm was created by two Belgian cryptographers, Joan Daemen and Vincent Rijmen, in the late 1990s. They developed the algorithm as a response to a call from the Belgian government for a new encryption algorithm that was both secure and efficient. The algorithm was named after its creators, combining their surnames.</p>
-                            <p className={"pYou"}>The adoption of the AES algorithm has been widespread, with many government and commercial organizations using it to secure their sensitive data. It has been adopted as the encryption standard by the US government and is used in a wide range of applications, including data encryption, secure communications, and digital signatures. Its wide adoption and the fact that it has never been publicly broken have made it one of the most trusted encryption algorithms in use today.</p>
-                            <p className={'pYou'}>In the late 1990s, the National Institute of Standards and Technology (NIST) issued a call for proposals to develop a new encryption standard. The finalists were evaluated based on their security, implementation complexity, and performance. In 2000, NIST selected Rijndael as the winner of the competition and announced it as the new Advanced Encryption Standard. Rijndael was chosen because of its superior performance and security compared to the other finalists. It was also highly efficient in hardware and software implementations, making it suitable for a wide range of applications.</p>
+                            <p className={"pYou"}>The Advanced Encryption Standard (AES) is a widely used encryption
+                                algorithm that is considered to be highly secure and has become a standard for
+                                government and commercial use. Its development was the result of a global effort to
+                                replace the Data Encryption Standard (DES), which was becoming less secure due to
+                                advances in technology.</p>
+                            <p className={"pYou"}>The Rijndael algorithm was created by two Belgian cryptographers, Joan
+                                Daemen and Vincent Rijmen, in the late 1990s. They developed the algorithm as a response
+                                to a call from the Belgian government for a new encryption algorithm that was both
+                                secure and efficient. The algorithm was named after its creators, combining their
+                                surnames.</p>
+                            <p className={"pYou"}>The adoption of the AES algorithm has been widespread, with many
+                                government and commercial organizations using it to secure their sensitive data. It has
+                                been adopted as the encryption standard by the US government and is used in a wide range
+                                of applications, including data encryption, secure communications, and digital
+                                signatures. Its wide adoption and the fact that it has never been publicly broken have
+                                made it one of the most trusted encryption algorithms in use today.</p>
+                            <p className={'pYou'}>In the late 1990s, the National Institute of Standards and Technology
+                                (NIST) issued a call for proposals to develop a new encryption standard. The finalists
+                                were evaluated based on their security, implementation complexity, and performance. In
+                                2000, NIST selected Rijndael as the winner of the competition and announced it as the
+                                new Advanced Encryption Standard. Rijndael was chosen because of its superior
+                                performance and security compared to the other finalists. It was also highly efficient
+                                in hardware and software implementations, making it suitable for a wide range of
+                                applications.</p>
 
                         </div>
                         <img loading={'lazy'} className={'tableX'}
-                             style={{ padding: '1rem'}}
+                             style={{padding: '1rem'}}
                              src={aesCreators} alt={'the creates of the Aes'}/>
                     </div>
 

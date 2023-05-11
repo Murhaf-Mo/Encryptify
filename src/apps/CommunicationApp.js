@@ -9,7 +9,15 @@ function CommunicationApp() {
         stiffness: 100, damping: 30, restDelta: 0.001
     });
 
-    return (<div className={'applications-container'}>
+    return (
+        <motion.div
+            whileInView={{opacity: 1}}
+            viewport={{once: true}}
+            transition={{
+                duration: 1.5,
+            }}
+            initial={{opacity: 0}}
+            className={'applications-container'}>
         <h1 style={{position: "absolute", left: '5%', top: '13%', fontSize: 'var(--step-7)'}}
             className={'cipher-title'}>End-to-end Encryption</h1>
 
@@ -25,7 +33,6 @@ function CommunicationApp() {
         <article>
             <section>
                 <h1>What is end-to-end encryption?</h1>
-
                 <p>
                     To demonstrate how end-to-end encryption works, we have a simulation of
                     three messaging boxes - one for the sender, one for the messaging server/database, and one for the
@@ -68,7 +75,7 @@ function CommunicationApp() {
     </article>
     <motion.div className="progress" style={{scaleX}}/>
 
-</div>
+</motion.div>
 
 
 )

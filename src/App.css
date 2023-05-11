@@ -768,10 +768,18 @@ tr:nth-child {
     display: flex;
     align-items: center;
 }
+.hash-res{
+    align-items: center;
+    justify-content: center;
+
+
+}
 @media (min-width: 1001px){
     .hash-res {
-    display: flex
+        display: flex;
+        justify-content: center;
 }}
+
 @media (max-width: 1000px) {
 
     .message-sim{
@@ -790,8 +798,9 @@ tr:nth-child {
 
 .message-name{
     padding-left: 25%;
-    font-size: var(--step-1);
-    margin: 2% 2% 2rem;
+    font-size: var(--step-3);
+    padding-bottom: 0;
+    margin: 2% 2% 0;
 
 }
 
@@ -943,8 +952,6 @@ tr:nth-child {
         height: 35vh;
         position: relative;;
     }
-
-
 
 }
 

@@ -7,7 +7,7 @@ import {motion} from "framer-motion";
 
 const MY_USER_ID = 'apple';
 
-export default function MessageList(props) {
+export default function MessageList() {
     const [messages, setMessages] = useState([])
 
     useEffect(() => {
@@ -33,35 +33,33 @@ export default function MessageList(props) {
             message: "I have took a look at your website. It seems to me that your little project isn't that appealing.",
             timestamp: new Date().getTime()
         }, {
-            id: 4, author: 'orange', message: "It's SO BAD LOL ", timestamp: new Date().getTime()
+            id: 4, author: 'orange', message: "It's SO BAD LOL ",
+            timestamp: new Date().getTime()
         }, {
-            id: 5, author: 'apple', message: 'OMG I cannot believe you rn', timestamp: new Date().getTime()
+            id: 5, author: 'apple', message: 'OMG I cannot believe you rn',
+            timestamp: new Date().getTime()
         }, {
             id: 6,
             author: 'orange',
             message: 'JK I hope you do well on presentation day 💕💕',
             timestamp: new Date().getTime()
-        }, //     {
-            //     id: 7,
-            //     author: 'apple',
-            //     message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
-            //     timestamp: new Date().getTime()
-            // }, {
-            //   id: 8,
-            //   author: 'orange',
-            //   message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
-            //   timestamp: new Date().getTime()
-            // },
-            // {
+        }, {
+            id: 7,
+            author: 'apple',
+            message: "That's really nice of you to say. Thank you bruv",
+            timestamp: new Date().getTime()
+        }, {
+            id: 8, author: 'orange', message: 'NP', timestamp: new Date().getTime()
+        }, // {
             //   id: 9,
             //   author: 'apple',
-            //   message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+            //   message: 'NP',
             //   timestamp: new Date().getTime()
             // },
             // {
             //   id: 10,
             //   author: 'orange',
-            //   message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
+            //   message: 'It looks like it wraps exactly as it is supposed to. Let us see what a reply looks like!',
             //   timestamp: new Date().getTime()
             // },
         ];
@@ -251,53 +249,6 @@ export default function MessageList(props) {
 
 
         <div className="messenger">
-            <h2 className={'message-name'}>Recipient</h2>
-
-            <motion.div
-                initial={{opacity: 0, scale: 0.5}}
-                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
-                viewport={{once: true}}
-                transition={{
-                    type: "spring", duration: 0.4, stiffness: 40,
-                }}
-                className="scrollable content">
-
-                <div className="message-list-container">{renderMessages()} {send && <Message
-                    key={1}
-                    isMine={!true}
-                    startsSequence={true}
-                    endsSequence={false}
-                    showTimestamp={false}
-                    data={{
-                        id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
-                    }}
-                />}
-                </div>
-            </motion.div>
-            <h2 className={'message-name'}>Database/Server</h2>
-
-
-            <motion.div
-                initial={{opacity: 0, scale: 0.5}}
-                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
-                viewport={{once: true}}
-                transition={{
-                    type: "spring", duration: 0.8, stiffness: 40,
-                }}
-                className="scrollable content">
-                <div className="message-list-container">{renderMessages3()} {send && <Message2
-                    key={1}
-                    isMine={true}
-                    startsSequence={true}
-                    endsSequence={false}
-                    showTimestamp={false}
-                    data={{
-                        id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
-                    }}
-                />}</div>
-
-            </motion.div>
-
             <h2 className={'message-name'}>Sender</h2>
 
             <motion.div
@@ -326,6 +277,54 @@ export default function MessageList(props) {
 
                 </div>
             </motion.div>
+            <h2 className={'message-name'}>Database</h2>
+
+            <motion.div
+                initial={{opacity: 0, scale: 0.5}}
+                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
+                viewport={{once: true}}
+                transition={{
+                    type: "spring", duration: 0.8, stiffness: 40,
+                }}
+                className="scrollable content">
+                <div className="message-list-container">{renderMessages3()} {send && <Message2
+                    key={1}
+                    isMine={true}
+                    startsSequence={true}
+                    endsSequence={false}
+                    showTimestamp={false}
+                    data={{
+                        id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
+                    }}
+                />}</div>
+
+            </motion.div>
+
+            <h2 className={'message-name'}>Recipient</h2>
+
+            <motion.div
+                initial={{opacity: 0, scale: 0.5}}
+                whileInView={{y: [1000, 0], opacity: 1, scale: 1}}
+                viewport={{once: true}}
+                transition={{
+                    type: "spring", duration: 0.4, stiffness: 40,
+                }}
+                className="scrollable content">
+
+                <div className="message-list-container">{renderMessages()} {send && <Message
+                    key={1}
+                    isMine={false}
+                    startsSequence={true}
+                    endsSequence={false}
+                    showTimestamp={false}
+                    data={{
+                        id: 3, author: 'orange', message: text, timestamp: new Date().getTime()
+                    }}
+                />}
+                </div>
+            </motion.div>
+
+
         </div>
 
 

@@ -163,7 +163,13 @@ function FileEncryption() {
         stiffness: 100, damping: 30, restDelta: 0.001
     });
 
-    return (<div className={'applications-container'}>
+    return (<motion.div
+    whileInView={{opacity: 1}}
+    viewport={{once: true}}
+    transition={{
+        duration: 1.5,
+    }}
+    initial={{opacity: 0}} className={'applications-container'}>
             <h1 style={{position: "absolute", left: '5%', top: '13%', fontSize: 'var(--step-7)'}}
                 className={'cipher-title'}>Image Encryption</h1>
 
@@ -179,18 +185,26 @@ function FileEncryption() {
 
                     <p>
                         Image encryption is a method of securing digital images to prevent unauthorized access,
-                        modification, or viewing. It involves using encryption algorithms to convert the image data into a cipher that can only be decoded by those who have the decryption
-                        key. This ensures that the image can only be viewed by those who are authorized to do so. Image
-                        encryption is commonly used to protect sensitive images, such as medical images, classified documents, and
-                        personal photos. </p>
+                        modification, or viewing. It involves using encryption algorithms to convert the image data into
+                        a cipher that can only be decoded by those who have the decryption key. This ensures that the image can only be viewed by those who are authorized to do so. Image
+                        encryption is commonly used to protect sensitive images, such as medical images, classified
+                        documents, and personal photos. </p>
+
+                    <p>
+                        Choosing image encryption over file encryption can be a powerful way to present the effects of
+                        encryption on data. By encrypting images, we can visually showcase the transformation and
+                        altered appearance of the encrypted data, making it easier for viewers to understand and
+                        appreciate the impact of encryption techniques.
+
+                    </p>
                 </section>
                 <section>
                     <h1>How does it work?</h1>
                     <p>
                         Image encryption works by using encryption algorithms to transform the pixel values of an image
                         into a ciphered form that can only be deciphered by those with the decryption key. The
-                        encryption process involves scrambling the pixel values of the image using mathematical operations, such as
-                        substitution and permutation. This results in a ciphered image that is unintelligible to anyone
+                        encryption process involves scrambling the pixel values of the image using mathematical
+                        operations, such as substitution and permutation. This results in a ciphered image that is unintelligible to anyone
                         without the decryption key. </p>
                     <p>
                         To decrypt the image, the same encryption algorithm is applied in reverse using the decryption
@@ -200,14 +214,15 @@ function FileEncryption() {
                     <p>
                         In symmetric key encryption, the same key is used for both encryption and decryption. This means
                         that the encryption and decryption keys must be kept secret from anyone who should not have
-                        access to the image. In asymmetric key encryption, two different keys are used for encryption and
-                        decryption. This allows for more flexibility in sharing encrypted images, but requires a more complex key management system.
+                        access to the image. In asymmetric key encryption, two different keys are used for encryption
+                        and decryption. This allows for more flexibility in sharing encrypted images, but requires a more
+                        complex key management system.
                     </p>
                 </section>
             </article>
             <motion.div className="progress" style={{scaleX}}/>
 
-        </div>
+        </motion.div>
 
     )
 }

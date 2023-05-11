@@ -7,7 +7,11 @@
     <list default="true" id="a7114c85-480b-423a-a642-328ff8e83301" name="Changes" comment="Initialize project using Create React App">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/CommunicationApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/CommunicationApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/FileEncryption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/FileEncryption.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/HashingApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/HashingApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/messageSim/MessageList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/messageSim/MessageList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ciphers/Aes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciphers/Aes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Challenges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Challenges.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +139,7 @@
       <workItem from="1683294407328" duration="4136000" />
       <workItem from="1683299482384" duration="100031000" />
       <workItem from="1683639695789" duration="30693000" />
-      <workItem from="1683692116264" duration="8244000" />
+      <workItem from="1683692116264" duration="20142000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <created>1679780474391</created>
